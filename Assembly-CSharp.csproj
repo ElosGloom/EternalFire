@@ -41,6 +41,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Game\Scripts\TreeCutter.cs" />
      <Compile Include="Assets\Game\Scripts\SimplePlayerController.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\ExternalAssets\Male Peasant Pack Cute Series\Standard Assets Files" />
