@@ -42,9 +42,9 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Game\Scripts\TreeCutter.cs" />
+     <Compile Include="Assets\Game\Scripts\DamageOnHit.cs" />
      <Compile Include="Assets\Game\Scripts\SimplePlayerController.cs" />
      <Compile Include="Assets\Game\Scripts\PlayerHealth.cs" />
-     <Compile Include="Assets\Game\Scripts\DamageOnHit.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\ExternalAssets\Male Peasant Pack Cute Series\Standard Assets Files" />
      <Folder Include="Assets\ExternalAssets\Male Peasant Pack Cute Series\01 Customize Character Here\02 Attach Weapons and Accessories\Tools (+R Hand)" />
