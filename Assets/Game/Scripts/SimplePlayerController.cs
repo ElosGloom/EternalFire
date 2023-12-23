@@ -37,10 +37,9 @@ public class SimplePlayerController : MonoBehaviour
             velocity.z = -speed;
         }
 
-        if (velocity.magnitude < 0.1f) return;
 
         animator.SetBool("Run", isAnyButtonDown);
-        
+        if (velocity.magnitude < 0.1f) return;
 
         rb.velocity = velocity;
         var targetRotation = Quaternion.LookRotation(velocity.normalized);
