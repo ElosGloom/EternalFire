@@ -9,7 +9,13 @@ namespace Game.Scripts
     {
         [SerializeField] private HealthComponent treeHP;
         [SerializeField] private Animator animator;
-
+        [SerializeField] private MeshFilter treeMesh;
+        [SerializeField] private Mesh damagedMesh;
+        [SerializeField] private Mesh destroyedMesh;
+        [SerializeField] private Collider treeTrigger;
+        [SerializeField] private Collider treeCollider;
+        
+        
 
         private void Start()
         {
@@ -24,9 +30,18 @@ namespace Game.Scripts
                 return;
             }
 
+            if (currentHp<=0.5*maxHp)
+            {
+                treeMesh.mesh = damagedMesh;
+            }
             if (currentHp <= 0)
             {
-                Destroy(treeHP.gameObject);
+                treeMesh.mesh = destroyedMesh;
+                Destroy(treeTrigger);
+                Destroy(treeCollider);
+                Destroy(treeHP);
+                Destroy(animator,1);
+                Destroy(this);
             }
 
             animator.SetTrigger("TreeDamage");

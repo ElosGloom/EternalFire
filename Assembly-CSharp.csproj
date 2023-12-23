@@ -63,6 +63,7 @@
      <Folder Include="Assets\ExternalAssets\Male Peasant Pack Cute Series\01 Customize Character Here\02 Attach Weapons and Accessories\Standard Heads  (+ Head )" />
      <Folder Include="Assets\ExternalAssets\Male Peasant Pack Cute Series\01 Customize Character Here" />
      <Folder Include="Assets\ExternalAssets\Male Peasant Pack Cute Series\Addon Textures Pack 01\Materials" />
+     <Folder Include="Assets\Game\Animations\Tree" />
      <Folder Include="Assets\ExternalAssets\Male Peasant Pack Cute Series\01 Customize Character Here\01 Drag Character Base to Scene" />
      <Folder Include="Assets\Game" />
      <Folder Include="Assets\ExternalAssets\Male Peasant Pack Cute Series\FBX" />
@@ -74,6 +75,7 @@
      <Folder Include="Assets\ExternalAssets\Male Peasant Pack Cute Series\01 Customize Character Here\02 Attach Weapons and Accessories\Standard Hair (+ Head )" />
      <Folder Include="Assets\ExternalAssets\Male Peasant Pack Cute Series\01 Customize Character Here\02 Attach Weapons and Accessories" />
      <Folder Include="Assets\ExternalAssets\Male Peasant Pack Cute Series\Cute series demo assets" />
+     <Folder Include="Assets\Game\Animations\Player" />
      <Folder Include="Assets\Game\Prefabs" />
      <Folder Include="Assets\ExternalAssets\Male Peasant Pack Cute Series\01 Customize Character Here\02 Attach Weapons and Accessories\Standard Faces (+ Head)" />
      <Folder Include="Assets\ExternalAssets\Male Peasant Pack Cute Series\Addon Textures Pack 01" />

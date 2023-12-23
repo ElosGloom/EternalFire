@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Game.Scripts;
+using Unity.Collections;
 using UnityEngine;
 
 namespace DefaultNamespace
@@ -10,7 +11,7 @@ namespace DefaultNamespace
          public event Action<float, float> OnHealthChangeEvent;
          public  event Action OnDeathEvent;
          [SerializeField] private float maxHealth ;
-         [SerializeField] private float currentHealth;
+         [SerializeField,ReadOnly] private float currentHealth;
 
        
 
