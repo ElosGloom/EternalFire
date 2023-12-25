@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,6 +6,9 @@ namespace Game.Scripts
 {
     public class Inventory : MonoBehaviour
     {
+        [SerializeField] private float destroyDelay;
+
+
         private Dictionary<string, int> _resources = new()
         {
             { "Wood", 0 }
@@ -13,21 +16,24 @@ namespace Game.Scripts
 
         private void AddItem(string itemName, int itemCount)
         {
-           
             _resources[itemName] += itemCount;
-            Debug.Log(_resources["Wood"]);
         }
 
         private void OnTriggerEnter(Collider other)
         {
-            InventoryResource inventoryresource = other.gameObject.GetComponent<InventoryResource>();
-            if (other.CompareTag("Resource"))
-            {
-                AddItem(inventoryresource.ItemName,inventoryresource.ItemsCount);
-                Destroy(inventoryresource.gameObject);
-            }
-          
+            StartCoroutine(DestroyDelayRoutine(other));
         }
-        
+
+        private IEnumerator DestroyDelayRoutine(Collider other)
+        {
+            var inventoryResource = other.gameObject.GetComponent<InventoryResource>();
+            yield return new WaitForSeconds(destroyDelay);
+
+            if (inventoryResource)
+            {
+                AddItem(inventoryResource.ItemName, inventoryResource.ItemsCount);
+                Destroy(inventoryResource.gameObject);
+            }
+        }
     }
 }

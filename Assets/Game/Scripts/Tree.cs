@@ -2,6 +2,7 @@
 using System.Collections;
 using DefaultNamespace;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Game.Scripts
 {
@@ -15,7 +16,9 @@ namespace Game.Scripts
         [SerializeField] private Collider treeTrigger;
         [SerializeField] private Collider treeCollider;
         public int woodCount;
-        [SerializeField] private GameObject woodPrefab;
+        [SerializeField] private Rigidbody woodPrefab;
+        [SerializeField] private Transform woodSpawnPoint;
+        [SerializeField] private int shootOutForce;
 
 
         private void Start()
@@ -45,7 +48,17 @@ namespace Game.Scripts
                 Destroy(animator, 1);
                 for (int i = 0; i < woodCount; i++)
                 {
-                    Instantiate(woodPrefab).transform.position = transform.position;
+                    float range = .5f;
+                    float randomX = Random.Range(-range, range);
+                    float randomY = Random.Range(-range, range);
+                    float randomZ = Random.Range(-range, range);
+                    var randomVector = new Vector3(randomX, randomY, randomZ);
+                    var randomPosition = woodSpawnPoint.position + randomVector;
+
+
+                    var currentPrefab = Instantiate(woodPrefab);
+                    currentPrefab.transform.position = randomPosition;
+                    currentPrefab.AddForce((randomPosition - transform.position) * shootOutForce);
                 }
 
                 Destroy(this);
