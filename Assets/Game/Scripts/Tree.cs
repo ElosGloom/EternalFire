@@ -14,8 +14,9 @@ namespace Game.Scripts
         [SerializeField] private Mesh destroyedMesh;
         [SerializeField] private Collider treeTrigger;
         [SerializeField] private Collider treeCollider;
-        
-        
+        public int woodCount;
+        [SerializeField] private GameObject woodPrefab;
+
 
         private void Start()
         {
@@ -30,17 +31,23 @@ namespace Game.Scripts
                 return;
             }
 
-            if (currentHp<=0.5*maxHp)
+            if (currentHp <= 0.5 * maxHp)
             {
                 treeMesh.mesh = damagedMesh;
             }
+
             if (currentHp <= 0)
             {
                 treeMesh.mesh = destroyedMesh;
                 Destroy(treeTrigger);
                 Destroy(treeCollider);
                 Destroy(treeHP);
-                Destroy(animator,1);
+                Destroy(animator, 1);
+                for (int i = 0; i < woodCount; i++)
+                {
+                    Instantiate(woodPrefab).transform.position = transform.position;
+                }
+
                 Destroy(this);
             }
 

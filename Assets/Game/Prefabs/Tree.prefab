@@ -202,3 +202,5 @@ MonoBehaviour:
   destroyedMesh: {fileID: -3932542189027751561, guid: ea6914c3f330bf34a8d283458bf7e857, type: 3}
   treeTrigger: {fileID: 202187189431739435}
   treeCollider: {fileID: 7873919050070581151}
+  woodCount: 3
+  woodPrefab: {fileID: 2139334533042051766, guid: cb45c8c0cf840e54db43fa6f0aa8c068, type: 3}
