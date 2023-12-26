@@ -1002,6 +1002,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7595317682797125615, guid: 90f37f0337efc1f46972b6e4eece3614, type: 3}
   m_PrefabInstance: {fileID: 274903865}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1863784993 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5233873014066414424, guid: 1d6770becb6c0664ea46c884bf839d6b, type: 3}
+  m_PrefabInstance: {fileID: 4922761850936496051}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcec1ec1d5534b8ca702ff2ea0020f1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1867226219
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1211,13 +1222,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 778269077896948941, guid: a0ad1b17a96fb5443abe74f490ce04e2, type: 3}
+      propertyPath: _playerInventory
+      value: 
+      objectReference: {fileID: 1863784993}
     - target: {fileID: 4446452435224446330, guid: a0ad1b17a96fb5443abe74f490ce04e2, type: 3}
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4446452435224446330, guid: a0ad1b17a96fb5443abe74f490ce04e2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.673
+      value: 1.45
       objectReference: {fileID: 0}
     - target: {fileID: 4446452435224446330, guid: a0ad1b17a96fb5443abe74f490ce04e2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1225,7 +1240,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4446452435224446330, guid: a0ad1b17a96fb5443abe74f490ce04e2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.174
+      value: -5.34
       objectReference: {fileID: 0}
     - target: {fileID: 4446452435224446330, guid: a0ad1b17a96fb5443abe74f490ce04e2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1268,9 +1283,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3160804848274206316, guid: 1d6770becb6c0664ea46c884bf839d6b, type: 3}
-      propertyPath: attackCooldown
-      value: 1
+    - target: {fileID: 4697214073201757790, guid: 1d6770becb6c0664ea46c884bf839d6b, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 1863784993}
+    - target: {fileID: 4697214073201757790, guid: 1d6770becb6c0664ea46c884bf839d6b, type: 3}
+      propertyPath: destroyDelay
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4922761849981307233, guid: 1d6770becb6c0664ea46c884bf839d6b, type: 3}
       propertyPath: m_RootOrder

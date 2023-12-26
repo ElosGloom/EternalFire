@@ -1,49 +1,70 @@
 ﻿using System;
-using System.Collections.Generic;
-using Game.Scripts;
+using System.Collections;
 using Unity.Collections;
 using UnityEngine;
 
 namespace DefaultNamespace
 {
-     public class HealthComponent : MonoBehaviour
-     {
-         public event Action<float, float> OnHealthChangeEvent;
-         public  event Action OnDeathEvent;
-         [SerializeField] private float maxHealth ;
-         [SerializeField,ReadOnly] private float currentHealth;
+    public class HealthComponent : MonoBehaviour
+    {
+        public event Action<float, float> OnHealthChangeEvent;
+        public event Action OnDeathEvent;
+        [SerializeField] private float maxHealth;
+        [SerializeField] private float currentHealth;
 
-       
+        
 
-         private void Start()
-         {
-             currentHealth = maxHealth;
-             OnHealthChangeEvent?.Invoke(currentHealth, maxHealth);
-         }
+        private void Start()
+        {
+            currentHealth = maxHealth;
+            OnHealthChangeEvent?.Invoke(currentHealth, maxHealth);
+        }
 
-         public void TakeDamage(int damage)
-         {
-             currentHealth -= damage;
+        public void TakeDamage(int damage)
+        {
+            currentHealth -= damage;
 
 
-             if (currentHealth < 1)
-             {
-                 OnDeathEvent?.Invoke();
-             }
+            if (currentHealth < 1)
+            {
+                OnDeathEvent?.Invoke();
+            }
 
-             OnHealthChangeEvent?.Invoke(currentHealth, maxHealth);
-         }
+            OnHealthChangeEvent?.Invoke(currentHealth, maxHealth);
+        }
 
-         public void Healing(int heal)
-         {
-             currentHealth += heal;
-             if (currentHealth > maxHealth)
-             {
-                 currentHealth = maxHealth;
-             }
+        // public void DecreaseHealthOverTime()
+        // {
+        //     float decreaseAmount = 1f; 
+        //     float decreaseInterval = 1f; 
+        //
+        //     StartCoroutine(DecreaseHealthRoutine(decreaseAmount, decreaseInterval));
+        // }
+        //
+        // IEnumerator DecreaseHealthRoutine(float decreaseAmount, float decreaseInterval)
+        // {
+        //     while (currentHealth > 0f)
+        //     {
+        //         yield return new WaitForSeconds(decreaseInterval);
+        //         currentHealth -= decreaseAmount;
+        //
+        //       
+        //         if (currentHealth <= 0f)
+        //         {
+        //             // вуфер
+        //         }
+        //     }
+        // }
 
-             OnHealthChangeEvent?.Invoke(currentHealth, maxHealth);
-             
-         }
-     }
+        public void Healing(int heal)
+        {
+            currentHealth += heal;
+            if (currentHealth > maxHealth)
+            {
+                currentHealth = maxHealth;
+            }
+
+            OnHealthChangeEvent?.Invoke(currentHealth, maxHealth);
+        }
+    }
 }

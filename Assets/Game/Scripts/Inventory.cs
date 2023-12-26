@@ -6,34 +6,30 @@ namespace Game.Scripts
 {
     public class Inventory : MonoBehaviour
     {
-        [SerializeField] private float destroyDelay;
-
-
         private Dictionary<string, int> _resources = new()
         {
             { "Wood", 0 }
         };
 
-        private void AddItem(string itemName, int itemCount)
+        public void AddItem(string itemName, int itemCount)
         {
             _resources[itemName] += itemCount;
         }
 
-        private void OnTriggerEnter(Collider other)
+        public bool TryRemoveItem(string itemName, int itemCount)
         {
-            StartCoroutine(DestroyDelayRoutine(other));
-        }
-
-        private IEnumerator DestroyDelayRoutine(Collider other)
-        {
-            var inventoryResource = other.gameObject.GetComponent<InventoryResource>();
-            yield return new WaitForSeconds(destroyDelay);
-
-            if (inventoryResource)
+            if (itemCount < 0)
             {
-                AddItem(inventoryResource.ItemName, inventoryResource.ItemsCount);
-                Destroy(inventoryResource.gameObject);
+                return false;
             }
+
+            if (_resources[itemName] >= itemCount)
+            {
+                _resources[itemName] -= itemCount;
+                return true;
+            }
+
+            return false;
         }
     }
 }
