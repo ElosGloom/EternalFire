@@ -42,16 +42,17 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Game\Scripts\Tree.cs" />
-     <Compile Include="Assets\Game\Scripts\Inventory.cs" />
+     <Compile Include="Assets\Game\Scripts\Inventory\Inventory.cs" />
      <Compile Include="Assets\Game\Scripts\TreeCutter.cs" />
-     <Compile Include="Assets\Game\Scripts\InventoryCollector.cs" />
+     <Compile Include="Assets\Game\Scripts\Inventory\InventoryCollector.cs" />
      <Compile Include="Assets\Game\Scripts\Bonfire.cs" />
-     <Compile Include="Assets\Game\Scripts\InventoryResource.cs" />
+     <Compile Include="Assets\Game\Scripts\Inventory\InventoryResource.cs" />
      <Compile Include="Assets\Game\Scripts\SimplePlayerController.cs" />
      <Compile Include="Assets\Game\Scripts\HealthComponent.cs" />
      <Compile Include="Assets\Game\Scripts\GUI\InventoryView.cs" />
      <Compile Include="Assets\Game\Scripts\Utils\SerializableDictionary.cs" />
      <Compile Include="Assets\Game\Scripts\GUI\InventoryCellView.cs" />
+     <Compile Include="Assets\Game\Scripts\GUI\HealthBar.cs" />
      <Folder Include="Assets" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <Folder Include="Assets\ExternalAssets\Male Peasant Pack Cute Series\Standard Assets Files" />
@@ -77,6 +78,7 @@
      <Folder Include="Assets\ExternalAssets\Male Peasant Pack Cute Series\02 Customized Sample Prefabs" />
      <Folder Include="Assets\Game\Animations" />
      <Folder Include="Assets\Game\Scripts\GUI" />
+     <Folder Include="Assets\Game\Scripts\Inventory" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <Folder Include="Assets\ExternalAssets\Male Peasant Pack Cute Series\01 Customize Character Here\02 Attach Weapons and Accessories\Standard Heads  (+ Head )" />
      <Folder Include="Assets\ExternalAssets\Male Peasant Pack Cute Series\01 Customize Character Here" />
