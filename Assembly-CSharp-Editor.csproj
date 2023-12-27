@@ -41,8 +41,8 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\ExternalAssets\Bitgem\Cube_World\_Materials\URP_Multicolor_Material\Multicolor shader related\Editor\TextureConverter.cs" />
-     <Folder Include="Assets\ExternalAssets\Bitgem\Cube_World\_Materials\URP_Multicolor_Material\Multicolor shader related\Editor" />
+     <Compile Include="Assets\Game\Scripts\Utils\Editor\SerializableDictionaryPropertyDrawer.cs" />
+     <Folder Include="Assets\Game\Scripts\Utils\Editor" />
      <Reference Include="UnityEngine">
      <HintPath>D:\Unity\2021.3.31f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
