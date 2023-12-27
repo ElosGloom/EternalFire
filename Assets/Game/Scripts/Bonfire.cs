@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using DefaultNamespace;
+﻿using DefaultNamespace;
 using UnityEngine;
 
 namespace Game.Scripts
@@ -34,9 +32,7 @@ namespace Game.Scripts
             {
               
                 if (other.GetComponent<Inventory>() == null)
-                {
                     return;
-                }
 
                 var canRemoveItem= _playerInventory.TryRemoveItem("Wood", 1);
                 
@@ -44,7 +40,6 @@ namespace Game.Scripts
                 {
                     _triggerTimeLeft = woodCooldown;
                     _fireHealth.Healing(3);
-                   
                 }
             }
         }
