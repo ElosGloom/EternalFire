@@ -42,30 +42,31 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Game\Scripts\Tree.cs" />
+     <Compile Include="Assets\ExternalAssets\Epic Toon FX\Scripts\ETFXPitchRandomizer.cs" />
      <Compile Include="Assets\Game\Scripts\Utils\SerializableDictionary.cs" />
      <Compile Include="Assets\Game\Scripts\Inventory\Inventory.cs" />
+     <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\ETFXFireProjectile.cs" />
+     <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\ETFXButtonScript.cs" />
+     <Compile Include="Assets\ExternalAssets\Epic Toon FX\Scripts\ETFXLightFade.cs" />
      <Compile Include="Assets\Game\Scripts\TreeCutter.cs" />
+     <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\VFX Library\ParticleEffectsLibrary.cs" />
+     <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\ETFXMouseOrbit.cs" />
+     <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\ETFXTarget.cs" />
      <Compile Include="Assets\Game\Scripts\GUI\HealthBar.cs" />
+     <Compile Include="Assets\ExternalAssets\Epic Toon FX\Scripts\ETFXRotation.cs" />
      <Compile Include="Assets\Game\Scripts\Inventory\InventoryCollector.cs" />
+     <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\ETFXSceneManager.cs" />
      <Compile Include="Assets\Game\Scripts\GUI\InventoryView.cs" />
-     <Compile Include="Assets\Game\Scripts\Bonfire.cs" />
+     <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\VFX Library\PEButtonScript.cs" />
+     <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\ETFXLoopScript.cs" />
+     <Compile Include="Assets\Game\Scripts\Fire\Bonfire.cs" />
+     <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\VFX Library\UICanvasManager.cs" />
      <Compile Include="Assets\Game\Scripts\Inventory\InventoryResource.cs" />
      <Compile Include="Assets\Game\Scripts\GUI\InventoryCellView.cs" />
      <Compile Include="Assets\Game\Scripts\SimplePlayerController.cs" />
-     <Compile Include="Assets\Game\Scripts\HealthComponent.cs" />
-     <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\VFX Library\ParticleEffectsLibrary.cs" />
-     <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\ETFXLoopScript.cs" />
-     <Compile Include="Assets\ExternalAssets\Epic Toon FX\Scripts\ETFXPitchRandomizer.cs" />
-     <Compile Include="Assets\ExternalAssets\Epic Toon FX\Scripts\ETFXLightFade.cs" />
-     <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\ETFXButtonScript.cs" />
-     <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\ETFXFireProjectile.cs" />
-     <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\ETFXMouseOrbit.cs" />
-     <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\ETFXTarget.cs" />
-     <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\VFX Library\PEButtonScript.cs" />
      <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\ETFXProjectileScript.cs" />
-     <Compile Include="Assets\ExternalAssets\Epic Toon FX\Scripts\ETFXRotation.cs" />
-     <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\ETFXSceneManager.cs" />
-     <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\VFX Library\UICanvasManager.cs" />
+     <Compile Include="Assets\Game\Scripts\HealthComponent.cs" />
+     <Compile Include="Assets\Game\Scripts\Fire\FireFx.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Environment\Water\Other" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Sound" />
@@ -263,6 +264,7 @@
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Muzzleflash\LaserMuzzle" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Sword\Whirlwind" />
      <Folder Include="Assets\ExternalAssets\Male Peasant Pack Cute Series\FBX" />
+     <Folder Include="Assets\Game\Scripts\Fire" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Explosions\MagicExplosion" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Environment\Water\Flowing\Soft" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
@@ -1087,8 +1089,14 @@
      <Reference Include="Unity.VSCode.Editor">
      <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualScripting.Shared.Editor">
-     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+     <Reference Include="Unity.RenderPipelines.Universal.Shaders">
+     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="PPv2URPConverters">
+     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
      <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
@@ -1102,9 +1110,6 @@
      <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
      <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Timeline.Editor">
-     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.Timeline">
      <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
      </Reference>
@@ -1117,8 +1122,17 @@
      <Reference Include="Unity.VisualScripting.State.Editor">
      <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.Burst.Editor">
+     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Searcher.Editor">
+     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
      <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Core.Runtime">
+     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
      <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
@@ -1135,14 +1149,11 @@
      <Reference Include="Unity.Rider.Editor">
      <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.TestTools.CodeCoverage.Editor">
-     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
+     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.UI">
      <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.State">
-     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Core">
      <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
@@ -1150,50 +1161,41 @@
      <Reference Include="Unity.EditorCoroutines.Editor">
      <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.RenderPipelines.Universal.Shaders">
-     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.RenderPipelines.Core.Runtime">
-     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Searcher.Editor">
-     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="PPv2URPConverters">
-     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.RenderPipelines.Universal.Editor">
-     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Mathematics.Editor">
-     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
-     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.RenderPipelines.Core.Editor">
-     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.Mathematics">
      <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
-     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Burst">
-     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
      </Reference>
      <Reference Include="Unity.ShaderGraph.Editor">
      <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.RenderPipelines.Universal.Runtime">
-     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+     <Reference Include="Unity.Burst">
+     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Burst.Editor">
-     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
+     <Reference Include="Unity.RenderPipelines.Universal.Editor">
+     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Shared.Editor">
+     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Timeline.Editor">
+     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Mathematics.Editor">
+     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TestTools.CodeCoverage.Editor">
+     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Core.Editor">
+     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.State">
+     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>

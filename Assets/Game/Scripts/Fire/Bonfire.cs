@@ -1,4 +1,5 @@
-﻿using DefaultNamespace;
+﻿using System;
+using DefaultNamespace;
 using UnityEngine;
 
 namespace Game.Scripts
@@ -12,7 +13,14 @@ namespace Game.Scripts
         private float _waitTimeLeft;
         [SerializeField] private float woodCooldown = 0.25f;
         private float _triggerTimeLeft;
+        private float _lightRadius;
+        [SerializeField] private float maxLightRadius=5;
+        
 
+        private void Start()
+        {
+            _fireHealth.HealthChangeEvent += OnHealthChanged;
+        }
 
         private void Update()
         {
@@ -42,6 +50,21 @@ namespace Game.Scripts
                     _fireHealth.Healing(3);
                 }
             }
+        }
+
+        private void OnHealthChanged(float currentHp, float maxHp)
+        {
+            _lightRadius = Mathf.Lerp(0, maxLightRadius, currentHp / maxHp);
+        }
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position,_lightRadius);
+        }
+
+        private void OnDestroy()
+        {
+            _fireHealth.HealthChangeEvent -= OnHealthChanged;
         }
     }
 }

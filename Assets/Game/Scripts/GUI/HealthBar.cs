@@ -12,10 +12,10 @@ namespace DefaultNamespace.UI
 
         private void Start()
         {
-            healthComponent.OnHealthChangeEvent += OnHealthChangeEvent;
+            healthComponent.HealthChangeEvent += OnHealthChanged;
         }
 
-        private void OnHealthChangeEvent(float currentHealth, float maxHealth)
+        private void OnHealthChanged(float currentHealth, float maxHealth)
         {
             hpText.text = $"{currentHealth.ToString("0")}/{maxHealth.ToString()}";
             hpFill.fillAmount = currentHealth / maxHealth;
@@ -23,7 +23,7 @@ namespace DefaultNamespace.UI
 
         private void OnDestroy()
         {
-            healthComponent.OnHealthChangeEvent -= OnHealthChangeEvent;
+            healthComponent.HealthChangeEvent -= OnHealthChanged;
         }
     }
 }

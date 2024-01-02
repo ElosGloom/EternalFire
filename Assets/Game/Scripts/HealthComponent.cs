@@ -7,7 +7,7 @@ namespace DefaultNamespace
 {
     public class HealthComponent : MonoBehaviour
     {
-        public event Action<float, float> OnHealthChangeEvent;
+        public event Action<float, float> HealthChangeEvent;
         public event Action OnDeathEvent;
         [SerializeField] private float maxHealth;
         [SerializeField] private float currentHealth;
@@ -17,7 +17,7 @@ namespace DefaultNamespace
         private void Start()
         {
             currentHealth = maxHealth;
-            OnHealthChangeEvent?.Invoke(currentHealth, maxHealth);
+            HealthChangeEvent?.Invoke(currentHealth, maxHealth);
         }
 
         public void TakeDamage(int damage)
@@ -30,7 +30,7 @@ namespace DefaultNamespace
                 OnDeathEvent?.Invoke();
             }
 
-            OnHealthChangeEvent?.Invoke(currentHealth, maxHealth);
+            HealthChangeEvent?.Invoke(currentHealth, maxHealth);
         }
 
         // public void DecreaseHealthOverTime()
@@ -64,7 +64,7 @@ namespace DefaultNamespace
                 currentHealth = maxHealth;
             }
 
-            OnHealthChangeEvent?.Invoke(currentHealth, maxHealth);
+            HealthChangeEvent?.Invoke(currentHealth, maxHealth);
         }
     }
 }

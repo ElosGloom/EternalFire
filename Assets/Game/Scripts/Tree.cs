@@ -23,7 +23,7 @@ namespace Game.Scripts
 
         private void Start()
         {
-            treeHP.OnHealthChangeEvent += OnDamageTaken;
+            treeHP.HealthChangeEvent += OnDamageTaken;
         }
 
 
@@ -69,7 +69,7 @@ namespace Game.Scripts
 
         private void OnDestroy()
         {
-            treeHP.OnHealthChangeEvent -= OnDamageTaken;
+            treeHP.HealthChangeEvent -= OnDamageTaken;
         }
     }
 }
