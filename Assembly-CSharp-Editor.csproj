@@ -41,8 +41,15 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\ExternalAssets\Piloto Studio\Readme\Scripts\Editor\ReadmeHierarchy.cs" />
+     <Compile Include="Assets\ExternalAssets\AOSFogWar\Editor\editorFogWar.cs" />
+     <Compile Include="Assets\ExternalAssets\Piloto Studio\Readme\Scripts\Editor\ReadmeEditorStyles.cs" />
      <Compile Include="Assets\Game\Scripts\Utils\Editor\SerializableDictionaryPropertyDrawer.cs" />
+     <Compile Include="Assets\ExternalAssets\Piloto Studio\Readme\Scripts\Editor\ReadmeEditor.cs" />
+     <Compile Include="Assets\ExternalAssets\Piloto Studio\Readme\Scripts\Editor\ReadmeBehaviourEditor.cs" />
      <Folder Include="Assets\Game\Scripts\Utils\Editor" />
+     <Folder Include="Assets\ExternalAssets\AOSFogWar\Editor" />
+     <Folder Include="Assets\ExternalAssets\Piloto Studio\Readme\Scripts\Editor" />
      <Reference Include="UnityEngine">
      <HintPath>D:\Unity\2021.3.31f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
