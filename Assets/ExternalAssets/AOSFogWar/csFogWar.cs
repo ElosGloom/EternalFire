@@ -8,29 +8,30 @@
  */
 
 
-
-using System;                       // Convert
-using System.IO;                    // Directory
-using System.Linq;                  // Enumerable
-using System.Collections.Generic;   // List
-using UnityEngine;                  // Monobehaviour
-using UnityEditor;                  // Handles
-
+using System; // Convert
+using System.IO; // Directory
+using System.Linq; // Enumerable
+using System.Collections.Generic; // List
+using UnityEngine; // Monobehaviour
+using UnityEditor; // Handles
 
 
 namespace FischlWorks_FogWar
 {
-
-
-
     /// The non-static high-level monobehaviour interface of the AOS Fog of War module.
-
     /// This class holds serialized data for various configuration properties,\n
     /// and is resposible for scanning / saving / loading the LevelData object.\n
     /// The class handles the update frequency of the fog, plus some shader businesses.\n
     /// Various public interfaces related to FogRevealer's FOV are also available.
     public class csFogWar : MonoBehaviour
     {
+        public static csFogWar Instance { get; private set; }
+
+        private void Awake()
+        {
+            Instance = this;
+        }
+
         /// A class for storing the base level data.
         /// 
         /// This class is later serialized into Json format.\n
@@ -46,8 +47,10 @@ namespace FischlWorks_FogWar
             }
 
             // Indexer definition
-            public LevelColumn this[int index] {
-                get {
+            public LevelColumn this[int index]
+            {
+                get
+                {
                     if (index >= 0 && index < levelRow.Count)
                     {
                         return levelRow[index];
@@ -59,7 +62,8 @@ namespace FischlWorks_FogWar
                         return null;
                     }
                 }
-                set {
+                set
+                {
                     if (index >= 0 && index < levelRow.Count)
                     {
                         levelRow[index] = value;
@@ -81,10 +85,8 @@ namespace FischlWorks_FogWar
 
             public float scanSpacingPerUnit = 0;
 
-            [SerializeField]
-            private List<LevelColumn> levelRow = new List<LevelColumn>();
+            [SerializeField] private List<LevelColumn> levelRow = new List<LevelColumn>();
         }
-
 
 
         [System.Serializable]
@@ -103,8 +105,10 @@ namespace FischlWorks_FogWar
             }
 
             // Indexer definition
-            public ETileState this[int index] {
-                get {
+            public ETileState this[int index]
+            {
+                get
+                {
                     if (index >= 0 && index < levelColumn.Count)
                     {
                         return levelColumn[index];
@@ -116,7 +120,8 @@ namespace FischlWorks_FogWar
                         return ETileState.Empty;
                     }
                 }
-                set {
+                set
+                {
                     if (index >= 0 && index < levelColumn.Count)
                     {
                         levelColumn[index] = value;
@@ -130,10 +135,8 @@ namespace FischlWorks_FogWar
                 }
             }
 
-            [SerializeField]
-            private List<ETileState> levelColumn = new List<ETileState>();
+            [SerializeField] private List<ETileState> levelColumn = new List<ETileState>();
         }
-
 
 
         [System.Serializable]
@@ -156,102 +159,78 @@ namespace FischlWorks_FogWar
             }
 
             // To be assigned manually by the user
-            [SerializeField]
-            private Transform revealerTransform = null;
+            [SerializeField] private Transform revealerTransform = null;
+
             // These are called expression-bodied properties btw, being stricter here because these are not pure data containers
             public Transform _RevealerTransform => revealerTransform;
 
-            [SerializeField]
-            private int sightRange = 0;
+            [SerializeField] private int sightRange = 0;
             public int _SightRange => sightRange;
 
-            [SerializeField]
-            private bool updateOnlyOnMove = true;
+            [SerializeField] private bool updateOnlyOnMove = true;
             public bool _UpdateOnlyOnMove => updateOnlyOnMove;
 
             private Vector2Int currentLevelCoordinates = new Vector2Int();
-            public Vector2Int _CurrentLevelCoordinates {
-                get {
+
+            public Vector2Int _CurrentLevelCoordinates
+            {
+                get
+                {
                     lastSeenAt = currentLevelCoordinates;
 
                     return currentLevelCoordinates;
                 }
             }
 
-            [Header("Debug")]
-            [SerializeField]
+            [Header("Debug")] [SerializeField]
             private Vector2Int lastSeenAt = new Vector2Int(Int32.MaxValue, Int32.MaxValue);
+
             public Vector2Int _LastSeenAt => lastSeenAt;
         }
 
 
-
-        [BigHeader("Basic Properties")]
-        [SerializeField]
+        [BigHeader("Basic Properties")] [SerializeField]
         private List<FogRevealer> fogRevealers = null;
+
         public List<FogRevealer> _FogRevealers => fogRevealers;
-        [SerializeField]
-        private Transform levelMidPoint = null;
+        [SerializeField] private Transform levelMidPoint = null;
         public Transform _LevelMidPoint => levelMidPoint;
-        [SerializeField]
-        [Range(1, 30)]
-        private float FogRefreshRate = 10;
+        [SerializeField] [Range(1, 30)] private float FogRefreshRate = 10;
 
-        [BigHeader("Fog Properties")]
-        [SerializeField]
-        [Range(0, 100)]
+        [BigHeader("Fog Properties")] [SerializeField] [Range(0, 100)]
         private float fogPlaneHeight = 1;
-        [SerializeField]
-        private Material fogPlaneMaterial = null;
-        [SerializeField]
-        private Color fogColor = new Color32(5, 15, 25, 255);
-        [SerializeField]
-        [Range(0, 1)]
-        private float fogPlaneAlpha = 1;
-        [SerializeField]
-        [Range(1, 5)]
-        private float fogLerpSpeed = 2.5f;
-        [Header("Debug")]
-        [SerializeField]
-        private Texture2D fogPlaneTextureLerpTarget = null;
-        [SerializeField]
-        private Texture2D fogPlaneTextureLerpBuffer = null;
 
-        [BigHeader("Level Data")]
-        [SerializeField]
+        [SerializeField] private Material fogPlaneMaterial = null;
+        [SerializeField] private Color fogColor = new Color32(5, 15, 25, 255);
+        [SerializeField] [Range(0, 1)] private float fogPlaneAlpha = 1;
+        [SerializeField] [Range(1, 5)] private float fogLerpSpeed = 2.5f;
+        [Header("Debug")] [SerializeField] private Texture2D fogPlaneTextureLerpTarget = null;
+        [SerializeField] private Texture2D fogPlaneTextureLerpBuffer = null;
+
+        [BigHeader("Level Data")] [SerializeField]
         private TextAsset LevelDataToLoad = null;
-        [SerializeField]
-        private bool saveDataOnScan = true;
-        [ShowIf("saveDataOnScan")]
-        [SerializeField]
+
+        [SerializeField] private bool saveDataOnScan = true;
+
+        [ShowIf("saveDataOnScan")] [SerializeField]
         private string levelNameToSave = "Default";
 
-        [BigHeader("Scan Properties")]
-        [SerializeField]
-        [Range(1, 300)]
+        [BigHeader("Scan Properties")] [SerializeField] [Range(1, 300)]
         private int levelDimensionX = 11;
-        [SerializeField]
-        [Range(1, 300)]
-        private int levelDimensionY = 11;
-        [SerializeField]
-        private float unitScale = 1;
-        public float _UnitScale => unitScale;
-        [SerializeField]
-        private float scanSpacingPerUnit = 0.25f;
-        [SerializeField]
-        private float rayStartHeight = 5;
-        [SerializeField]
-        private float rayMaxDistance = 10;
-        [SerializeField]
-        private LayerMask obstacleLayers = new LayerMask();
-        [SerializeField]
-        private bool ignoreTriggers = true;
 
-        [BigHeader("Debug Options")]
-        [SerializeField]
+        [SerializeField] [Range(1, 300)] private int levelDimensionY = 11;
+        [SerializeField] private float unitScale = 1;
+        public float _UnitScale => unitScale;
+        [SerializeField] private float scanSpacingPerUnit = 0.25f;
+        [SerializeField] private float rayStartHeight = 5;
+        [SerializeField] private float rayMaxDistance = 10;
+        [SerializeField] private LayerMask obstacleLayers = new LayerMask();
+        [SerializeField] private bool ignoreTriggers = true;
+
+        [BigHeader("Debug Options")] [SerializeField]
         private bool drawGizmos = false;
-        [SerializeField]
-        private bool LogOutOfRange = false;
+
+        [SerializeField] private bool LogOutOfRange = false;
 
         // External shadowcaster module
         public Shadowcaster shadowcaster { get; private set; } = new Shadowcaster();
@@ -266,9 +245,7 @@ namespace FischlWorks_FogWar
         private const string levelScanDataPath = "/LevelData";
 
 
-
         // --- --- ---
-
 
 
         private void Start()
@@ -304,16 +281,13 @@ namespace FischlWorks_FogWar
         }
 
 
-
         private void Update()
         {
             UpdateFog();
         }
 
 
-
         // --- --- ---
-
 
 
         private void CheckProperties()
@@ -348,7 +322,6 @@ namespace FischlWorks_FogWar
         }
 
 
-
         private void InitializeVariables()
         {
             // This is for faster development iteration purposes
@@ -363,7 +336,6 @@ namespace FischlWorks_FogWar
                 levelNameToSave = "Default";
             }
         }
-
 
 
         private void InitializeFog()
@@ -397,14 +369,12 @@ namespace FischlWorks_FogWar
         }
 
 
-
         private void ForceUpdateFog()
         {
             UpdateFogField();
 
             Graphics.CopyTexture(fogPlaneTextureLerpTarget, fogPlaneTextureLerpBuffer);
         }
-
 
 
         private void UpdateFog()
@@ -454,7 +424,6 @@ namespace FischlWorks_FogWar
         }
 
 
-
         private void UpdateFogField()
         {
             shadowcaster.ResetTileVisibility();
@@ -470,7 +439,6 @@ namespace FischlWorks_FogWar
 
             UpdateFogPlaneTextureTarget();
         }
-
 
 
         // Doing shader business on the script, if we pull this out as a shader pass, same operations must be repeated
@@ -494,7 +462,6 @@ namespace FischlWorks_FogWar
         }
 
 
-
         private void UpdateFogPlaneTextureTarget()
         {
             fogPlane.GetComponent<MeshRenderer>().material.SetColor("_Color", fogColor);
@@ -505,8 +472,7 @@ namespace FischlWorks_FogWar
         }
 
 
-
-        private void ScanLevel()
+        public void ScanLevel()
         {
             Debug.LogFormat("There is no level data file assigned, scanning level...");
 
@@ -549,7 +515,6 @@ namespace FischlWorks_FogWar
         }
 
 
-
         // We intend to use Application.dataPath only for accessing project files directory (only in unity editor)
 #if UNITY_EDITOR
         private void SaveScanAsLevelData()
@@ -577,7 +542,6 @@ namespace FischlWorks_FogWar
 #endif
 
 
-
         private void LoadLevelData()
         {
             Debug.LogFormat("Level scan data with a name of \"{0}\" is assigned, loading...", LevelDataToLoad.name);
@@ -596,7 +560,6 @@ namespace FischlWorks_FogWar
         }
 
 
-
         /// Adds a new FogRevealer instance to the list and returns its index
         public int AddFogRevealer(FogRevealer fogRevealer)
         {
@@ -604,7 +567,6 @@ namespace FischlWorks_FogWar
 
             return fogRevealers.Count - 1;
         }
-
 
 
         /// Removes a FogRevealer instance from the list with index
@@ -621,13 +583,11 @@ namespace FischlWorks_FogWar
         }
 
 
-
         /// Replaces the FogRevealer list with the given one
         public void ReplaceFogRevealerList(List<FogRevealer> fogRevealers)
         {
             this.fogRevealers = fogRevealers;
         }
-
 
 
         /// Checks if the given level coordinates are within level dimension range.
@@ -648,7 +608,6 @@ namespace FischlWorks_FogWar
         }
 
 
-
         /// Checks if the given world coordinates are within level dimension range.
         public bool CheckWorldGridRange(Vector3 worldCoordinates)
         {
@@ -658,7 +617,6 @@ namespace FischlWorks_FogWar
         }
 
 
-
         /// Checks if the given pair of world coordinates and additionalRadius is visible by FogRevealers.
         public bool CheckVisibility(Vector3 worldCoordinates, int additionalRadius)
         {
@@ -666,8 +624,8 @@ namespace FischlWorks_FogWar
 
             if (additionalRadius == 0)
             {
-                return shadowcaster.fogField[levelCoordinates.x][levelCoordinates.y] == 
-                    Shadowcaster.LevelColumn.ETileVisibility.Revealed;
+                return shadowcaster.fogField[levelCoordinates.x][levelCoordinates.y] ==
+                       Shadowcaster.LevelColumn.ETileVisibility.Revealed;
             }
 
             int scanResult = 0;
@@ -677,8 +635,8 @@ namespace FischlWorks_FogWar
                 for (int yIterator = -1; yIterator < additionalRadius + 1; yIterator++)
                 {
                     if (CheckLevelGridRange(new Vector2Int(
-                        levelCoordinates.x + xIterator, 
-                        levelCoordinates.y + yIterator)) == false)
+                            levelCoordinates.x + xIterator,
+                            levelCoordinates.y + yIterator)) == false)
                     {
                         scanResult = 0;
 
@@ -686,7 +644,7 @@ namespace FischlWorks_FogWar
                     }
 
                     scanResult += Convert.ToInt32(
-                        shadowcaster.fogField[levelCoordinates.x + xIterator][levelCoordinates.y + yIterator] == 
+                        shadowcaster.fogField[levelCoordinates.x + xIterator][levelCoordinates.y + yIterator] ==
                         Shadowcaster.LevelColumn.ETileVisibility.Revealed);
                 }
             }
@@ -700,7 +658,6 @@ namespace FischlWorks_FogWar
         }
 
 
-
         /// Converts unit (divided by unitScale, then rounded) world coordinates to level coordinates.
         public Vector2Int WorldToLevel(Vector3 worldCoordinates)
         {
@@ -712,16 +669,14 @@ namespace FischlWorks_FogWar
         }
 
 
-
         /// Converts level coordinates into world coordinates.
         public Vector3 GetWorldVector(Vector2Int worldCoordinates)
         {
             return new Vector3(
-                GetWorldX(worldCoordinates.x + (levelDimensionX / 2)), 
-                0, 
+                GetWorldX(worldCoordinates.x + (levelDimensionX / 2)),
+                0,
                 GetWorldY(worldCoordinates.y + (levelDimensionY / 2)));
         }
-
 
 
         /// Converts "pure" world coordinates into unit world coordinates.
@@ -729,7 +684,6 @@ namespace FischlWorks_FogWar
         {
             return new Vector2Int(GetUnitX(worldCoordinates.x), GetUnitY(worldCoordinates.z));
         }
-
 
 
         /// Converts level coordinate to corresponding unit world coordinates.
@@ -744,13 +698,11 @@ namespace FischlWorks_FogWar
         }
 
 
-
         /// Converts world coordinate to unit world coordinates.
         public int GetUnitX(float xValue)
         {
             return Mathf.RoundToInt((xValue - levelMidPoint.position.x) / unitScale);
         }
-
 
 
         /// Converts level coordinate to corresponding unit world coordinates.
@@ -765,13 +717,11 @@ namespace FischlWorks_FogWar
         }
 
 
-
         /// Converts world coordinate to unit world coordinates.
         public int GetUnitY(float yValue)
         {
             return Mathf.RoundToInt((yValue - levelMidPoint.position.z) / unitScale);
         }
-
 
 
 #if UNITY_EDITOR
@@ -795,7 +745,8 @@ namespace FischlWorks_FogWar
                 {
                     if (levelData[xIterator][yIterator] == LevelColumn.ETileState.Obstacle)
                     {
-                        if (shadowcaster.fogField[xIterator][yIterator] == Shadowcaster.LevelColumn.ETileVisibility.Revealed)
+                        if (shadowcaster.fogField[xIterator][yIterator] ==
+                            Shadowcaster.LevelColumn.ETileVisibility.Revealed)
                         {
                             Handles.color = Color.green;
                         }
@@ -826,7 +777,8 @@ namespace FischlWorks_FogWar
                             unitScale / 5.0f);
                     }
 
-                    if (shadowcaster.fogField[xIterator][yIterator] == Shadowcaster.LevelColumn.ETileVisibility.Revealed)
+                    if (shadowcaster.fogField[xIterator][yIterator] ==
+                        Shadowcaster.LevelColumn.ETileVisibility.Revealed)
                     {
                         Gizmos.color = Color.green;
 
@@ -844,11 +796,11 @@ namespace FischlWorks_FogWar
     }
 
 
-
     [AttributeUsage(AttributeTargets.Field, AllowMultiple = true, Inherited = true)]
     public class ShowIfAttribute : PropertyAttribute
     {
-        public string _BaseCondition {
+        public string _BaseCondition
+        {
             get { return mBaseCondition; }
         }
 
@@ -861,11 +813,11 @@ namespace FischlWorks_FogWar
     }
 
 
-
     [AttributeUsage(AttributeTargets.Field, AllowMultiple = true, Inherited = true)]
     public class BigHeaderAttribute : PropertyAttribute
     {
-        public string _Text {
+        public string _Text
+        {
             get { return mText; }
         }
 
@@ -876,7 +828,4 @@ namespace FischlWorks_FogWar
             mText = text;
         }
     }
-
-
-
 }

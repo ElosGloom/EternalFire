@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using DefaultNamespace;
+using FischlWorks_FogWar;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
