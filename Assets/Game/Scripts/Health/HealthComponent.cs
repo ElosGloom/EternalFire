@@ -10,12 +10,10 @@ namespace Game.Scripts.Health
         [SerializeField] private float maxHealth;
         [SerializeField] private float currentHealth;
 
-        
 
-        private void Start()
+        private void OnValidate()
         {
             currentHealth = maxHealth;
-            HealthChangeEvent?.Invoke(currentHealth, maxHealth);
         }
 
         public void TakeDamage(float damage)

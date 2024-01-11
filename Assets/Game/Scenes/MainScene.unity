@@ -663,6 +663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dfbeda9b3b3aa04bbb897826b875157, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fogOfWarHider: {fileID: 197056418}
   ObjectsToHide:
   - {fileID: 197056415}
 --- !u!114 &197056418
@@ -1435,6 +1436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dfbeda9b3b3aa04bbb897826b875157, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fogOfWarHider: {fileID: 802945856}
   ObjectsToHide:
   - {fileID: 802945853}
 --- !u!114 &802945856
@@ -2081,6 +2083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dfbeda9b3b3aa04bbb897826b875157, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fogOfWarHider: {fileID: 1022770219}
   ObjectsToHide:
   - {fileID: 1022770215}
 --- !u!1001 &1029586732
@@ -2220,6 +2223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dfbeda9b3b3aa04bbb897826b875157, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fogOfWarHider: {fileID: 1038124258}
   ObjectsToHide:
   - {fileID: 1038124255}
 --- !u!114 &1038124258
@@ -2940,6 +2944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dfbeda9b3b3aa04bbb897826b875157, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fogOfWarHider: {fileID: 1647371080}
   ObjectsToHide:
   - {fileID: 1647371077}
 --- !u!114 &1647371080
@@ -4073,6 +4078,58 @@ PrefabInstance:
       propertyPath: _playerInventory
       value: 
       objectReference: {fileID: 1863784993}
+    - target: {fileID: 778269077896948941, guid: a0ad1b17a96fb5443abe74f490ce04e2, type: 3}
+      propertyPath: lightRadiusCurve.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 778269077896948941, guid: a0ad1b17a96fb5443abe74f490ce04e2, type: 3}
+      propertyPath: lightRadiusCurve.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 778269077896948941, guid: a0ad1b17a96fb5443abe74f490ce04e2, type: 3}
+      propertyPath: lightRadiusCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 778269077896948941, guid: a0ad1b17a96fb5443abe74f490ce04e2, type: 3}
+      propertyPath: lightRadiusCurve.m_Curve.Array.data[0].value
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 778269077896948941, guid: a0ad1b17a96fb5443abe74f490ce04e2, type: 3}
+      propertyPath: lightRadiusCurve.m_Curve.Array.data[1].value
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 778269077896948941, guid: a0ad1b17a96fb5443abe74f490ce04e2, type: 3}
+      propertyPath: lightRadiusCurve.m_Curve.Array.data[0].inSlope
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 778269077896948941, guid: a0ad1b17a96fb5443abe74f490ce04e2, type: 3}
+      propertyPath: lightRadiusCurve.m_Curve.Array.data[1].inSlope
+      value: 0.4402515
+      objectReference: {fileID: 0}
+    - target: {fileID: 778269077896948941, guid: a0ad1b17a96fb5443abe74f490ce04e2, type: 3}
+      propertyPath: lightRadiusCurve.m_Curve.Array.data[0].outSlope
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 778269077896948941, guid: a0ad1b17a96fb5443abe74f490ce04e2, type: 3}
+      propertyPath: lightRadiusCurve.m_Curve.Array.data[1].inWeight
+      value: 0.2625
+      objectReference: {fileID: 0}
+    - target: {fileID: 778269077896948941, guid: a0ad1b17a96fb5443abe74f490ce04e2, type: 3}
+      propertyPath: lightRadiusCurve.m_Curve.Array.data[1].outSlope
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 778269077896948941, guid: a0ad1b17a96fb5443abe74f490ce04e2, type: 3}
+      propertyPath: lightRadiusCurve.m_Curve.Array.data[0].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 778269077896948941, guid: a0ad1b17a96fb5443abe74f490ce04e2, type: 3}
+      propertyPath: lightRadiusCurve.m_Curve.Array.data[0].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 778269077896948941, guid: a0ad1b17a96fb5443abe74f490ce04e2, type: 3}
+      propertyPath: lightRadiusCurve.m_Curve.Array.data[1].tangentMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4446452435224446330, guid: a0ad1b17a96fb5443abe74f490ce04e2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.49

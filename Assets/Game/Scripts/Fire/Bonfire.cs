@@ -9,15 +9,13 @@ namespace Game.Scripts.Fire
         [SerializeField] private HealthComponent _fireHealth;
         [SerializeField] private Inventory _playerInventory;
         [SerializeField] private float woodCooldown = 0.25f;
-        [SerializeField] private float maxLightRadius = 5;
         [SerializeField] private FogOfWarRevealer3D fogOfWarRevealer;
-        
-        
+        [SerializeField] private AnimationCurve lightRadiusCurve;
+
         private float _triggerTimeLeft;
-        private float _lightRadius;
         private float _waitTimeLeft;
 
-        private void Start()
+        private void Awake()
         {
             _fireHealth.HealthChangeEvent += OnHealthChanged;
         }
@@ -31,7 +29,6 @@ namespace Game.Scripts.Fire
         {
             if (_triggerTimeLeft < 0)
             {
-
                 if (other.GetComponent<Inventory>() == null)
                     return;
 
@@ -47,15 +44,15 @@ namespace Game.Scripts.Fire
 
         private void OnHealthChanged(float currentHp, float maxHp)
         {
-            fogOfWarRevealer.ViewRadius = _lightRadius;
-            _lightRadius = Mathf.Lerp(0, maxLightRadius, currentHp / maxHp);
+            float t = currentHp / maxHp;
+            fogOfWarRevealer.ViewRadius = lightRadiusCurve.Evaluate(t);
         }
 
-        private void OnDrawGizmos()
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(transform.position, _lightRadius);
-        }
+        // private void OnDrawGizmos()
+        // {
+        //     Gizmos.color = Color.red;
+        //     Gizmos.DrawWireSphere(transform.position, _lightRadius);
+        // }
 
         private void OnDestroy()
         {
