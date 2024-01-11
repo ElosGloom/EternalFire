@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections;
-using DefaultNamespace;
+﻿using DefaultNamespace;
+using Game.Scripts.Health;
 using UnityEngine;
 using Random = UnityEngine.Random;
 

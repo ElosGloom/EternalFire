@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using DefaultNamespace;
+using Game.Scripts.Health;
 using UnityEngine;
 
 namespace Game.Scripts

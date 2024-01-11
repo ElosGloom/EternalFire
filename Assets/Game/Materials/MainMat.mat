@@ -9,6 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: MainMat
   m_Shader: {fileID: 4800000, guid: 7ffc1bc2bbb1ef64f84b552b2d2f0619, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - TCP2_MOBILE
   - TCP2_REFLECTIONS_FRESNEL
@@ -23,6 +25,7 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -146,8 +149,8 @@ Material:
     - _RampBandsSmoothing: 0.1
     - _RampOffset: 0
     - _RampScale: 1
-    - _RampSmoothing: 0
-    - _RampThreshold: 0.551
+    - _RampSmoothing: 0.244
+    - _RampThreshold: 0.399
     - _RampType: 0
     - _ReceiveShadows: 1
     - _ReceiveShadowsOff: 1

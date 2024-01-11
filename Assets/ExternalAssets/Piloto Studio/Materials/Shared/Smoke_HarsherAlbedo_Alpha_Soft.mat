@@ -9,6 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Smoke_HarsherAlbedo_Alpha_Soft
   m_Shader: {fileID: 4800000, guid: d985403ea514e7c46bf7c2fab31b9d95, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _USESOFTALPHA_ON
   m_InvalidKeywords:
@@ -24,6 +26,7 @@ Material:
   - DistortionVectors
   - MOTIONVECTORS
   - TransparentBackface
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -81,7 +84,7 @@ Material:
     - _MiddlePointPos: 0.5
     - _MultiplyNoiseDesaturation: 1
     - _OpaqueCullMode: 2
-    - _QueueControl: 0
+    - _QueueControl: 1
     - _QueueOffset: 0
     - _ReceivesSSR: 0
     - _ReceivesSSRTransparent: 0
