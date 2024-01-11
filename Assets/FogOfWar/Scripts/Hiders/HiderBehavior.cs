@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace FOW
@@ -8,10 +6,19 @@ namespace FOW
     public abstract class HiderBehavior : MonoBehaviour
     {
         protected bool IsEnabled;
+        [SerializeField] private FogOfWarHider fogOfWarHider;
+
         protected virtual void Awake()
         {
             OnHide();
-            GetComponent<FogOfWarHider>().OnActiveChanged += OnStatusChanged;
+            fogOfWarHider.OnActiveChanged += OnStatusChanged;
+        }
+
+        private void OnValidate()
+        {
+            if (fogOfWarHider == null)
+                fogOfWarHider = GetComponent<FogOfWarHider>();
+           
         }
 
         void OnStatusChanged(bool isEnabled)
@@ -22,6 +29,12 @@ namespace FOW
             else
                 OnHide();
         }
+
+        private void OnDestroy()
+        {
+            fogOfWarHider.OnActiveChanged -= OnStatusChanged;
+        }
+
         protected abstract void OnReveal();
         protected abstract void OnHide();
     }

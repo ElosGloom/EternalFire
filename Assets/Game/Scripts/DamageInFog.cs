@@ -1,29 +1,22 @@
-﻿using System;
-using FOW;
+﻿using FOW;
 using Game.Scripts.Health;
 using UnityEngine;
 
 namespace Game.Scripts
 {
     [RequireComponent(typeof(FogOfWarHider))]
-    public class DamageInFog : MonoBehaviour
+    public class DamageInFog : HiderBehavior
     {
-        [SerializeField] private FogOfWarHider hider;
         [SerializeField] private DamageOverTime damageOverTime;
 
-        private void Awake()
+        protected override void OnReveal()
         {
-            hider.OnActiveChanged += OnStatusChanged;
+            damageOverTime.enabled = false;
         }
 
-        private void OnDestroy()
+        protected override void OnHide()
         {
-            hider.OnActiveChanged -= OnStatusChanged;
-        }
-
-        private void OnStatusChanged(bool isActive)
-        {
-            damageOverTime.enabled = !isActive;
+            damageOverTime.enabled = true;
         }
     }
 }
