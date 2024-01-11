@@ -1303,6 +1303,9 @@
      <Reference Include="Unity.RenderPipelines.Core.Runtime">
      <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
      </Reference>
+     <Reference Include="com.unity.cinemachine.editor">
+     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Runtime">
      <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
      </Reference>
@@ -1419,6 +1422,9 @@
      </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Editor">
      <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Cinemachine">
+     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>
