@@ -716,7 +716,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 778269077896948941, guid: a0ad1b17a96fb5443abe74f490ce04e2, type: 3}
       propertyPath: lightRadiusCurve.m_Curve.Array.data[0].value
-      value: -2
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 778269077896948941, guid: a0ad1b17a96fb5443abe74f490ce04e2, type: 3}
       propertyPath: lightRadiusCurve.m_Curve.Array.data[1].value
@@ -724,7 +724,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 778269077896948941, guid: a0ad1b17a96fb5443abe74f490ce04e2, type: 3}
       propertyPath: lightRadiusCurve.m_Curve.Array.data[0].inSlope
-      value: 7
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 778269077896948941, guid: a0ad1b17a96fb5443abe74f490ce04e2, type: 3}
       propertyPath: lightRadiusCurve.m_Curve.Array.data[1].inSlope
@@ -732,7 +732,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 778269077896948941, guid: a0ad1b17a96fb5443abe74f490ce04e2, type: 3}
       propertyPath: lightRadiusCurve.m_Curve.Array.data[0].outSlope
-      value: 7
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 778269077896948941, guid: a0ad1b17a96fb5443abe74f490ce04e2, type: 3}
       propertyPath: lightRadiusCurve.m_Curve.Array.data[1].inWeight
@@ -753,6 +753,10 @@ PrefabInstance:
     - target: {fileID: 778269077896948941, guid: a0ad1b17a96fb5443abe74f490ce04e2, type: 3}
       propertyPath: lightRadiusCurve.m_Curve.Array.data[1].tangentMode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855207084001381562, guid: a0ad1b17a96fb5443abe74f490ce04e2, type: 3}
+      propertyPath: UnobscuredRadius
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4446452435224446330, guid: a0ad1b17a96fb5443abe74f490ce04e2, type: 3}
       propertyPath: m_LocalPosition.x
