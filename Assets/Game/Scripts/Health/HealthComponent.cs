@@ -6,7 +6,7 @@ namespace Game.Scripts.Health
     public class HealthComponent : MonoBehaviour
     {
         public event Action<float, float> HealthChangeEvent;
-        public event Action OnDeathEvent;
+        public event Action DeathEvent;
         [SerializeField] private float maxHealth;
         [SerializeField] private float currentHealth;
 
@@ -21,9 +21,9 @@ namespace Game.Scripts.Health
             currentHealth -= damage;
 
 
-            if (currentHealth < 1)
+            if (currentHealth <=0)
             {
-                OnDeathEvent?.Invoke();
+                DeathEvent?.Invoke();
             }
 
             HealthChangeEvent?.Invoke(currentHealth, maxHealth);
@@ -39,5 +39,6 @@ namespace Game.Scripts.Health
 
             HealthChangeEvent?.Invoke(currentHealth, maxHealth);
         }
+       
     }
 }

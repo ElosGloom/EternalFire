@@ -51,6 +51,7 @@
      <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\ETFXMouseOrbit.cs" />
      <Compile Include="Assets\Game\Scripts\Inventory\InventoryResource.cs" />
      <Compile Include="Assets\Game\Scripts\GUI\HealthBar.cs" />
+     <Compile Include="Assets\Game\Scripts\LevelManager\Level.cs" />
      <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\ETFXFireProjectile.cs" />
      <Compile Include="Assets\Game\Scripts\Inventory\Inventory.cs" />
      <Compile Include="Assets\FogOfWar\Scripts\MiniMapFrustum.cs" />
@@ -93,6 +94,7 @@
      <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\ETFXButtonScript.cs" />
      <Compile Include="Assets\Game\Scripts\GUI\InventoryView.cs" />
      <Compile Include="Assets\FogOfWar\Demo\Scripts\BlinkingRevealer.cs" />
+     <Compile Include="Assets\Game\Scripts\LevelManager\LevelManager.cs" />
      <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\ETFXLoopScript.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Environment\Water\Other" />
@@ -481,6 +483,7 @@
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_Ramp Shading.txt" />
      <Folder Include="Assets\Game\Scripts\Utils" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Materials\Misc\Explosions" />
+     <Folder Include="Assets\Game\Scripts\LevelManager" />
      <Folder Include="Assets\JMO Assets\Toony Colors Pro\Textures" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Environment\Fire\Cartoon\Field" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Sword\Hit\SwordHit" />
@@ -574,6 +577,7 @@
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_HSV.txt" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Materials\Misc\Portals" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Upgrade" />
+     <Folder Include="Assets\Game\Prefabs\Levels" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\Hybrid\TCP2 Hybrid URP Support.cginc" />
      <Folder Include="Assets\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\Water" />
      <Folder Include="Assets\ExternalAssets\Male Peasant Pack Cute Series\01 Customize Character Here\02 Attach Weapons and Accessories" />
