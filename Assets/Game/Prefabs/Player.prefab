@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 1939546171096627623}
   - component: {fileID: 7133547810872059515}
   - component: {fileID: 1790655269783735814}
+  - component: {fileID: 6588357532893986978}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -56,7 +57,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  currentHealth: 0
+  currentHealth: 100
 --- !u!114 &4922761849981307239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,8 +216,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3b71fe8c34f458083afab92d4e02398, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hider: {fileID: 1939546171096627623}
+  fogOfWarHider: {fileID: 1939546171096627623}
   damageOverTime: {fileID: 7133547810872059515}
+--- !u!114 &6588357532893986978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4922761849981307234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7050efd5393f48a08df68482fcb34853, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fogOfWarHider: {fileID: 1939546171096627623}
+  torchPrefab: {fileID: 7954399407431549603, guid: a1ad84ad79ba8a54db830ca0a4dfe370, type: 3}
+  player: {fileID: 0}
 --- !u!1 &6265820264253018980
 GameObject:
   m_ObjectHideFlags: 0

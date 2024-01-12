@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,11 @@ namespace FOW
     public class HiderDisableObjects : HiderBehavior
     {
         public GameObject[] ObjectsToHide;
+
+        private void Start()
+        {
+            OnHide();
+        }
 
         protected override void OnHide()
         {

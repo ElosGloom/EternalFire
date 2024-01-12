@@ -8,9 +8,9 @@ namespace FOW
         protected bool IsEnabled;
         [SerializeField] private FogOfWarHider fogOfWarHider;
 
-        protected virtual void Awake()
+        protected virtual void OnEnable()
         {
-            OnHide();
+            // OnHide();
             fogOfWarHider.OnActiveChanged += OnStatusChanged;
         }
 
@@ -30,7 +30,7 @@ namespace FOW
                 OnHide();
         }
 
-        private void OnDestroy()
+        private void OnDisable()
         {
             fogOfWarHider.OnActiveChanged -= OnStatusChanged;
         }
