@@ -1,22 +1,14 @@
-﻿using FOW;
-using Game.Scripts.Health;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Game.Scripts.Fire
 {
-    public class Bonfire : MonoBehaviour
+    public class Bonfire : FireSystemMember
     {
         [SerializeField] private float woodCooldown = 0.25f;
-        [SerializeField] private FogOfWarRevealer3D fogOfWarRevealer;
-        [SerializeField] private AnimationCurve lightRadiusCurve;
 
         private float _triggerTimeLeft;
         private float _waitTimeLeft;
 
-        private void Awake()
-        {
-            FireSystem.Instance.HealthComponent.HealthChangeEvent += OnHealthChanged;
-        }
 
         private void Update()
         {
@@ -31,7 +23,7 @@ namespace Game.Scripts.Fire
                 {
                     return;
                 }
-                
+
 
                 var canRemoveItem = inventory.TryRemoveItem("Wood", 1);
 
@@ -41,23 +33,6 @@ namespace Game.Scripts.Fire
                     FireSystem.Instance.HealthComponent.Healing(3);
                 }
             }
-        }
-
-        private void OnHealthChanged(float currentHp, float maxHp)
-        {
-            float t = currentHp / maxHp;
-            fogOfWarRevealer.ViewRadius = lightRadiusCurve.Evaluate(t);
-        }
-
-        // private void OnDrawGizmos()
-        // {
-        //     Gizmos.color = Color.red;
-        //     Gizmos.DrawWireSphere(transform.position, _lightRadius);
-        // }
-
-        private void OnDestroy()
-        {
-            FireSystem.Instance.HealthComponent.HealthChangeEvent -= OnHealthChanged;
         }
     }
 }

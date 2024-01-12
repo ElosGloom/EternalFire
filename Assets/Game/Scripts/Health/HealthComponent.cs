@@ -10,6 +10,9 @@ namespace Game.Scripts.Health
         [SerializeField] private float maxHealth;
         [SerializeField] private float currentHealth;
 
+        public float MaxHealth => maxHealth;
+
+        public float CurrentHealth => currentHealth;
 
         private void OnValidate()
         {

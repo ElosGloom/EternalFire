@@ -82,6 +82,7 @@
      <Compile Include="Assets\FogOfWar\Demo\Scripts\TeamsDemo.cs" />
      <Compile Include="Assets\Game\Scripts\GUI\InventoryCellView.cs" />
      <Compile Include="Assets\Game\Scripts\Tree.cs" />
+     <Compile Include="Assets\Game\Scripts\Fire\FireSystemMember.cs" />
      <Compile Include="Assets\FogOfWar\Scripts\URP\FogOfWarPass.cs" />
      <Compile Include="Assets\ExternalAssets\Epic Toon FX\Scripts\ETFXPitchRandomizer.cs" />
      <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\VFX Library\ParticleEffectsLibrary.cs" />
@@ -110,6 +111,7 @@
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Magic\Aura" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Environment\Water\Bubbles" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+     <Folder Include="Assets\Game\Prefabs\Fire" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Sword\Slash\SwordSlashThin" />
      <Folder Include="Assets\JMO Assets\Toony Colors Pro\Documentation\Documentation Data" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Interactive\Hearts" />
