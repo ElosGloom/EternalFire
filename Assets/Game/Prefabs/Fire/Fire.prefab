@@ -11,10 +11,8 @@ GameObject:
   - component: {fileID: 4446452435224446330}
   - component: {fileID: 7444965559574786481}
   - component: {fileID: 1437661926093191674}
-  - component: {fileID: 6698692099062109178}
   - component: {fileID: 778269077896948941}
   - component: {fileID: 2279726752599032976}
-  - component: {fileID: 942335025256671004}
   - component: {fileID: 1855207084001381562}
   m_Layer: 0
   m_Name: Fire
@@ -83,20 +81,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 2.23
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6698692099062109178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4446452435224446331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d26e671f77f513948935bb91b3279f27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 100
 --- !u!114 &778269077896948941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,13 +93,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41d1f53ca69745709f0abd0ce8191178, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fireHealth: {fileID: 6698692099062109178}
-  _playerInventory: {fileID: 0}
   woodCooldown: 0.25
   fogOfWarRevealer: {fileID: 1855207084001381562}
   lightRadiusCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: -0.5
+      inSlope: 5.5
+      outSlope: 5.5
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 5
+      inSlope: 0.4402515
+      outSlope: 1
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.2625
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ec370604d784f609d1ab16016096b30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireHealth: {fileID: 6698692099062109178}
+  fireHealth: {fileID: 0}
   mainFire: {fileID: 543668418331726719}
   embersSmall: {fileID: 543668418882673804}
   glow: {fileID: 1278017376494972146}
@@ -208,20 +208,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &942335025256671004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4446452435224446331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fe41e58eeaa4d94b1b427d06159ba48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damagePerSecond: 1
-  healthComponent: {fileID: 6698692099062109178}
 --- !u!114 &1855207084001381562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,7 +223,7 @@ MonoBehaviour:
   ViewRadius: 5
   SoftenDistance: 1
   ViewAngle: 360
-  UnobscuredRadius: 1
+  UnobscuredRadius: 0
   Opacity: 1
   AddCorners: 0
   RevealHiderInFadeOutZonePercentage: 0.5

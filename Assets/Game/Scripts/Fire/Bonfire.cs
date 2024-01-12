@@ -6,8 +6,6 @@ namespace Game.Scripts.Fire
 {
     public class Bonfire : MonoBehaviour
     {
-        [SerializeField] private HealthComponent _fireHealth;
-        [SerializeField] private Inventory _playerInventory;
         [SerializeField] private float woodCooldown = 0.25f;
         [SerializeField] private FogOfWarRevealer3D fogOfWarRevealer;
         [SerializeField] private AnimationCurve lightRadiusCurve;
@@ -17,7 +15,7 @@ namespace Game.Scripts.Fire
 
         private void Awake()
         {
-            _fireHealth.HealthChangeEvent += OnHealthChanged;
+            FireSystem.Instance.HealthComponent.HealthChangeEvent += OnHealthChanged;
         }
 
         private void Update()
@@ -29,15 +27,18 @@ namespace Game.Scripts.Fire
         {
             if (_triggerTimeLeft < 0)
             {
-                if (other.GetComponent<Inventory>() == null)
+                if (!other.TryGetComponent(out Inventory inventory))
+                {
                     return;
+                }
+                
 
-                var canRemoveItem = _playerInventory.TryRemoveItem("Wood", 1);
+                var canRemoveItem = inventory.TryRemoveItem("Wood", 1);
 
                 if (canRemoveItem)
                 {
                     _triggerTimeLeft = woodCooldown;
-                    _fireHealth.Healing(3);
+                    FireSystem.Instance.HealthComponent.Healing(3);
                 }
             }
         }
@@ -56,7 +57,7 @@ namespace Game.Scripts.Fire
 
         private void OnDestroy()
         {
-            _fireHealth.HealthChangeEvent -= OnHealthChanged;
+            FireSystem.Instance.HealthComponent.HealthChangeEvent -= OnHealthChanged;
         }
     }
 }

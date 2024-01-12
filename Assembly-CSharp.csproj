@@ -52,6 +52,8 @@
      <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\ETFXMouseOrbit.cs" />
      <Compile Include="Assets\Game\Scripts\Inventory\InventoryResource.cs" />
      <Compile Include="Assets\Game\Scripts\GUI\HealthBar.cs" />
+     <Compile Include="Assets\Game\Scripts\Fire\Torch.cs" />
+     <Compile Include="Assets\Game\Scripts\Fire\FireSystem.cs" />
      <Compile Include="Assets\Game\Scripts\LevelManager\Level.cs" />
      <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\ETFXFireProjectile.cs" />
      <Compile Include="Assets\Game\Scripts\Inventory\Inventory.cs" />
