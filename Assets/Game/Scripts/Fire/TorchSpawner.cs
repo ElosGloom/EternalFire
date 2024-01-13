@@ -10,6 +10,8 @@ namespace Game.Scripts.Fire
         [SerializeField] private GameObject torchPrefab;
         [SerializeField] private Transform fireParent;
         private float _searchRadius = 5f;
+        [SerializeField] private FireSystem _fireSystem;
+        
 
         private void Update()
         {
@@ -41,6 +43,8 @@ namespace Game.Scripts.Fire
                 {
                     Vector3 playerPosition = transform.position;
                     Instantiate(torchPrefab, playerPosition, Quaternion.identity, fireParent);
+                    
+                    
                 }
             }
         }

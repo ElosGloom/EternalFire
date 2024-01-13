@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8763320216263017897}
   - component: {fileID: 8642621137821779582}
   - component: {fileID: 218928175897987171}
+  - component: {fileID: 3911548400996617138}
   m_Layer: 0
   m_Name: FireSystem
   m_TagString: Untagged
@@ -52,7 +53,7 @@ MonoBehaviour:
   - {fileID: 5968571351098433712}
   - {fileID: 5445961019722372657}
   healthComponent: {fileID: 8642621137821779582}
-  Torches: []
+  _torches: []
 --- !u!114 &8642621137821779582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,6 +82,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damagePerSecond: 1
   healthComponent: {fileID: 8642621137821779582}
+--- !u!114 &3911548400996617138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789050309126017628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d170b6a30e1411eb32ca6f50ff42fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4710491620252515068
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -7,9 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToonyColorsPro2.Demo", "ToonyColorsPro2.Demo.csproj", "{69702be0-5567-1fd5-0d30-d7954500c887}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToonyColorsPro.Runtime", "ToonyColorsPro.Runtime.csproj", "{6efd43f5-0ede-5f22-59e5-90f0e89daf92}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{2a7cc7b5-41d4-f717-0f18-2331f887d9f6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToonyColorsPro.Runtime", "ToonyColorsPro.Runtime.csproj", "{6efd43f5-0ede-5f22-59e5-90f0e89daf92}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToonyColorsPro.Demo.Editor", "ToonyColorsPro.Demo.Editor.csproj", "{affdc108-f496-64c0-b1c9-ffdd2d3d9f80}"
 EndProject
@@ -24,10 +24,10 @@ Global
 		{a8d1236b-72a1-5781-145c-9041f6fd5761}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69702be0-5567-1fd5-0d30-d7954500c887}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{69702be0-5567-1fd5-0d30-d7954500c887}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6efd43f5-0ede-5f22-59e5-90f0e89daf92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6efd43f5-0ede-5f22-59e5-90f0e89daf92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2a7cc7b5-41d4-f717-0f18-2331f887d9f6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2a7cc7b5-41d4-f717-0f18-2331f887d9f6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6efd43f5-0ede-5f22-59e5-90f0e89daf92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6efd43f5-0ede-5f22-59e5-90f0e89daf92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{affdc108-f496-64c0-b1c9-ffdd2d3d9f80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{affdc108-f496-64c0-b1c9-ffdd2d3d9f80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
