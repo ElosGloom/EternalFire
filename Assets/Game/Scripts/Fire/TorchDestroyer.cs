@@ -14,7 +14,7 @@ namespace Game.Scripts.Fire
 
         private void DestroyLastTorch()
         {
-            if (FireSystem.Instance.TryUnregisterLastTorch(out var lastTorch))
+            if (FireSystem.Instance.TryDisconnectLastTorch(out var lastTorch))
             {
                 Destroy(lastTorch.gameObject);
             }

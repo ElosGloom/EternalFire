@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using FOW;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Game.Scripts.Fire
 {
@@ -9,9 +6,8 @@ namespace Game.Scripts.Fire
     {
         [SerializeField] private GameObject torchPrefab;
         [SerializeField] private Transform fireParent;
-        private float _searchRadius = 5f;
-        [SerializeField] private FireSystem _fireSystem;
-        
+        private float _minimalSpawnRadius = 5f;
+
 
         private void Update()
         {
@@ -20,32 +16,12 @@ namespace Game.Scripts.Fire
 
         private void SearchingFire()
         {
-            FogOfWarRevealer3D[] allObjects = FindObjectsOfType<FogOfWarRevealer3D>();
+            Vector3 nearestObject = FireSystem.Instance.SearchNearestMemberPosition(transform.position);
 
-            FogOfWarRevealer3D nearestObject = null;
-            float nearestDistance = Mathf.Infinity;
-
-
-            foreach (FogOfWarRevealer3D obj in allObjects)
+            if (Vector3.Distance(transform.position, nearestObject) >= _minimalSpawnRadius)
             {
-                float distance = Vector3.Distance(transform.position, obj.transform.position);
-
-                if (distance < nearestDistance)
-                {
-                    nearestObject = obj;
-                    nearestDistance = distance;
-                }
-            }
-
-            if (nearestObject != null)
-            {
-                if (Vector3.Distance(transform.position, nearestObject.transform.position) >= _searchRadius)
-                {
-                    Vector3 playerPosition = transform.position;
-                    Instantiate(torchPrefab, playerPosition, Quaternion.identity, fireParent);
-                    
-                    
-                }
+                Vector3 playerPosition = transform.position;
+                Instantiate(torchPrefab, playerPosition, Quaternion.identity, fireParent);
             }
         }
     }

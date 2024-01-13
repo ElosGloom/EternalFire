@@ -49,11 +49,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3009d8553bd247a6a9a7680605af0521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bonfires:
-  - {fileID: 5968571351098433712}
-  - {fileID: 5445961019722372657}
   healthComponent: {fileID: 8642621137821779582}
-  _torches: []
+  connectedMembers:
+  - {fileID: 5968571351098433712}
 --- !u!114 &8642621137821779582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,17 +161,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0ad1b17a96fb5443abe74f490ce04e2, type: 3}
---- !u!114 &5445961019722372657 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 778269077896948941, guid: a0ad1b17a96fb5443abe74f490ce04e2, type: 3}
-  m_PrefabInstance: {fileID: 4710491620252515068}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41d1f53ca69745709f0abd0ce8191178, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &9001569504599457670 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4446452435224446330, guid: a0ad1b17a96fb5443abe74f490ce04e2, type: 3}
