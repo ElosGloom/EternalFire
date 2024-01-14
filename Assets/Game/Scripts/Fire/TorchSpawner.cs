@@ -6,8 +6,10 @@ namespace Game.Scripts.Fire
     {
         [SerializeField] private Torch torchPrefab;
         [SerializeField] private Transform fireParent;
-        private const float  MinSpawnRadius = 5f;
-        private const  float MaxSpawnRadius = 5.5f;
+        [SerializeField] private Inventory.Inventory inventory;
+
+        private const float MinSpawnRadius = 5f;
+        private const float MaxSpawnRadius = 5.5f;
 
 
         private void Update()
@@ -23,9 +25,13 @@ namespace Game.Scripts.Fire
             var distance = Vector3.Distance(spawnerPosition, nearestMember.transform.position);
             if (distance > MinSpawnRadius && distance < MaxSpawnRadius)
             {
-                var torch = Instantiate(torchPrefab, spawnerPosition, Quaternion.identity, fireParent);
+                bool canRemoveItems = inventory.TryRemoveItem("Torch", 1);
+                if (canRemoveItems)
+                {
+                    var torch = Instantiate(torchPrefab, spawnerPosition, Quaternion.identity, fireParent);
 
-                FireSystem.Instance.ConnectNewTorch(torch, nearestMember);
+                    FireSystem.Instance.ConnectNewTorch(torch, nearestMember);
+                }
             }
         }
     }

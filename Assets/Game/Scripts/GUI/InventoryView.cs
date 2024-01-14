@@ -6,7 +6,7 @@ namespace Game.Scripts.GUI
     public class InventoryView : MonoBehaviour
     {
         [SerializeField] private SerializableDictionary<string, InventoryCellView> cellViews;
-        [SerializeField] private Inventory inventory;
+        [SerializeField] private Inventory.Inventory inventory;
 
 
         private void Start()
@@ -16,7 +16,11 @@ namespace Game.Scripts.GUI
 
         public void OnItemCountChange(string itemName, int itemCount)
         {
-            cellViews[itemName].ItemCounterText.text = itemCount.ToString();
+            if (cellViews.ContainsKey(itemName))
+            {
+                cellViews[itemName].ItemCounterText.text = itemCount.ToString();
+            }
+           
         }
 
         private void OnDestroy()

@@ -7,7 +7,7 @@ namespace Game.Scripts
     {
         
         [SerializeField] private float destroyDelay;
-        [SerializeField] private Inventory _inventory;
+        [SerializeField] private Inventory.Inventory _inventory;
 
         private void OnTriggerEnter(Collider other)
         {

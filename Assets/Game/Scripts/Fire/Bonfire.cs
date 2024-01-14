@@ -19,7 +19,7 @@ namespace Game.Scripts.Fire
         {
             if (_triggerTimeLeft < 0)
             {
-                if (!other.TryGetComponent(out Inventory inventory))
+                if (!other.TryGetComponent(out Inventory.Inventory inventory))
                 {
                     return;
                 }

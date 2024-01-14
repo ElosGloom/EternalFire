@@ -14,11 +14,10 @@ namespace Game.Scripts
         [SerializeField] private Mesh destroyedMesh;
         [SerializeField] private Collider treeTrigger;
         [SerializeField] private Collider treeCollider;
-        public int woodCount;
         [SerializeField] private Rigidbody woodPrefab;
         [SerializeField] private Transform woodSpawnPoint;
         [SerializeField] private int shootOutForce;
-
+        [SerializeField] private int woodCount;
 
         private void Start()
         {

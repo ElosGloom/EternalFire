@@ -1,24 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
+using Game.Scripts.Utils;
 using UnityEngine;
 
-namespace Game.Scripts
+namespace Game.Scripts.Inventory
 {
     public class Inventory : MonoBehaviour
     {
         public Action<string, int> ItemCountChangeEvent;
 
-        private Dictionary<string, int> _items = new();
+        [SerializeField] private SerializableDictionary<string, int> items = new();
 
 
         public void AddItem(string itemName, int itemCount)
         {
-            if (!_items.ContainsKey(itemName))
-                _items.Add(itemName, itemCount);
+            if (!items.ContainsKey(itemName))
+                items.Add(itemName, itemCount);
             else
-                _items[itemName] += itemCount;
+                items[itemName] += itemCount;
 
-            ItemCountChangeEvent?.Invoke(itemName, _items[itemName]);
+            ItemCountChangeEvent?.Invoke(itemName, items[itemName]);
         }
 
         public bool TryRemoveItem(string itemName, int itemCount)
@@ -26,14 +26,14 @@ namespace Game.Scripts
             if (itemCount < 0)
                 return false;
 
-            if (!_items.ContainsKey(itemName))
+            if (!items.ContainsKey(itemName))
                 return false;
 
-            if (_items[itemName] < itemCount)
+            if (items[itemName] < itemCount)
                 return false;
 
-            _items[itemName] -= itemCount;
-            ItemCountChangeEvent?.Invoke(itemName, _items[itemName]);
+            items[itemName] -= itemCount;
+            ItemCountChangeEvent?.Invoke(itemName, items[itemName]);
             return true;
         }
     }
