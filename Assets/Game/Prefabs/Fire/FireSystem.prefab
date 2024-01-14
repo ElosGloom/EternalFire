@@ -52,6 +52,7 @@ MonoBehaviour:
   healthComponent: {fileID: 8642621137821779582}
   connectedMembers:
   - {fileID: 5968571351098433712}
+  fireConnectionFX: {fileID: 8875821634432544740, guid: 27fcb011b6ba8be479a592db5c0fee0b, type: 3}
 --- !u!114 &8642621137821779582
 MonoBehaviour:
   m_ObjectHideFlags: 0

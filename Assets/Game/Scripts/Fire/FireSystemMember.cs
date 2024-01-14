@@ -7,7 +7,9 @@ namespace Game.Scripts.Fire
     {
         [SerializeField] private FogOfWarRevealer3D fogOfWarRevealer;
         [SerializeField] private AnimationCurve lightRadiusCurve;
+        [SerializeField] private ParticleSystemForceField forceField;
 
+        public ParticleSystemForceField ForceField => forceField;
 
         private void Awake()
         {

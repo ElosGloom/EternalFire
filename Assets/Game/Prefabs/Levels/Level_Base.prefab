@@ -910,7 +910,7 @@ PrefabInstance:
     - target: {fileID: 6588357532893986978, guid: 1d6770becb6c0664ea46c884bf839d6b, type: 3}
       propertyPath: torchPrefab
       value: 
-      objectReference: {fileID: 4832082177534496341, guid: 6a8c932037be4044aa767e1997128aba, type: 3}
+      objectReference: {fileID: 1554922114054119494, guid: 6a8c932037be4044aa767e1997128aba, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

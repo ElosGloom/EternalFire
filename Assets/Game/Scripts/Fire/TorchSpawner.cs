@@ -4,24 +4,28 @@ namespace Game.Scripts.Fire
 {
     public class TorchSpawner : MonoBehaviour
     {
-        [SerializeField] private GameObject torchPrefab;
+        [SerializeField] private Torch torchPrefab;
         [SerializeField] private Transform fireParent;
-        private float _minimalSpawnRadius = 5f;
+        private const float  MinSpawnRadius = 5f;
+        private const  float MaxSpawnRadius = 5.5f;
 
 
         private void Update()
         {
-            SearchingFire();
+            TrySpawnTorch();
         }
 
-        private void SearchingFire()
+        private void TrySpawnTorch()
         {
-            Vector3 nearestObject = FireSystem.Instance.SearchNearestMemberPosition(transform.position);
+            var spawnerPosition = transform.position;
+            var nearestMember = FireSystem.Instance.SearchNearestMember(spawnerPosition);
 
-            if (Vector3.Distance(transform.position, nearestObject) >= _minimalSpawnRadius)
+            var distance = Vector3.Distance(spawnerPosition, nearestMember.transform.position);
+            if (distance > MinSpawnRadius && distance < MaxSpawnRadius)
             {
-                Vector3 playerPosition = transform.position;
-                Instantiate(torchPrefab, playerPosition, Quaternion.identity, fireParent);
+                var torch = Instantiate(torchPrefab, spawnerPosition, Quaternion.identity, fireParent);
+
+                FireSystem.Instance.ConnectNewTorch(torch, nearestMember);
             }
         }
     }
