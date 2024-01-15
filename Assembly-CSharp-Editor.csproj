@@ -46,10 +46,12 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\ExternalAssets\Piloto Studio\Readme\Scripts\Editor\ReadmeHierarchy.cs" />
+     <Compile Include="Assets\ExternalAssets\Hovl Studio\Render Pipelines support\Editor\ShaderChanger.cs" />
      <Compile Include="Assets\Game\Scripts\Utils\Editor\SerializableDictionaryPropertyDrawer.cs" />
      <Compile Include="Assets\ExternalAssets\Piloto Studio\Readme\Scripts\Editor\ReadmeBehaviourEditor.cs" />
      <Compile Include="Assets\ExternalAssets\Piloto Studio\Readme\Scripts\Editor\ReadmeEditor.cs" />
      <Compile Include="Assets\ExternalAssets\Piloto Studio\Readme\Scripts\Editor\ReadmeEditorStyles.cs" />
+     <Folder Include="Assets\ExternalAssets\Hovl Studio\Render Pipelines support\Editor" />
      <Folder Include="Assets\Game\Scripts\Utils\Editor" />
      <Folder Include="Assets\ExternalAssets\Piloto Studio\Readme\Scripts\Editor" />
      <Reference Include="UnityEngine">

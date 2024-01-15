@@ -540,7 +540,6 @@ GameObject:
   - component: {fileID: 1437661926093191674}
   - component: {fileID: 778269077896948941}
   - component: {fileID: 2279726752599032976}
-  - component: {fileID: 1855207084001381562}
   m_Layer: 0
   m_Name: Fire
   m_TagString: Untagged
@@ -561,9 +560,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 265260524141304812}
+  - {fileID: 8928008195345495115}
   - {fileID: 4196864003795451007}
-  - {fileID: 5990541802380946885}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &7444965559574786481
@@ -620,7 +618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41d1f53ca69745709f0abd0ce8191178, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fogOfWarRevealer: {fileID: 1855207084001381562}
+  fogOfWarRevealer: {fileID: 8180118373543962301}
   lightRadiusCurve:
     serializedVersion: 2
     m_Curve:
@@ -647,6 +645,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   forceField: {fileID: 6144946305796596997}
   woodCooldown: 0.25
+  revealer: {fileID: 6143447322036241141}
 --- !u!114 &2279726752599032976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -736,60 +735,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1855207084001381562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4446452435224446331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c8c92e8943a9914ba89720ba5fcf806, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ViewRadius: 5
-  SoftenDistance: 1
-  ViewAngle: 360
-  UnobscuredRadius: 0
-  Opacity: 1
-  AddCorners: 0
-  RevealHiderInFadeOutZonePercentage: 0.5
-  EyeOffset: 0
-  VisionHeight: 3
-  VisionHeightSoftenDistance: 1.5
-  ObstacleMask:
-    serializedVersion: 2
-    m_Bits: 0
-  RaycastResolution: 0.5
-  ResolveEdge: 1
-  MaxEdgeResolveIterations: 10
-  NumExtraIterations: 4
-  NumExtraRaysOnIteration: 3
-  MaxAcceptableEdgeAngleDifference: 0.005
-  EdgeDstThreshold: 0.1
-  DoubleHitMaxAngleDelta: 15
-  StartRevealerAsStatic: 0
-  StaticRevealer: 0
-  FogOfWarID: 0
-  IndexID: 0
-  NumberOfPoints: 0
-  Angles: []
-  Radii: []
-  AreHits: 
-  DebugMode: 0
-  DrawInitialRays: 0
-  SegmentTest: 0
-  DrawSegments: 0
-  DrawOutline: 0
-  DrawExpectedNextPoints: 0
-  DrawIteritiveRays: 0
-  DrawEdgeResolveRays: 0
-  LogNumRaycasts: 0
-  NumRayCasts: 0
-  DrawRayNoise: 0
-  DrawExtraCastLines: 0
-  hidersSeen: []
 --- !u!1 &4637814114507012179
 GameObject:
   m_ObjectHideFlags: 0
@@ -814,14 +759,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4637814114507012179}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 543668418622850941}
   - {fileID: 8430607159734047427}
-  m_Father: {fileID: 4446452435224446330}
+  m_Father: {fileID: 8928008195345495115}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5756831058239959635
 GameObject:
@@ -854,7 +799,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4446452435224446330}
+  m_Father: {fileID: 8928008195345495115}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &4825881755442322757
 Light:
@@ -941,6 +886,94 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1 &6143447322036241141
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8928008195345495115}
+  - component: {fileID: 8180118373543962301}
+  m_Layer: 0
+  m_Name: Revealer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8928008195345495115
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6143447322036241141}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 265260524141304812}
+  - {fileID: 5990541802380946885}
+  m_Father: {fileID: 4446452435224446330}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8180118373543962301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6143447322036241141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8c92e8943a9914ba89720ba5fcf806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ViewRadius: 5
+  SoftenDistance: 1
+  ViewAngle: 360
+  UnobscuredRadius: 0
+  Opacity: 1
+  AddCorners: 0
+  RevealHiderInFadeOutZonePercentage: 0.5
+  EyeOffset: 0
+  VisionHeight: 3
+  VisionHeightSoftenDistance: 1.5
+  ObstacleMask:
+    serializedVersion: 2
+    m_Bits: 0
+  RaycastResolution: 0.5
+  ResolveEdge: 1
+  MaxEdgeResolveIterations: 10
+  NumExtraIterations: 4
+  NumExtraRaysOnIteration: 3
+  MaxAcceptableEdgeAngleDifference: 0.005
+  EdgeDstThreshold: 0.1
+  DoubleHitMaxAngleDelta: 15
+  StartRevealerAsStatic: 0
+  StaticRevealer: 0
+  FogOfWarID: 0
+  IndexID: 0
+  NumberOfPoints: 0
+  Angles: []
+  Radii: []
+  AreHits: 
+  DebugMode: 0
+  DrawInitialRays: 0
+  SegmentTest: 0
+  DrawSegments: 0
+  DrawOutline: 0
+  DrawExpectedNextPoints: 0
+  DrawIteritiveRays: 0
+  DrawEdgeResolveRays: 0
+  LogNumRaycasts: 0
+  NumRayCasts: 0
+  DrawRayNoise: 0
+  DrawExtraCastLines: 0
+  hidersSeen: []
 --- !u!1001 &4446452433918663572
 PrefabInstance:
   m_ObjectHideFlags: 0

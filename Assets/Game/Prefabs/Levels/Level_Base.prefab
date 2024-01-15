@@ -1047,6 +1047,14 @@ PrefabInstance:
       propertyPath: torchPrefab
       value: 
       objectReference: {fileID: 1554922114054119494, guid: 6a8c932037be4044aa767e1997128aba, type: 3}
+    - target: {fileID: 6588357532893986978, guid: 1d6770becb6c0664ea46c884bf839d6b, type: 3}
+      propertyPath: inactiveBonfires.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6588357532893986978, guid: 1d6770becb6c0664ea46c884bf839d6b, type: 3}
+      propertyPath: inactiveBonfires.Array.data[0]
+      value: 
+      objectReference: {fileID: 3434293008929963287}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1275,6 +1283,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d26e671f77f513948935bb91b3279f27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3434293008929963287 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5445961019722372657, guid: 9f8fe8e4cb7828043a5f481451d4897f, type: 3}
+  m_PrefabInstance: {fileID: 7222366402903911206}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41d1f53ca69745709f0abd0ce8191178, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &8184482393892322711

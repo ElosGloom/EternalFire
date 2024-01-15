@@ -422,6 +422,7 @@
      <None Include="Assets\LevelData\Default.json" />
      <Folder Include="Assets\JMO Assets\Toony Colors Pro\Textures\Ramps" />
      <Folder Include="Assets\JMO Assets\Toony Colors Pro\Smoothed Meshes" />
+     <None Include="Assets\ExternalAssets\Hovl Studio\Render Pipelines support\Documentation.txt" />
      <Folder Include="Assets\FogOfWar\Demo\Scripts" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\Legacy\TCP2_OutlineOnly Blended SM2.shader" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\Water\Realistic.shader" />
@@ -471,6 +472,7 @@
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Interactive\Cards" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\Standard PBS\TCP2_Standard PBS.shader" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_VertExmotion.txt" />
+     <Folder Include="Assets\ExternalAssets\Hovl Studio\Render Pipelines support" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Environment\Confetti\Directional" />
      <None Include="Assets\FogOfWar\Shaders\Resources\FOW_RT.shader" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Decals" />
@@ -594,6 +596,7 @@
      <Folder Include="Assets\ExternalAssets\POLYMORPHFX\MiGHTYFX\_common\Extras\Grid" />
      <Folder Include="Assets\ExternalAssets\POLYMORPHFX\MiGHTYFX\MagicSpellsFXPack\Prefabs\FX\FXEnvironment" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Environment\Fire\Candle" />
+     <Folder Include="Assets\ExternalAssets\Hovl Studio\Render Pipelines support\Shaders" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs 2D\Blood\Red" />
      <Folder Include="Assets\ExternalAssets\POLYMORPHFX\MiGHTYFX\MagicSpellsFXPack\Prefabs\FX\FXSpells" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Flamethrower\Soft\Additive" />

@@ -5,7 +5,9 @@ namespace Game.Scripts.Fire
     public class Bonfire : FireSystemMember
     {
         [SerializeField] private float woodCooldown = 0.25f;
-
+        [SerializeField] private GameObject revealer;
+        
+        
         private float _triggerTimeLeft;
         private float _waitTimeLeft;
 
@@ -33,6 +35,11 @@ namespace Game.Scripts.Fire
                     FireSystem.Instance.HealthComponent.Healing(3);
                 }
             }
+        }
+
+        public void SwitchActive(bool value)
+        {
+           revealer.SetActive(value);
         }
     }
 }

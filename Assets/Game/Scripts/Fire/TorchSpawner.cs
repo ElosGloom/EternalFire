@@ -8,6 +8,7 @@ namespace Game.Scripts.Fire
         [SerializeField] private Transform fireParent;
         [SerializeField] private Inventory.Inventory inventory;
 
+
         private const float MinSpawnRadius = 5f;
         private const float MaxSpawnRadius = 5.5f;
 
@@ -29,8 +30,8 @@ namespace Game.Scripts.Fire
                 if (canRemoveItems)
                 {
                     var torch = Instantiate(torchPrefab, spawnerPosition, Quaternion.identity, fireParent);
-
                     FireSystem.Instance.ConnectNewTorch(torch, nearestMember);
+                    FireSystem.Instance.TryConnectBonfire(MaxSpawnRadius, torch);
                 }
             }
         }

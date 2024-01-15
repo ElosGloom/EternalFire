@@ -11,15 +11,19 @@ namespace Game.Scripts.Fire
         [SerializeField] private HealthComponent healthComponent;
         [SerializeField] private List<FireSystemMember> connectedMembers;
         [SerializeField] private ParticleSystem fireConnectionFX;
-        
+        [SerializeField] private List<Bonfire> inactiveBonfires;
+
         private List<Torch> _torches;
-        // [SerializeField] private Bonfire[] bonfires;
-        
         public HealthComponent HealthComponent => healthComponent;
 
-        
+
         private void Awake()
         {
+            foreach (var bonfire in inactiveBonfires)
+            {
+                bonfire.SwitchActive(false);
+            }
+
             Instance = this;
             _torches = new List<Torch>();
         }
@@ -44,7 +48,7 @@ namespace Game.Scripts.Fire
             return nearestObject;
         }
 
-        
+
         public bool TryDisconnectLastTorch(out Torch lastTorch)
         {
             if (_torches.Count > 0)
@@ -70,11 +74,28 @@ namespace Game.Scripts.Fire
             fx.externalForces.AddInfluence(newMember.ForceField);
         }
 
-
         public void ConnectNewTorch(Torch newTorch, FireSystemMember nearestMember)
         {
             _torches.Add(newTorch);
             ConnectMember(newTorch, nearestMember);
+        }
+
+        public void TryConnectBonfire(float maxSpawnRadius, FireSystemMember connectionProvider)
+        {
+            for (int i = 0; i < inactiveBonfires.Count; i++)
+            {
+                var bonfireDistance = Vector3.Distance(
+                    connectionProvider.transform.position,
+                    inactiveBonfires[i].transform.position);
+                
+                if (bonfireDistance < maxSpawnRadius)
+                {
+                    ConnectMember(inactiveBonfires[i], connectionProvider);
+                    inactiveBonfires[i].SwitchActive(true);
+                    inactiveBonfires.RemoveAt(i);
+                    _torches.Clear();
+                }
+            }
         }
     }
 }
