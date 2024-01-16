@@ -1,4 +1,5 @@
 ﻿using System;
+using Game.Scripts.Fire;
 using Game.Scripts.Health;
 using UnityEngine;
 
@@ -14,16 +15,23 @@ namespace Game.Scripts.LevelManager
         private void Start()
         {
             playerHealth.DeathEvent += OnPlayerDeath;
+            FireSystem.AllBonfiresConnectedEvent += OnAllBonfiresConnected;
         }
 
         private void OnPlayerDeath()
         {
-            if (LoseEvent != null) LoseEvent.Invoke();
+            LoseEvent?.Invoke();
+        }
+
+        private void OnAllBonfiresConnected()
+        {
+            WinEvent?.Invoke();
         }
 
         private void OnDestroy()
         {
             playerHealth.DeathEvent -= OnPlayerDeath;
+            FireSystem.AllBonfiresConnectedEvent -= OnAllBonfiresConnected;
         }
     }
 }

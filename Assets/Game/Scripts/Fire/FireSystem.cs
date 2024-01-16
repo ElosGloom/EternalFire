@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Game.Scripts.Health;
 using UnityEngine;
 
@@ -7,6 +8,7 @@ namespace Game.Scripts.Fire
     public class FireSystem : MonoBehaviour
     {
         public static FireSystem Instance { get; private set; }
+        public static event Action AllBonfiresConnectedEvent;
 
         [SerializeField] private HealthComponent healthComponent;
         [SerializeField] private List<FireSystemMember> connectedMembers;
@@ -26,6 +28,12 @@ namespace Game.Scripts.Fire
 
             Instance = this;
             _torches = new List<Torch>();
+            
+        }
+
+        private void Update()
+        {
+            EmptyBonfireListCheck();
         }
 
         public FireSystemMember SearchNearestMember(Vector3 spawnerPosition)
@@ -95,6 +103,14 @@ namespace Game.Scripts.Fire
                     inactiveBonfires.RemoveAt(i);
                     _torches.Clear();
                 }
+            }
+        }
+
+        private void EmptyBonfireListCheck()
+        {
+            if (inactiveBonfires.Count==0)
+            {
+                AllBonfiresConnectedEvent?.Invoke();
             }
         }
     }
