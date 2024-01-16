@@ -24,16 +24,15 @@ namespace Game.Scripts.Fire
             var nearestMember = FireSystem.Instance.SearchNearestMember(spawnerPosition);
 
             var distance = Vector3.Distance(spawnerPosition, nearestMember.transform.position);
-            if (distance > MinSpawnRadius && distance < MaxSpawnRadius)
-            {
-                bool canRemoveItems = inventory.TryRemoveItem("Torch", 1);
-                if (canRemoveItems)
-                {
-                    var torch = Instantiate(torchPrefab, spawnerPosition, Quaternion.identity, fireParent);
-                    FireSystem.Instance.ConnectNewTorch(torch, nearestMember);
-                    FireSystem.Instance.TryConnectBonfire(MaxSpawnRadius, torch);
-                }
-            }
+            if (distance < MinSpawnRadius || distance > MaxSpawnRadius)
+                return;
+            
+            if (!inventory.TryRemoveItem("Torch", 1)) 
+                return;
+            
+            var torch = Instantiate(torchPrefab, spawnerPosition, Quaternion.identity, fireParent);
+            FireSystem.Instance.ConnectNewTorch(torch, nearestMember);
+            FireSystem.Instance.TryConnectBonfire(MaxSpawnRadius, torch);
         }
     }
 }

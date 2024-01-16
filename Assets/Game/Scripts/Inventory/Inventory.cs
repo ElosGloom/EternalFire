@@ -6,7 +6,7 @@ namespace Game.Scripts.Inventory
 {
     public class Inventory : MonoBehaviour
     {
-        public Action<string, int> ItemCountChangeEvent;
+        public event Action<string, int> ItemCountChangeEvent;
 
         [SerializeField] private SerializableDictionary<string, int> items = new();
 
@@ -19,6 +19,16 @@ namespace Game.Scripts.Inventory
                 items[itemName] += itemCount;
 
             ItemCountChangeEvent?.Invoke(itemName, items[itemName]);
+        }
+
+        public int GetItemsCount(string itemName)
+        {
+            if (items.ContainsKey(itemName))
+            {
+                return items[itemName];
+            }
+
+            return 0;
         }
 
         public bool TryRemoveItem(string itemName, int itemCount)

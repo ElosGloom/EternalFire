@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using DefaultNamespace;
+﻿using System.Collections;
 using Game.Scripts.Health;
 using UnityEngine;
 
@@ -10,9 +8,11 @@ namespace Game.Scripts
     {
         [SerializeField] private Animator animator;
         [SerializeField] private float attackCooldown = 1f;
-        private float _nextAttackTimeLeft;
         [SerializeField] private int damage;
         [SerializeField] private float damageDelay;
+
+        private float _nextAttackTimeLeft;
+        private static readonly int TreeCut = Animator.StringToHash("TreeCut");
 
 
         private void Start()
@@ -28,17 +28,15 @@ namespace Game.Scripts
 
         private void OnTriggerStay(Collider other)
         {
-            if (_nextAttackTimeLeft < 0)
-            {
-                if (other.gameObject.CompareTag("Tree"))
-                {
-                    animator.SetTrigger("TreeCut");
-                    StartCoroutine(CooldownResetRoutine());
-
-                    StartCoroutine(DamageDelayRoutine(other));
-                    
-                }
-            }
+            if (_nextAttackTimeLeft > 0)
+                return;
+            
+            if (!other.gameObject.CompareTag("Tree")) 
+                return; //todo remove tag
+            
+            animator.SetTrigger(TreeCut);
+            StartCoroutine(CooldownResetRoutine());
+            StartCoroutine(DamageDelayRoutine(other));
         }
 
         private IEnumerator CooldownResetRoutine()
@@ -51,9 +49,7 @@ namespace Game.Scripts
         private IEnumerator DamageDelayRoutine(Collider other)
         {
             yield return new WaitForSeconds(damageDelay);
-            var comp = other.GetComponent<HealthComponent>();
-            comp.TakeDamage(damage);
-            
+            other.GetComponent<HealthComponent>().TakeDamage(damage);
         }
     }
 }

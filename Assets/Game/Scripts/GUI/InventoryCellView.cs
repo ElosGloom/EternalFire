@@ -5,8 +5,11 @@ namespace Game.Scripts.GUI
 {
     public class InventoryCellView : MonoBehaviour
     {
-        public TextMeshProUGUI ItemCounterText;
-        
-        
+        [SerializeField] private TextMeshProUGUI itemCounterText;
+
+        public void SetCounterText(int itemsCount)
+        {
+            itemCounterText.text = itemsCount.ToString();
+        }
     }
 }

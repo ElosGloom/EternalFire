@@ -1,6 +1,4 @@
-﻿using System;
-using Game.Scripts.Health;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Game.Scripts.LevelManager
 {
@@ -32,11 +30,9 @@ namespace Game.Scripts.LevelManager
             Destroy(_currentLevel.gameObject);
             _currentLevelIndex++;
 
-            if (_currentLevelIndex >= prefabs.Length)
-            {
+            if (_currentLevelIndex >= prefabs.Length) 
                 _currentLevelIndex = 0;
-            }
-            
+
             PlayerPrefs.SetInt("Current Level Index", _currentLevelIndex);
             PlayerPrefs.Save();
             _currentLevel = Instantiate(prefabs[_currentLevelIndex]);

@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Game.Scripts
+namespace Game.Scripts.Inventory
 {
     public class InventoryResource : MonoBehaviour
     {
         [SerializeField] private string itemName;
         [SerializeField] private int itemsCount = 1;
-        [SerializeField] private Rigidbody rb;
 
         public string ItemName => itemName;
 

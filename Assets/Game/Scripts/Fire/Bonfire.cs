@@ -6,8 +6,7 @@ namespace Game.Scripts.Fire
     {
         [SerializeField] private float woodCooldown = 0.25f;
         [SerializeField] private GameObject revealer;
-        
-        
+
         private float _triggerTimeLeft;
         private float _waitTimeLeft;
 
@@ -19,27 +18,22 @@ namespace Game.Scripts.Fire
 
         private void OnTriggerStay(Collider other)
         {
-            if (_triggerTimeLeft < 0)
-            {
-                if (!other.TryGetComponent(out Inventory.Inventory inventory))
-                {
-                    return;
-                }
+            if (_triggerTimeLeft > 0)
+                return;
+            
+            if (!other.TryGetComponent(out Inventory.Inventory inventory))
+                return;
 
-
-                var canRemoveItem = inventory.TryRemoveItem("Wood", 1);
-
-                if (canRemoveItem)
-                {
-                    _triggerTimeLeft = woodCooldown;
-                    FireSystem.Instance.HealthComponent.Healing(3);
-                }
-            }
+            if (!inventory.TryRemoveItem("Wood", 1))
+                return;
+                
+            _triggerTimeLeft = woodCooldown;
+            FireSystem.Instance.HealthComponent.Healing(3);
         }
 
         public void SwitchActive(bool value)
         {
-           revealer.SetActive(value);
+            revealer.SetActive(value);
         }
     }
 }

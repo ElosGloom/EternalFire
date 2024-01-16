@@ -5,6 +5,7 @@ namespace Game.Scripts.Fire
     public class TorchDestroyer : MonoBehaviour
     {
         [SerializeField] private Inventory.Inventory inventory;
+
         
         private void Update()
         {
@@ -16,11 +17,11 @@ namespace Game.Scripts.Fire
 
         private void DestroyLastTorch()
         {
-            if (FireSystem.Instance.TryDisconnectLastTorch(out var lastTorch))
-            {
-                inventory.AddItem("Torch", 1);
-                Destroy(lastTorch.gameObject);
-            }
+            if (!FireSystem.Instance.TryDisconnectLastTorch(out var lastTorch))
+                return;
+
+            inventory.AddItem("Torch", 1);
+            Destroy(lastTorch.gameObject);
         }
     }
 }

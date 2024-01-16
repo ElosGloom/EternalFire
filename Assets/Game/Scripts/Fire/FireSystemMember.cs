@@ -21,8 +21,7 @@ namespace Game.Scripts.Fire
 
         private void OnHealthChanged(float currentHp, float maxHp)
         {
-            float t = currentHp / maxHp;
-            fogOfWarRevealer.ViewRadius = lightRadiusCurve.Evaluate(t);
+            fogOfWarRevealer.ViewRadius = lightRadiusCurve.Evaluate(currentHp / maxHp);
         }
 
         private void OnDestroy()

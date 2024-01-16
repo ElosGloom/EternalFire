@@ -11,21 +11,26 @@ namespace Game.Scripts.GUI
 
         private void Start()
         {
-            inventory.ItemCountChangeEvent += OnItemCountChange;
+            foreach (var kvp in cellViews)
+            {
+                int itemCount = inventory.GetItemsCount(kvp.Key);
+                UpdateCell(kvp.Key,itemCount);
+            }
+
+            inventory.ItemCountChangeEvent += UpdateCell;
         }
 
-        public void OnItemCountChange(string itemName, int itemCount)
+        private void UpdateCell(string itemName, int itemCount)
         {
             if (cellViews.ContainsKey(itemName))
             {
-                cellViews[itemName].ItemCounterText.text = itemCount.ToString();
+                cellViews[itemName].SetCounterText(itemCount);
             }
-           
         }
 
         private void OnDestroy()
         {
-            inventory.ItemCountChangeEvent -= OnItemCountChange;
+            inventory.ItemCountChangeEvent -= UpdateCell;
         }
     }
 }

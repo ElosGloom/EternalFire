@@ -1,13 +1,13 @@
 ﻿using System.Collections;
+using Game.Scripts.Inventory;
 using UnityEngine;
 
 namespace Game.Scripts
 {
     public class InventoryCollector : MonoBehaviour
     {
-        
         [SerializeField] private float destroyDelay;
-        [SerializeField] private Inventory.Inventory _inventory;
+        [SerializeField] private Inventory.Inventory inventory;
 
         private void OnTriggerEnter(Collider other)
         {
@@ -21,7 +21,7 @@ namespace Game.Scripts
 
             if (inventoryResource)
             {
-                _inventory.AddItem(inventoryResource.ItemName, inventoryResource.ItemsCount);
+                inventory.AddItem(inventoryResource.ItemName, inventoryResource.ItemsCount);
                 Destroy(inventoryResource.gameObject);
             }
         }

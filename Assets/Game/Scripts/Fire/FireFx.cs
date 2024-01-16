@@ -1,9 +1,7 @@
-﻿using System;
-using DefaultNamespace;
-using Game.Scripts.Health;
+﻿using Game.Scripts.Health;
 using UnityEngine;
 
-namespace Game.Scripts
+namespace Game.Scripts.Fire
 {
     public class FireFx : MonoBehaviour
     {

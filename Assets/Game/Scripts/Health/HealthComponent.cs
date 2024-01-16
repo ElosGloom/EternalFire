@@ -21,19 +21,13 @@ namespace Game.Scripts.Health
 
         public void TakeDamage(float damage)
         {
-            if (currentHealth<=0)
-            {
+            if (currentHealth <= 0)
                 return;
-            }
 
             currentHealth -= damage;
 
-
-            if (currentHealth <=0)
-            {
+            if (currentHealth <= 0)
                 DeathEvent?.Invoke();
-                
-            }
 
             HealthChangeEvent?.Invoke(currentHealth, maxHealth);
         }
@@ -42,12 +36,9 @@ namespace Game.Scripts.Health
         {
             currentHealth += heal;
             if (currentHealth > maxHealth)
-            {
                 currentHealth = maxHealth;
-            }
 
             HealthChangeEvent?.Invoke(currentHealth, maxHealth);
         }
-       
     }
 }

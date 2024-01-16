@@ -1,48 +1,27 @@
-using Unity.VisualScripting;
+using Game.Scripts.GUI;
 using UnityEngine;
 
-public class SimplePlayerController : MonoBehaviour
+namespace Game.Scripts
 {
-    [SerializeField] private float speed;
-    [SerializeField] private Rigidbody rb;
-    [SerializeField] private Animator animator;
-
-
-    void FixedUpdate()
+    public class SimplePlayerController : MonoBehaviour
     {
-        Vector3 velocity = rb.velocity;
-        bool isAnyButtonDown = false;
+        [SerializeField] private float speed;
+        [SerializeField] private Rigidbody rb;
+        [SerializeField] private Animator animator;
+        private static readonly int Run = Animator.StringToHash("Run");
 
-        if (Input.GetKey(KeyCode.A))
+        private void FixedUpdate()
         {
-            isAnyButtonDown = true;
-            velocity.x = -speed;
+            var isJoystickActive = MainJoystick.Instance.IsActive();
+            if (isJoystickActive)
+                rb.velocity = MainJoystick.Instance.Direction * speed;
+
+            animator.SetBool(Run, isJoystickActive);
+            if (rb.velocity.magnitude < 0.1f)
+                return;
+
+            var targetRotation = Quaternion.LookRotation(rb.velocity.normalized);
+            rb.MoveRotation(Quaternion.Lerp(rb.rotation, targetRotation, 0.1f));
         }
-
-        if (Input.GetKey(KeyCode.D))
-        {
-            isAnyButtonDown = true;
-            velocity.x = speed;
-        }
-
-        if (Input.GetKey(KeyCode.W))
-        {
-            isAnyButtonDown = true;
-            velocity.z = speed;
-        }
-
-        if (Input.GetKey(KeyCode.S))
-        {
-            isAnyButtonDown = true;
-            velocity.z = -speed;
-        }
-
-
-        animator.SetBool("Run", isAnyButtonDown);
-        if (velocity.magnitude < 0.1f) return;
-
-        rb.velocity = velocity;
-        var targetRotation = Quaternion.LookRotation(velocity.normalized);
-        rb.MoveRotation(Quaternion.Lerp(rb.rotation, targetRotation, 0.1f));
     }
 }

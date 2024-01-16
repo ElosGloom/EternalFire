@@ -28,7 +28,6 @@ namespace Game.Scripts.Fire
 
             Instance = this;
             _torches = new List<Torch>();
-            
         }
 
         private void Update()
@@ -41,16 +40,15 @@ namespace Game.Scripts.Fire
             FireSystemMember nearestObject = null;
             float nearestDistance = Mathf.Infinity;
 
-
             foreach (var member in connectedMembers)
             {
                 float distance = Vector3.Distance(spawnerPosition, member.transform.position);
 
-                if (distance < nearestDistance)
-                {
-                    nearestObject = member;
-                    nearestDistance = distance;
-                }
+                if (distance > nearestDistance)
+                    continue;
+
+                nearestObject = member;
+                nearestDistance = distance;
             }
 
             return nearestObject;
@@ -70,7 +68,6 @@ namespace Game.Scripts.Fire
             lastTorch = null;
             return false;
         }
-
 
         private void ConnectMember(FireSystemMember newMember, FireSystemMember nearestMember)
         {
@@ -95,20 +92,20 @@ namespace Game.Scripts.Fire
                 var bonfireDistance = Vector3.Distance(
                     connectionProvider.transform.position,
                     inactiveBonfires[i].transform.position);
+
+                if (bonfireDistance > maxSpawnRadius)
+                    continue;
                 
-                if (bonfireDistance < maxSpawnRadius)
-                {
-                    ConnectMember(inactiveBonfires[i], connectionProvider);
-                    inactiveBonfires[i].SwitchActive(true);
-                    inactiveBonfires.RemoveAt(i);
-                    _torches.Clear();
-                }
+                ConnectMember(inactiveBonfires[i], connectionProvider);
+                inactiveBonfires[i].SwitchActive(true);
+                inactiveBonfires.RemoveAt(i);
+                _torches.Clear();
             }
         }
 
         private void EmptyBonfireListCheck()
         {
-            if (inactiveBonfires.Count==0)
+            if (inactiveBonfires.Count == 0)
             {
                 AllBonfiresConnectedEvent?.Invoke();
             }
