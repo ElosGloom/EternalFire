@@ -1,18 +1,17 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using UnityEngine.UI;
 
 namespace Game.Scripts.Fire
 {
     public class TorchDestroyer : MonoBehaviour
     {
         [SerializeField] private Inventory.Inventory inventory;
+        [SerializeField] private Button button;
 
-        
-        private void Update()
+        private void Start()
         {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                DestroyLastTorch();
-            }
+            button.onClick.AddListener(DestroyLastTorch);
         }
 
         private void DestroyLastTorch()
