@@ -1088,7 +1088,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1162498644868953497, guid: 02334f3f99d32104f9f48d3657d83587, type: 3}
       propertyPath: items.list.Array.data[0].Value
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2136798268482842255, guid: 02334f3f99d32104f9f48d3657d83587, type: 3}
       propertyPath: inactiveBonfires.Array.size

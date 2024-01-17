@@ -34,6 +34,9 @@ namespace Game.Scripts.Health
 
         public void Healing(float heal)
         {
+            if (currentHealth >= maxHealth)
+                return;
+
             currentHealth += heal;
             if (currentHealth > maxHealth)
                 currentHealth = maxHealth;
