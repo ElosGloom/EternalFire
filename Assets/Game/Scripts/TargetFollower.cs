@@ -6,7 +6,7 @@ namespace Game.Scripts
     {
         [SerializeField] private GameObject target;
 
-        private void Update()
+        private void LateUpdate()
         {
             transform.position = target.transform.position;
         }

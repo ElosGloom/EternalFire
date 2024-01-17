@@ -32,7 +32,7 @@ namespace Game.Scripts.Health
             HealthChangeEvent?.Invoke(currentHealth, maxHealth);
         }
 
-        public void Healing(int heal)
+        public void Healing(float heal)
         {
             currentHealth += heal;
             if (currentHealth > maxHealth)

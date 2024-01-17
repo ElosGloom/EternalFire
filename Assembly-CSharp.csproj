@@ -46,12 +46,14 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Game\Scripts\Fire\TorchDestroyer.cs" />
+     <Compile Include="Assets\Game\Scripts\Health\DamageInFog.cs" />
      <Compile Include="Assets\ExternalAssets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
      <Compile Include="Assets\Game\Scripts\Fire\TorchSpawner.cs" />
      <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\VFX Library\UICanvasManager.cs" />
      <Compile Include="Assets\FogOfWar\Scripts\Revealers\FogOfWarRevealer.cs" />
      <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\ETFXTarget.cs" />
      <Compile Include="Assets\ExternalAssets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
+     <Compile Include="Assets\Game\Scripts\GUI\HealthBarVisibility.cs" />
      <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\ETFXMouseOrbit.cs" />
      <Compile Include="Assets\Game\Scripts\Inventory\InventoryResource.cs" />
      <Compile Include="Assets\Game\Scripts\GUI\HealthBar.cs" />
@@ -80,6 +82,7 @@
      <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\ETFXSceneManager.cs" />
      <Compile Include="Assets\Game\Scripts\Fire\Bonfire.cs" />
      <Compile Include="Assets\FogOfWar\Scripts\Hiders\HiderBehavior.cs" />
+     <Compile Include="Assets\Game\Scripts\Health\HealingInLight.cs" />
      <Compile Include="Assets\Game\Scripts\ForestTree.cs" />
      <Compile Include="Assets\ExternalAssets\Epic Toon FX\Scripts\ETFXLightFade.cs" />
      <Compile Include="Assets\FogOfWar\Scripts\Revealers\FogOfWarRevealer2D.cs" />
@@ -103,11 +106,11 @@
      <Compile Include="Assets\Game\Scripts\TreeCutter.cs" />
      <Compile Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\Extensions\UIParticle\UIParticleSystem.cs" />
      <Compile Include="Assets\FogOfWar\Scripts\GenerateInvertedCollider.cs" />
-     <Compile Include="Assets\Game\Scripts\DamageInFog.cs" />
      <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\ETFXProjectileScript.cs" />
      <Compile Include="Assets\ExternalAssets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
      <Compile Include="Assets\FogOfWar\Scripts\Hiders\HiderDisableRenderers.cs" />
      <Compile Include="Assets\FogOfWar\Scripts\Hiders\HiderDisableObjects.cs" />
+     <Compile Include="Assets\Game\Scripts\Health\HealingOverTime.cs" />
      <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\ETFXButtonScript.cs" />
      <Compile Include="Assets\Game\Scripts\GUI\InventoryView.cs" />
      <Compile Include="Assets\FogOfWar\Demo\Scripts\BlinkingRevealer.cs" />

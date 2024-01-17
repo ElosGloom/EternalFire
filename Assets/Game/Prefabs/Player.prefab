@@ -20,6 +20,8 @@ GameObject:
   - component: {fileID: 7133547810872059515}
   - component: {fileID: 1790655269783735814}
   - component: {fileID: 6588357532893986978}
+  - component: {fileID: 722662897373707344}
+  - component: {fileID: 6089308330091719578}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -42,6 +44,7 @@ Transform:
   m_Children:
   - {fileID: 2704043954496768509}
   - {fileID: 2046318029660235673}
+  - {fileID: 466272434010345056}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6243507135973427302
@@ -56,8 +59,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d26e671f77f513948935bb91b3279f27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 100
+  maxHealth: 50
+  currentHealth: 50
 --- !u!114 &4922761849981307239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,6 +177,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcec1ec1d5534b8ca702ff2ea0020f1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  items:
+    list: []
+    keyCollision: 0
 --- !u!114 &1939546171096627623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,9 +236,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7050efd5393f48a08df68482fcb34853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  torchPrefab: {fileID: 1554922114054119494, guid: 6a8c932037be4044aa767e1997128aba, type: 3}
+  fireParent: {fileID: 0}
+  inventory: {fileID: 5233873014066414424}
+--- !u!114 &722662897373707344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4922761849981307234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0870f0b1030e4c458fb517bbc06bbc47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healPerSecond: 10
+  healthComponent: {fileID: 6243507135973427302}
+--- !u!114 &6089308330091719578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4922761849981307234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d57314d27e84a7f984cebdbbc290206, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   fogOfWarHider: {fileID: 1939546171096627623}
-  torchPrefab: {fileID: 7954399407431549603, guid: a1ad84ad79ba8a54db830ca0a4dfe370, type: 3}
-  player: {fileID: 0}
+  foWHider: {fileID: 1939546171096627623}
+  healingOverTime: {fileID: 722662897373707344}
 --- !u!1 &6265820264253018980
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,7 +280,7 @@ GameObject:
   - component: {fileID: 7263932910764557200}
   - component: {fileID: 4697214073201757790}
   m_Layer: 7
-  m_Name: Inventory
+  m_Name: InventoryCollector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -300,7 +335,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyDelay: 0.5
-  _inventory: {fileID: 5233873014066414424}
+  inventory: {fileID: 5233873014066414424}
+--- !u!1 &6275505107231332075
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 466272434010345056}
+  m_Layer: 0
+  m_Name: HpTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &466272434010345056
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6275505107231332075}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.89, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4922761849981307233}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4922761850195085000
 PrefabInstance:
   m_ObjectHideFlags: 0
