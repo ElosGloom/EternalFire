@@ -1,14 +1,12 @@
 ﻿using Game.Scripts.Health;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace DefaultNamespace.UI
+namespace Game.Scripts.GUI
 {
     public class HealthBar : MonoBehaviour
     {
         [SerializeField] private Image hpFill;
-        [SerializeField] private TextMeshProUGUI hpText;
         [SerializeField] private HealthComponent healthComponent;
 
         private void Start()
@@ -16,9 +14,8 @@ namespace DefaultNamespace.UI
             healthComponent.HealthChangeEvent += OnHealthChanged;
         }
 
-        private void OnHealthChanged(float currentHealth, float maxHealth)
+        protected virtual void OnHealthChanged(float currentHealth, float maxHealth)
         {
-            hpText.text = $"{currentHealth.ToString("0")}/{maxHealth.ToString()}";
             hpFill.fillAmount = currentHealth / maxHealth;
         }
 
