@@ -1,4 +1,5 @@
 ﻿using Game.Scripts.Health;
+using Game.Scripts.States;
 using UnityEngine;
 
 namespace Game.Scripts.GUI
@@ -7,35 +8,24 @@ namespace Game.Scripts.GUI
     {
         [SerializeField] private HealthComponent healthComponent;
         [SerializeField] private CanvasGroup canvasGroup;
-        [SerializeField] private bool currentState;
         [SerializeField, Min(0.1f)] private float fadeTime = 1;
 
+        private readonly StateMachine _stateMachine = new();
 
         private void Start()
         {
-            healthComponent.HealthChangeEvent += OnHealthChanged;
-            if (currentState)
-                canvasGroup.alpha = 1;
-            else
-                canvasGroup.alpha = 0;
-        }
+            var visibleState = new HealthBarVisibleState(canvasGroup, fadeTime, healthComponent, _stateMachine);
+            _stateMachine.AddState(visibleState);
 
-        private void OnHealthChanged(float currentHealth, float maxHealth)
-        {
-            currentState = currentHealth < maxHealth;
+            var invisibleState = new HealthBarInvisibleState(canvasGroup, fadeTime, healthComponent, _stateMachine);
+            _stateMachine.AddState(invisibleState);
+
+            _stateMachine.SetState<HealthBarInvisibleState>();
         }
 
         private void Update()
         {
-            if (currentState)
-                canvasGroup.alpha += Time.deltaTime / fadeTime;
-            else
-                canvasGroup.alpha -= Time.deltaTime / fadeTime;
-        }
-
-        private void OnDestroy()
-        {
-            healthComponent.HealthChangeEvent -= OnHealthChanged;
+            _stateMachine.Update();
         }
     }
 }

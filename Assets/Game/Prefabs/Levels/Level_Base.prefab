@@ -303,7 +303,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthComponent: {fileID: 1019239806543593127}
   canvasGroup: {fileID: 3299766906047757912}
-  currentState: 0
   fadeTime: 0.25
 --- !u!225 &3299766906047757912
 CanvasGroup:
@@ -313,7 +312,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2456956412340225266}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0

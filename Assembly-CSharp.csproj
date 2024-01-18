@@ -56,6 +56,7 @@
      <Compile Include="Assets\Game\Scripts\GUI\HealthBarVisibility.cs" />
      <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\ETFXMouseOrbit.cs" />
      <Compile Include="Assets\Game\Scripts\Inventory\InventoryResource.cs" />
+     <Compile Include="Assets\Game\Scripts\States\IState.cs" />
      <Compile Include="Assets\Game\Scripts\GUI\HealthBar.cs" />
      <Compile Include="Assets\Game\Scripts\Fire\Torch.cs" />
      <Compile Include="Assets\Game\Scripts\Fire\FireSystem.cs" />
@@ -63,10 +64,12 @@
      <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\ETFXFireProjectile.cs" />
      <Compile Include="Assets\Game\Scripts\Inventory\Inventory.cs" />
      <Compile Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\Scripts\PanelControlFantasyRPG.cs" />
+     <Compile Include="Assets\Game\Scripts\Extensions.cs" />
      <Compile Include="Assets\FogOfWar\Scripts\MiniMapFrustum.cs" />
      <Compile Include="Assets\ExternalAssets\Piloto Studio\Readme\Scripts\Readme.cs" />
      <Compile Include="Assets\ExternalAssets\Epic Toon FX\Scripts\ETFXRotation.cs" />
      <Compile Include="Assets\Game\Scripts\Inventory\InventoryCollector.cs" />
+     <Compile Include="Assets\Game\Scripts\States\HealthBarInvisibleState.cs" />
      <Compile Include="Assets\FogOfWar\Scripts\Revealers\FogOfWarRevealer3D.cs" />
      <Compile Include="Assets\ExternalAssets\Piloto Studio\Readme\Scripts\ReadmeBehaviour.cs" />
      <Compile Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\Scripts\PanelFantasyRPG.cs" />
@@ -81,6 +84,7 @@
      <Compile Include="Assets\Game\Scripts\Fire\FireFx.cs" />
      <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\ETFXSceneManager.cs" />
      <Compile Include="Assets\Game\Scripts\Fire\Bonfire.cs" />
+     <Compile Include="Assets\Game\Scripts\States\StateMachine.cs" />
      <Compile Include="Assets\FogOfWar\Scripts\Hiders\HiderBehavior.cs" />
      <Compile Include="Assets\Game\Scripts\Health\HealingInLight.cs" />
      <Compile Include="Assets\Game\Scripts\ForestTree.cs" />
@@ -93,6 +97,7 @@
      <Compile Include="Assets\Game\Scripts\Health\DamageOverTime.cs" />
      <Compile Include="Assets\FogOfWar\Demo\Scripts\TeamsDemo.cs" />
      <Compile Include="Assets\Game\Scripts\GUI\InventoryCellView.cs" />
+     <Compile Include="Assets\Game\Scripts\States\HealthBarVisibleState.cs" />
      <Compile Include="Assets\ExternalAssets\Joystick Pack\Examples\JoystickSetterExample.cs" />
      <Compile Include="Assets\Game\Scripts\Fire\FireSystemMember.cs" />
      <Compile Include="Assets\FogOfWar\Scripts\URP\FogOfWarPass.cs" />
@@ -591,6 +596,7 @@
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Missiles\Liquid" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\Standard PBS\TCP2_Standard PBS Outline Blended.shader" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Demo\Missile Prefabs\Sparkle" />
+     <Folder Include="Assets\Game\Scripts\States" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_Sketch.txt" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Models\Materials" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Explosions\NukeVerticalExplosion" />

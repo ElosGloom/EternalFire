@@ -37,21 +37,7 @@ namespace Game.Scripts.Fire
 
         public FireSystemMember SearchNearestMember(Vector3 spawnerPosition)
         {
-            FireSystemMember nearestObject = null;
-            float nearestDistance = Mathf.Infinity;
-
-            foreach (var member in connectedMembers)
-            {
-                float distance = Vector3.Distance(spawnerPosition, member.transform.position);
-
-                if (distance > nearestDistance)
-                    continue;
-
-                nearestObject = member;
-                nearestDistance = distance;
-            }
-
-            return nearestObject;
+            return connectedMembers.GetNearestObject(spawnerPosition);
         }
 
 
