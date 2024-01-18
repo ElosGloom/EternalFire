@@ -99,8 +99,8 @@
      <Compile Include="Assets\ExternalAssets\Epic Toon FX\Scripts\ETFXPitchRandomizer.cs" />
      <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\VFX Library\ParticleEffectsLibrary.cs" />
      <Compile Include="Assets\Game\Scripts\Health\HealthComponent.cs" />
-     <Compile Include="Assets\Game\Scripts\SimplePlayerController.cs" />
      <Compile Include="Assets\Game\Scripts\GUI\HealthBarWithText.cs" />
+     <Compile Include="Assets\Game\Scripts\SimplePlayerController.cs" />
      <Compile Include="Assets\FogOfWar\Scripts\Revealers\RevealerDebug.cs" />
      <Compile Include="Assets\ExternalAssets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
      <Compile Include="Assets\Game\Scripts\TreeCutter.cs" />
@@ -109,8 +109,8 @@
      <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\ETFXProjectileScript.cs" />
      <Compile Include="Assets\ExternalAssets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
      <Compile Include="Assets\FogOfWar\Scripts\Hiders\HiderDisableRenderers.cs" />
-     <Compile Include="Assets\FogOfWar\Scripts\Hiders\HiderDisableObjects.cs" />
      <Compile Include="Assets\Game\Scripts\Health\HealingOverTime.cs" />
+     <Compile Include="Assets\FogOfWar\Scripts\Hiders\HiderDisableObjects.cs" />
      <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\ETFXButtonScript.cs" />
      <Compile Include="Assets\Game\Scripts\GUI\InventoryView.cs" />
      <Compile Include="Assets\FogOfWar\Demo\Scripts\BlinkingRevealer.cs" />
@@ -202,12 +202,10 @@
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\SG2\Detail Texture Simple.shader" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\Standard PBS\TCP2_PBS_Main.cginc" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat" />
-     <Folder Include="Assets\Layer Lab" />
      <Folder Include="Assets\ExternalAssets\Piloto Studio\Readme\Scripts" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Nova\Fire" />
      <Folder Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\ResourcesData\Sprites\Component\Button" />
      <Folder Include="Assets\ExternalAssets\VFX_Klaus\Materials" />
-     <Folder Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\PSD" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Nova" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Environment\Weather\Rain" />
@@ -387,7 +385,6 @@
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Materials\Misc\Text" />
      <Folder Include="Assets\TextMesh Pro" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_NdotL Stylization.txt" />
-     <Folder Include="Assets\Layer Lab\GUI Pro-FantasyRPG" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Explosions\RoundExplosion" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_Water.txt" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\Default\Comic Book.shader" />
@@ -739,7 +736,7 @@
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Demo\Demo Prefabs\VFX Library" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Environment\Fire\Cartoon\Torch" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\Legacy\TCP2_OutlineOnly.shader" />
-     <Folder Include="Assets\Layer Lab\GUI Pro-FantasyRPG\PSD" />
+     <Folder Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\PSD 1" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Interactive\Loot\ItemSparkleSoft" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Environment\Weather\Snow" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Missiles\Lightning" />
