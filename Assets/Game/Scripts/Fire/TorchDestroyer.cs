@@ -17,7 +17,10 @@ namespace Game.Scripts.Fire
         private void DestroyLastTorch()
         {
             if (!FireSystem.Instance.TryDisconnectLastTorch(out var lastTorch))
+            {
                 return;
+            }
+            
 
             inventory.AddItem("Torch", 1);
             Destroy(lastTorch.gameObject);

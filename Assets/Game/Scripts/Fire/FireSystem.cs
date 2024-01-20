@@ -9,13 +9,14 @@ namespace Game.Scripts.Fire
     {
         public static FireSystem Instance { get; private set; }
         public static event Action AllBonfiresConnectedEvent;
+        public static event Action<bool> HasTorchesToReturn;
 
         [SerializeField] private HealthComponent healthComponent;
         [SerializeField] private List<FireSystemMember> connectedMembers;
         [SerializeField] private ParticleSystem fireConnectionFX;
         [SerializeField] private List<Bonfire> inactiveBonfires;
 
-        private List<Torch> _torches;
+        private static List<Torch> _torches;
         public HealthComponent HealthComponent => healthComponent;
 
 
@@ -28,6 +29,11 @@ namespace Game.Scripts.Fire
 
             Instance = this;
             _torches = new List<Torch>();
+        }
+
+        private void Start()
+        {
+            HasTorchesToReturn?.Invoke(false);
         }
 
         private void Update()
@@ -48,6 +54,7 @@ namespace Game.Scripts.Fire
                 lastTorch = _torches[_torches.Count - 1];
                 _torches.RemoveAt(_torches.Count - 1);
                 connectedMembers.RemoveAt(connectedMembers.Count - 1);
+                
                 return true;
             }
 
@@ -68,6 +75,7 @@ namespace Game.Scripts.Fire
         public void ConnectNewTorch(Torch newTorch, FireSystemMember nearestMember)
         {
             _torches.Add(newTorch);
+            HasTorchesToReturn?.Invoke(_torches.Count > 0);
             ConnectMember(newTorch, nearestMember);
         }
 
@@ -81,13 +89,15 @@ namespace Game.Scripts.Fire
 
                 if (bonfireDistance > maxSpawnRadius)
                     continue;
-                
+
                 ConnectMember(inactiveBonfires[i], connectionProvider);
                 inactiveBonfires[i].SwitchActive(true);
                 inactiveBonfires.RemoveAt(i);
                 _torches.Clear();
+                HasTorchesToReturn?.Invoke(_torches.Count > 0);
             }
         }
+        
 
         private void EmptyBonfireListCheck()
         {
