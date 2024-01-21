@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.40392157, g: 0.33333334, b: 0.4509804, a: 1}
+  m_Color: {r: 1, g: 0.8440695, b: 0.33490568, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 85a75d80a48a7ea44afa897d3d0dd16f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a01e38f611398ad40924b819b7c978ae, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -224,8 +224,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4281284960
+  m_fontColor: {r: 0.3773585, g: 0.22214378, b: 0.18333928, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -358,12 +358,12 @@ GameObject:
   - component: {fileID: 2325734091655966447}
   - component: {fileID: 1385844455027916772}
   m_Layer: 5
-  m_Name: ItemIcon (1)
+  m_Name: ItemBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2866092846097140401
 RectTransform:
   m_ObjectHideFlags: 0

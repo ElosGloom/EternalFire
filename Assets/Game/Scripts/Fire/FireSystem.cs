@@ -54,6 +54,7 @@ namespace Game.Scripts.Fire
                 lastTorch = _torches[_torches.Count - 1];
                 _torches.RemoveAt(_torches.Count - 1);
                 connectedMembers.RemoveAt(connectedMembers.Count - 1);
+                HasTorchesToReturn?.Invoke(_torches.Count > 0);
                 
                 return true;
             }
