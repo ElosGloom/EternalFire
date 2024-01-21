@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Game.Scripts.SFX;
+using UnityEngine;
 
 namespace Game.Scripts.Fire
 {
@@ -26,13 +27,14 @@ namespace Game.Scripts.Fire
             var distance = Vector3.Distance(spawnerPosition, nearestMember.transform.position);
             if (distance < MinSpawnRadius || distance > MaxSpawnRadius)
                 return;
-            
-            if (!inventory.TryRemoveItem("Torch", 1)) 
+
+            if (!inventory.TryRemoveItem("Torch", 1))
                 return;
-            
+
             var torch = Instantiate(torchPrefab, spawnerPosition, Quaternion.identity, fireParent);
             FireSystem.Instance.ConnectNewTorch(torch, nearestMember);
             FireSystem.Instance.TryConnectBonfire(MaxSpawnRadius, torch);
+            SfxController.PlaySfx("event:/Torch");
         }
     }
 }

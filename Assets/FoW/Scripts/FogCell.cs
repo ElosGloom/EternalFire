@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Unity.Collections;
 using Unity.Jobs;
 using UnityEngine;
@@ -7,7 +8,7 @@ namespace FoW
 {
     public class FogCell : MonoBehaviour
     {
-        [SerializeField] private Transform fowPlane;
+        public static event Action<FogCell> VisionStatusChangedEvent;
         private Mesh _fogPlaneMesh;
         private NativeArray<Vector3> _fogPlaneVertices;
         private Color[] _fogPlaneColors;
@@ -18,26 +19,25 @@ namespace FoW
         private NativeArray<float> _revealersRadius;
         private NativeArray<float> _revealForces;
 
-        public bool IsVisible { get; private set; }
 
         private void OnBecameVisible()
         {
-            IsVisible = true;
+            VisionStatusChangedEvent?.Invoke(this);
         }
 
         private void OnBecameInvisible()
         {
-            IsVisible = false;
+            VisionStatusChangedEvent?.Invoke(this);
         }
 
         public void Init(Color color)
         {
-            if (fowPlane.gameObject.layer == 0)
-            {
-                Debug.LogError("Error: Fog plane is missing the FOW layer!");
-            }
+            // if (gameObject.layer == 0)
+            // {
+            //     Debug.LogError("Error: Fog plane is missing the FOW layer!");
+            // }
 
-            _fogPlaneMesh = fowPlane.GetComponent<MeshFilter>().mesh;
+            _fogPlaneMesh = GetComponent<MeshFilter>().mesh;
 
             _fogPlaneVertices = new(_fogPlaneMesh.vertices.Length, Allocator.Persistent);
             _fogPlaneMesh.colors = new Color[_fogPlaneMesh.vertices.Length];
@@ -47,8 +47,6 @@ namespace FoW
                 _fogPlaneMesh.colors[i] = color;
             }
 
-            int tintColor = Shader.PropertyToID("_TintColor");
-            fowPlane.GetComponent<Renderer>().material.SetColor(tintColor, color);
             _fogPlaneColors = new Color[_fogPlaneVertices.Length];
             for (int i = 0; i < _fogPlaneColors.Length; i++)
             {

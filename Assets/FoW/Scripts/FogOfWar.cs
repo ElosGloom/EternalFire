@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace FoW
@@ -7,10 +8,9 @@ namespace FoW
     public class FogOfWar : MonoBehaviour
     {
         private static readonly List<FogRevealer> Revealers = new();
+        private static readonly HashSet<FogCell> VisibleCells = new();
 
-        [SerializeField] private Color color = Color.black;
         [SerializeField] private float edgeSharpness = 1;
-        [SerializeField] private FogCell[] fogCells;
         [SerializeField] private FogGridBuilder _fogGridBuilder;
 
         private float _fogHeight;
@@ -25,7 +25,7 @@ namespace FoW
             Revealers.Remove(revealer);
         }
 
-        public static bool IsVisible(IHider hider)
+        public static bool IsHiderVisible(IHider hider)
         {
             for (int i = 0; i < Revealers.Count; i++)
             {
@@ -47,55 +47,43 @@ namespace FoW
             fowCamera.farClipPlane = mainCamera.farClipPlane;
             fowCamera.nearClipPlane = mainCamera.nearClipPlane;
 
-            if (fogCells.Length == 0)
-            {
-                fogCells = GetComponentsInChildren<FogCell>();
-                if (fogCells.Length == 0)
-                    BuildFogGrid();
-            }
 
-            for (int i = 0; i < fogCells.Length; i++)
-            {
-                fogCells[i].Init(color);
-            }
+            if (_fogGridBuilder.CreatedCells.Length == 0)
+                BuildFogGrid();
+
+                
+            foreach (var cell in _fogGridBuilder.CreatedCells)
+                cell.Init(_fogGridBuilder.Color);
+
+            FogCell.VisionStatusChangedEvent += UpdateVisibleCells;
+            _fogGridBuilder = null;
+        }
+
+        private static void UpdateVisibleCells(FogCell cell)
+        {
+            if (VisibleCells.Contains(cell))
+                VisibleCells.Remove(cell);
+            else
+                VisibleCells.Add(cell);
         }
 
         [ContextMenu(nameof(BuildFogGrid))]
         private void BuildFogGrid()
         {
-            for (int i = 0; i < fogCells.Length; i++)
-                Destroy(fogCells[i].gameObject);
-
-            fogCells = _fogGridBuilder.Build(transform);
+            _fogGridBuilder.Build(transform);
         }
 
 
         private void Update()
         {
-            for (int i = 0; i < fogCells.Length; i++)
-            {
-                if (!fogCells[i].IsVisible)
-                    continue;
-
-                fogCells[i].StartJob(Revealers, _fogHeight, edgeSharpness);
-            }
+            foreach (var cell in VisibleCells)
+                cell.StartJob(Revealers, _fogHeight, edgeSharpness);
         }
 
         private void LateUpdate()
         {
-            for (int i = 0; i < fogCells.Length; i++)
-            {
-                if (!fogCells[i].IsVisible)
-                    continue;
-
-                fogCells[i].FinishJob();
-            }
-        }
-
-        private void OnValidate()
-        {
-            if (fogCells.Length == 0)
-                fogCells = GetComponentsInChildren<FogCell>();
+            foreach (var cell in VisibleCells)
+                cell.FinishJob();
         }
 
         [Serializable]
@@ -103,15 +91,32 @@ namespace FoW
         {
             private const float CellSize = 6;
 
+            [SerializeField] private Color color = Color.black;
             [SerializeField] private Vector2Int size = new(10, 10);
             [SerializeField] private FogCell fogCellPrefab;
+            [SerializeField] private FogCell[] createdCells;
 
-            public FogCell[] Build(Transform parent)
+            public FogCell[] CreatedCells => createdCells;
+            public Color Color => color;
+
+            public void Build(Transform parent)
             {
-                if (fogCellPrefab == null)
-                    return null;
+                for (int i = 0; i < createdCells.Length; i++)
+                {
+#if UNITY_EDITOR
+                    if (!Application.isPlaying)
+                    {
+                        DestroyImmediate(createdCells[i].gameObject);
+                        continue;
+                    }
+#endif
+                    Destroy(createdCells[i].gameObject);
+                }
 
-                FogCell[] fogCells = new FogCell[size.x * size.y];
+                if (fogCellPrefab == null)
+                    return;
+
+                createdCells = new FogCell[size.x * size.y];
                 float zDefault = -((size.y - 1) * CellSize / 2);
                 Vector3 nextLocalPos = new() { x = -((size.x - 1) * CellSize / 2), z = zDefault };
 
@@ -119,13 +124,15 @@ namespace FoW
                 {
                     for (int y = 0; y < size.y; y++)
                     {
-                        fogCells[x * size.y + y] = Instantiate(fogCellPrefab, parent.position + nextLocalPos, parent.rotation, parent);
+                        createdCells[x * size.y + y] = Instantiate(fogCellPrefab, parent.position + nextLocalPos, parent.rotation, parent);
                         nextLocalPos.z += CellSize;
                     }
                     nextLocalPos.x += CellSize;
                     nextLocalPos.z = zDefault;
                 }
-                return fogCells;
+                
+                int tintColor = Shader.PropertyToID("_TintColor");
+                CreatedCells.First().GetComponent<Renderer>().sharedMaterial.SetColor(tintColor, color);
             }
         }
     }

@@ -22,7 +22,7 @@ namespace FoW
 
         private void Update()
         {
-            bool isVisible = FogOfWar.IsVisible(this);
+            bool isVisible = FogOfWar.IsHiderVisible(this);
             if (_lastVisibleStatus == isVisible)
                 return;
 

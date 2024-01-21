@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{56bbd06b-d018-4b34-a3c0-b884bab93812}">
+		<property name="assetPath">
+			<value>Chop2.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.24997732426303854</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{5054f51c-3372-4b0d-85f5-b12d59101b73}</destination>
+		</relationship>
+	</object>
+</objects>

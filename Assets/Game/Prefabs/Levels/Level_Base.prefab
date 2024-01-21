@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 4799873936671940351}
   - component: {fileID: 2928857423601444070}
   - component: {fileID: 5161281038580711707}
+  - component: {fileID: 3524548147070539692}
   m_Layer: 5
   m_Name: ReturnTorchButton
   m_TagString: Untagged
@@ -228,6 +229,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 4799873936671940351}
+--- !u!114 &3524548147070539692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2254625788632922830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 680ef07184fe450cae111916b2cc4d06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxPath: event:/Click
+  maxPitchRange: 0.2
 --- !u!1 &2456956412340225266
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,6 +625,7 @@ GameObject:
   - component: {fileID: 8358108090813370908}
   - component: {fileID: 4716865692126933535}
   - component: {fileID: 2922185846391934586}
+  - component: {fileID: 3322860169265610306}
   m_Layer: 5
   m_Name: SettingsButton
   m_TagString: Untagged
@@ -718,6 +734,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3322860169265610306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4483441914015508972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 680ef07184fe450cae111916b2cc4d06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxPath: event:/Click
+  maxPitchRange: 0.2
 --- !u!1 &5360099961844313097
 GameObject:
   m_ObjectHideFlags: 0
@@ -1120,6 +1150,7 @@ GameObject:
   - component: {fileID: 5552037365665054730}
   - component: {fileID: 8161850479384800631}
   - component: {fileID: 6623767092981875413}
+  - component: {fileID: 3158948868908029006}
   m_Layer: 5
   m_Name: ReloadLevelButton
   m_TagString: Untagged
@@ -1241,6 +1272,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3158948868908029006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6216313937650229542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 680ef07184fe450cae111916b2cc4d06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxPath: event:/Click
+  maxPitchRange: 0.2
 --- !u!1 &6459062091010769313
 GameObject:
   m_ObjectHideFlags: 0

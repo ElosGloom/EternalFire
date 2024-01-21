@@ -3,3 +3,7 @@ Logs
 Library
 .idea
 UserSettings
+obj
+Assets/Plugins/FMOD/Cache
+Assets/StreamingAssets/Fmod/EternalFire/.cache
+fmod_editor.log

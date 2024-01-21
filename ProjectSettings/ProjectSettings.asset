@@ -52,7 +52,7 @@ PlayerSettings:
   m_SpriteBatchVertexThreshold: 300
   m_MTRendering: 1
   mipStripping: 1
-  numberOfMipsStripped: 0
+  numberOfMipsStripped: 1
   numberOfMipsStrippedPerMipmapLimitGroup: {}
   m_StackTraceTypes: 010000000100000001000000010000000100000001000000
   iosShowActivityIndicatorOnLoading: -1
@@ -260,8 +260,8 @@ PlayerSettings:
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: 
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: D:/UnityProjects/EternalFire.keystore
+  AndroidKeyaliasName: ']-]ztmj@=wl7ov|4]fugosft1{;8of'
   AndroidEnableArmv9SecurityFeatures: 0
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
@@ -269,7 +269,7 @@ PlayerSettings:
   AndroidEnableTango: 0
   androidEnableBanner: 1
   androidUseLowAccuracyLocation: 0
-  androidUseCustomKeystore: 0
+  androidUseCustomKeystore: 1
   m_AndroidBanners:
   - width: 320
     height: 180
