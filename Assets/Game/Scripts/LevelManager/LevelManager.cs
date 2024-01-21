@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Game.Scripts.GUI;
+using UnityEngine;
 
 namespace Game.Scripts.LevelManager
 {
@@ -16,6 +17,7 @@ namespace Game.Scripts.LevelManager
             _currentLevelIndex = PlayerPrefs.GetInt("Current Level Index");
             Level.LoseEvent += ReloadLevel;
             Level.WinEvent += LoadNextLevel;
+            ReloadLevelButton.OnClickEvent += ReloadLevel;
             _currentLevel = Instantiate(prefabs[_currentLevelIndex]);
         }
 
@@ -43,6 +45,7 @@ namespace Game.Scripts.LevelManager
         {
             Level.WinEvent -= LoadNextLevel;
             Level.LoseEvent -= ReloadLevel;
+            ReloadLevelButton.OnClickEvent -= ReloadLevel;
         }
     }
 }
