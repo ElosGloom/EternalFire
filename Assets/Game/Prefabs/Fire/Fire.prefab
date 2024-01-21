@@ -618,27 +618,60 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41d1f53ca69745709f0abd0ce8191178, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fogOfWarRevealer: {fileID: 8180118373543962301}
+  fogRevealer: {fileID: 4132254343068641182}
   lightRadiusCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: -0.5
-      inSlope: 5.5
-      outSlope: 5.5
-      tangentMode: 34
+      value: 1
+      inSlope: 10.398424
+      outSlope: 10.398424
+      tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.33333334
+      outWeight: 0.29398146
     - serializedVersion: 3
       time: 1
       value: 5
-      inSlope: 0.4402515
-      outSlope: 1
-      tangentMode: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
       weightedMode: 0
-      inWeight: 0.2625
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  revealForceCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 30.675543
+      outSlope: 30.675543
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.35713977
+    - serializedVersion: 3
+      time: 0.1
+      value: 1
+      inSlope: 0.1785975
+      outSlope: 0
+      tangentMode: 65
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.2842338
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: -0
+      outSlope: 0
+      tangentMode: 69
+      weightedMode: 0
+      inWeight: 0
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -768,124 +801,6 @@ Transform:
   - {fileID: 8430607159734047427}
   m_Father: {fileID: 8928008195345495115}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5756831058239959635
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5990541802380946885}
-  - component: {fileID: 4825881755442322757}
-  - component: {fileID: 1673461034916540822}
-  m_Layer: 0
-  m_Name: Point Light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5990541802380946885
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5756831058239959635}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.51, y: 3.6599998, z: -0.45999998}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8928008195345495115}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!108 &4825881755442322757
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5756831058239959635}
-  m_Enabled: 1
-  serializedVersion: 10
-  m_Type: 2
-  m_Shape: 0
-  m_Color: {r: 1, g: 0.9760522, b: 0.8443396, a: 1}
-  m_Intensity: 25
-  m_Range: 8.7
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 1
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 8900000, guid: 6741ab397df180148acdecc362fe5868, type: 3}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_UseViewFrustumForShadowCasterCull: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
---- !u!114 &1673461034916540822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5756831058239959635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Version: 3
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 0
-  m_LightLayerMask: 1
-  m_RenderingLayers: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_ShadowRenderingLayers: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
-  m_SoftShadowQuality: 0
 --- !u!1 &6143447322036241141
 GameObject:
   m_ObjectHideFlags: 0
@@ -895,7 +810,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8928008195345495115}
-  - component: {fileID: 8180118373543962301}
+  - component: {fileID: 4132254343068641182}
   m_Layer: 0
   m_Name: Revealer
   m_TagString: Untagged
@@ -917,10 +832,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 265260524141304812}
-  - {fileID: 5990541802380946885}
   m_Father: {fileID: 4446452435224446330}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8180118373543962301
+--- !u!114 &4132254343068641182
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -929,51 +843,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6143447322036241141}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c8c92e8943a9914ba89720ba5fcf806, type: 3}
+  m_Script: {fileID: 11500000, guid: 33be6d8915785834eab16a8ff7a71c74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ViewRadius: 5
-  SoftenDistance: 1
-  ViewAngle: 360
-  UnobscuredRadius: 0
-  Opacity: 1
-  AddCorners: 0
-  RevealHiderInFadeOutZonePercentage: 0.5
-  EyeOffset: 0
-  VisionHeight: 3
-  VisionHeightSoftenDistance: 1.5
-  ObstacleMask:
-    serializedVersion: 2
-    m_Bits: 0
-  RaycastResolution: 0.5
-  ResolveEdge: 1
-  MaxEdgeResolveIterations: 10
-  NumExtraIterations: 4
-  NumExtraRaysOnIteration: 3
-  MaxAcceptableEdgeAngleDifference: 0.005
-  EdgeDstThreshold: 0.1
-  DoubleHitMaxAngleDelta: 15
-  StartRevealerAsStatic: 0
-  StaticRevealer: 0
-  FogOfWarID: 0
-  IndexID: 0
-  NumberOfPoints: 0
-  Angles: []
-  Radii: []
-  AreHits: 
-  DebugMode: 0
-  DrawInitialRays: 0
-  SegmentTest: 0
-  DrawSegments: 0
-  DrawOutline: 0
-  DrawExpectedNextPoints: 0
-  DrawIteritiveRays: 0
-  DrawEdgeResolveRays: 0
-  LogNumRaycasts: 0
-  NumRayCasts: 0
-  DrawRayNoise: 0
-  DrawExtraCastLines: 0
-  hidersSeen: []
+  radius: 5
+  revealForce: 1
 --- !u!1001 &4446452433918663572
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1046,6 +920,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FireModel
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: da597832752c4c6478f9c884946adb33, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1116,6 +994,22 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.08
       objectReference: {fileID: 0}
+    - target: {fileID: 7700276133282876483, guid: 080943fb36bd20d489ff1079570d0041, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9001554205323274027, guid: 080943fb36bd20d489ff1079570d0041, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9001554206564720971, guid: 080943fb36bd20d489ff1079570d0041, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9001554206710398013, guid: 080943fb36bd20d489ff1079570d0041, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9001554206986987458, guid: 080943fb36bd20d489ff1079570d0041, type: 3}
       propertyPath: m_Name
       value: Fire
@@ -1123,6 +1017,10 @@ PrefabInstance:
     - target: {fileID: 9001554206986987458, guid: 080943fb36bd20d489ff1079570d0041, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9001554206986987458, guid: 080943fb36bd20d489ff1079570d0041, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9001554206986987471, guid: 080943fb36bd20d489ff1079570d0041, type: 3}
       propertyPath: m_RootOrder
@@ -1171,6 +1069,10 @@ PrefabInstance:
     - target: {fileID: 9001554207227917248, guid: 080943fb36bd20d489ff1079570d0041, type: 3}
       propertyPath: m_Name
       value: MainFire
+      objectReference: {fileID: 0}
+    - target: {fileID: 9001554207227917248, guid: 080943fb36bd20d489ff1079570d0041, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

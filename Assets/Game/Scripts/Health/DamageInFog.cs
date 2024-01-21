@@ -1,34 +1,28 @@
-﻿using System;
-using FOW;
-using UnityEngine;
+﻿using UnityEngine;
+using FoW;
 
 namespace Game.Scripts.Health
 {
-    public class DamageInFog : HiderBehavior
+    public class DamageInFog : HiderBehaviour
     {
         [SerializeField] private DamageOverTime damageOverTime;
         [SerializeField] private CanvasGroup canvasGroup;
         [SerializeField, Min(0.1f)] private float fadeTime = 1;
+        
         private bool _inFog;
-
-        protected override void OnReveal()
-        {
-            _inFog = false;
-            damageOverTime.enabled = false;
-        }
-
-        protected override void OnHide()
-        {
-            _inFog = true;
-            damageOverTime.enabled = true;
-        }
-
+        
         private void Update()
         {
             if (_inFog)
                 canvasGroup.alpha += Time.deltaTime / fadeTime;
             else
                 canvasGroup.alpha -= Time.deltaTime / fadeTime;
+        }
+
+        public override void OnVisionStatusChanged(bool isVisible)
+        {
+            _inFog = !isVisible;
+            damageOverTime.enabled = !isVisible;
         }
     }
 }

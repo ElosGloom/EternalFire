@@ -1,12 +1,13 @@
-﻿using FOW;
+﻿using FoW;
 using UnityEngine;
 
 namespace Game.Scripts.Fire
 {
     public class FireSystemMember : MonoBehaviour
     {
-        [SerializeField] private FogOfWarRevealer3D fogOfWarRevealer;
+        [SerializeField] private FogRevealer fogRevealer;
         [SerializeField] private AnimationCurve lightRadiusCurve;
+        [SerializeField] private AnimationCurve revealForceCurve;
         [SerializeField] private ParticleSystemForceField forceField;
 
         public ParticleSystemForceField ForceField => forceField;
@@ -18,10 +19,10 @@ namespace Game.Scripts.Fire
             healthComponent.HealthChangeEvent += OnHealthChanged;
         }
 
-
         private void OnHealthChanged(float currentHp, float maxHp)
         {
-            fogOfWarRevealer.ViewRadius = lightRadiusCurve.Evaluate(currentHp / maxHp);
+            fogRevealer.Radius = lightRadiusCurve.Evaluate(currentHp / maxHp);
+            fogRevealer.RevealForce = revealForceCurve.Evaluate(currentHp / maxHp);
         }
 
         private void OnDestroy()

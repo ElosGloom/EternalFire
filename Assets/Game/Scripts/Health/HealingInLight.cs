@@ -1,21 +1,15 @@
-﻿using FOW;
+﻿using FoW;
 using UnityEngine;
 
 namespace Game.Scripts.Health
 {
-    public class HealingInLight : HiderBehavior
+    public class HealingInLight : HiderBehaviour
     {
         [SerializeField] private HealingOverTime healingOverTime;
-        
-        
-        protected override void OnReveal()
-        {
-            healingOverTime.enabled = true;
-        }
 
-        protected override void OnHide()
+        public override void OnVisionStatusChanged(bool isVisible)
         {
-            healingOverTime.enabled = false;
+            healingOverTime.enabled = isVisible;
         }
     }
 }

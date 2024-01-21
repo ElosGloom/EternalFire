@@ -129,56 +129,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2139334533042051766, guid: ea21ba4805b77c742b95245a06413c7e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7042468931366863219}
-    - targetCorrespondingSourceObject: {fileID: 2139334533042051766, guid: ea21ba4805b77c742b95245a06413c7e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2092731077780498112}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea21ba4805b77c742b95245a06413c7e, type: 3}
 --- !u!4 &2095674815189832195 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2454172680867933292, guid: ea21ba4805b77c742b95245a06413c7e, type: 3}
   m_PrefabInstance: {fileID: 4547417540594679407}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2498333705139135705 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2139334533042051766, guid: ea21ba4805b77c742b95245a06413c7e, type: 3}
-  m_PrefabInstance: {fileID: 4547417540594679407}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7042468931366863219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2498333705139135705}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06c78af948052824d93c22c84c08dd65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  samplePoints:
-  - {fileID: 2095674815189832195}
-  maxDistBetweenPoints: 0
-  seenCount: 0
-  seenBy: []
---- !u!114 &2092731077780498112
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2498333705139135705}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dfbeda9b3b3aa04bbb897826b875157, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fogOfWarHider: {fileID: 7042468931366863219}
-  ObjectsToHide:
-  - {fileID: 2498333705139135705}
 --- !u!1001 &5000356478674097106
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -539,7 +496,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level_1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5597790097697191907, guid: 02334f3f99d32104f9f48d3657d83587, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2278849622685713758, guid: 02334f3f99d32104f9f48d3657d83587, type: 3}

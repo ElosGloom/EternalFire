@@ -16,12 +16,12 @@ GameObject:
   - component: {fileID: 3160804848274206316}
   - component: {fileID: 5003763155144849433}
   - component: {fileID: 5233873014066414424}
-  - component: {fileID: 1939546171096627623}
   - component: {fileID: 7133547810872059515}
   - component: {fileID: 1790655269783735814}
   - component: {fileID: 6588357532893986978}
   - component: {fileID: 722662897373707344}
   - component: {fileID: 6089308330091719578}
+  - component: {fileID: 5735886568856775094}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -180,22 +180,6 @@ MonoBehaviour:
   items:
     list: []
     keyCollision: 0
---- !u!114 &1939546171096627623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4922761849981307234}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06c78af948052824d93c22c84c08dd65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  samplePoints: []
-  maxDistBetweenPoints: 0
-  seenCount: 0
-  seenBy: []
 --- !u!114 &7133547810872059515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,8 +206,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3b71fe8c34f458083afab92d4e02398, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fogOfWarHider: {fileID: 1939546171096627623}
   damageOverTime: {fileID: 7133547810872059515}
+  canvasGroup: {fileID: 0}
+  fadeTime: 1
 --- !u!114 &6588357532893986978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,9 +250,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d57314d27e84a7f984cebdbbc290206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fogOfWarHider: {fileID: 1939546171096627623}
-  foWHider: {fileID: 1939546171096627623}
   healingOverTime: {fileID: 722662897373707344}
+--- !u!114 &5735886568856775094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4922761849981307234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0af8ae4bd82429bb32e9c7539a8cc52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6265820264253018980
 GameObject:
   m_ObjectHideFlags: 0
