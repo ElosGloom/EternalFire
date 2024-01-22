@@ -14,16 +14,14 @@ namespace Game.Scripts.LevelManager
         private void Start()
         {
             _currentLevelIndex = PlayerPrefs.GetInt("Current Level Index");
-            Level.LoseEvent += ReloadLevel;
-            Level.WinEvent += LoadNextLevel;
             ReloadLevelButton.OnClickEvent += ReloadLevel;
+            NextLevelButton.OnClickEvent += LoadNextLevel;
             _currentLevel = Instantiate(prefabs[_currentLevelIndex]);
         }
 
         private void ReloadLevel()
         {
             Destroy(_currentLevel.gameObject);
-            Debug.Log("YOU LOSE");
             _currentLevel = Instantiate(prefabs[_currentLevelIndex]);
         }
 
@@ -42,9 +40,8 @@ namespace Game.Scripts.LevelManager
 
         private void OnDestroy()
         {
-            Level.WinEvent -= LoadNextLevel;
-            Level.LoseEvent -= ReloadLevel;
             ReloadLevelButton.OnClickEvent -= ReloadLevel;
+            NextLevelButton.OnClickEvent += LoadNextLevel;
         }
     }
 }

@@ -14,7 +14,7 @@ namespace Game.Scripts.GUI
         public bool IsActive()
         {
             const float joystickThreshold = 0.15f;
-            return joystick.Direction.magnitude > joystickThreshold;
+            return joystick.Direction.magnitude > joystickThreshold && isActiveAndEnabled;
         }
 
         public Vector3 Direction => GetNormalizedWorldDirection();
