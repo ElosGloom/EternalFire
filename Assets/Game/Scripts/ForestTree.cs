@@ -51,8 +51,7 @@ namespace Game.Scripts
                     var randomPosition = woodSpawnPoint.position + randomVector;
 
 
-                    var currentPrefab = Instantiate(woodPrefab);
-                    currentPrefab.transform.position = randomPosition;
+                    var currentPrefab = Instantiate(woodPrefab,randomPosition, Quaternion.identity, transform.parent);
                     currentPrefab.AddForce((randomPosition - transform.position) * shootOutForce);
                 }
 

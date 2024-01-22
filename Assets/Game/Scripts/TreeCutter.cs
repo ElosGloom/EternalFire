@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using Game.Scripts.Health;
+using Game.Scripts.SFX;
 using UnityEngine;
 
 namespace Game.Scripts
@@ -10,6 +11,8 @@ namespace Game.Scripts
         [SerializeField] private float attackCooldown = 1f;
         [SerializeField] private int damage;
         [SerializeField] private float damageDelay;
+        [SerializeField] private ParticleSystem vfx;
+
 
         private float _nextAttackTimeLeft;
         private static readonly int TreeCut = Animator.StringToHash("TreeCut");
@@ -18,7 +21,6 @@ namespace Game.Scripts
         private void Start()
         {
             _nextAttackTimeLeft = 0;
-            
         }
 
         private void Update()
@@ -30,10 +32,10 @@ namespace Game.Scripts
         {
             if (_nextAttackTimeLeft > 0)
                 return;
-            
-            if (!other.gameObject.CompareTag("Tree")) 
+
+            if (!other.gameObject.CompareTag("Tree"))
                 return; //todo remove tag
-            
+
             animator.SetTrigger(TreeCut);
             StartCoroutine(CooldownResetRoutine());
             StartCoroutine(DamageDelayRoutine(other));
@@ -43,13 +45,17 @@ namespace Game.Scripts
         {
             yield return new WaitForFixedUpdate();
             _nextAttackTimeLeft = attackCooldown;
-
         }
 
         private IEnumerator DamageDelayRoutine(Collider other)
         {
             yield return new WaitForSeconds(damageDelay);
-            other.GetComponent<HealthComponent>().TakeDamage(damage);
+            if (other)
+            {
+                SfxController.PlaySfx("event:/Chop1", 0.2f);
+                vfx.Play();
+                other.GetComponent<HealthComponent>().TakeDamage(damage);
+            }
         }
     }
 }
