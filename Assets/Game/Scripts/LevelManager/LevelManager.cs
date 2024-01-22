@@ -13,7 +13,6 @@ namespace Game.Scripts.LevelManager
 
         private void Start()
         {
-            Application.targetFrameRate = 75;
             _currentLevelIndex = PlayerPrefs.GetInt("Current Level Index");
             Level.LoseEvent += ReloadLevel;
             Level.WinEvent += LoadNextLevel;

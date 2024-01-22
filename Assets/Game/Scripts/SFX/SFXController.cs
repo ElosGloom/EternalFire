@@ -40,7 +40,9 @@ namespace Game.Scripts.SFX
 
         private static async void ReleaseAfterPlay(EventInstance eventInstance)
         {
-            await Task.Delay(5000);
+            eventInstance.getDescription(out var description);
+            description.getLength(out int length);
+            await Task.Delay(length);
             eventInstance.release();
         }
     }

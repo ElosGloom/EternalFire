@@ -7,6 +7,7 @@ namespace Game.Scripts
     {
         private void Awake()
         {
+            Application.targetFrameRate = 60;
             MusicController.PlayMusic("event:/MainMusic");
         }
     }
