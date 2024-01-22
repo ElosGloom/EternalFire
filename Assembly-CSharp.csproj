@@ -1537,14 +1537,14 @@
      <Reference Include="Unity.RenderPipelines.Core.Editor">
      <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.VisualEffectGraph.Editor">
+     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.VisualEffectGraph.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.VisualScripting.Flow">
      <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Mathematics.Editor">
      <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualEffectGraph.Editor">
-     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.VisualEffectGraph.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
      <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
@@ -1564,11 +1564,11 @@
      <Reference Include="Unity.TextMeshPro">
      <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
-     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.VSCode.Editor">
      <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
+     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Editor">
      <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
@@ -1679,13 +1679,13 @@
       <Project>{affdc108-f496-64c0-b1c9-ffdd2d3d9f80}</Project>
       <Name>ToonyColorsPro.Demo.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="ToonyColorsPro.Runtime.csproj">
-      <Project>{6efd43f5-0ede-5f22-59e5-90f0e89daf92}</Project>
-      <Name>ToonyColorsPro.Runtime</Name>
-    </ProjectReference>
     <ProjectReference Include="FMODUnityResonanceEditor.csproj">
       <Project>{5a073275-a1f9-b2e5-094d-175b4867cd46}</Project>
       <Name>FMODUnityResonanceEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="ToonyColorsPro.Runtime.csproj">
+      <Project>{6efd43f5-0ede-5f22-59e5-90f0e89daf92}</Project>
+      <Name>ToonyColorsPro.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="ToonyColorsPro.Editor.csproj">
       <Project>{6268801e-a217-66c5-121e-0591f907e35e}</Project>

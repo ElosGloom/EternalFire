@@ -20,9 +20,9 @@ namespace Game.Scripts.Fire
             fireHealth.HealthChangeEvent += OnHealthChanged;
         }
 
-        private void OnHealthChanged(float currentHp, float maxHp)
+        private void OnHealthChanged()
         {
-            float t = currentHp / maxHp;
+            float t = FireSystem.Instance.HealthComponent.CurrentHealth / FireSystem.Instance.HealthComponent.MaxHealth;
             //mainFire
             var mainModule = mainFire.main;
             float mainFireSize = mainFireSizeCurve.Evaluate(t);

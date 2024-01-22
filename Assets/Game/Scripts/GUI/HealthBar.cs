@@ -9,14 +9,16 @@ namespace Game.Scripts.GUI
         [SerializeField] private Image hpFill;
         [SerializeField] private HealthComponent healthComponent;
 
+        protected HealthComponent HealthComponent => healthComponent;
+
         private void Start()
         {
             healthComponent.HealthChangeEvent += OnHealthChanged;
         }
 
-        protected virtual void OnHealthChanged(float currentHealth, float maxHealth)
+        protected virtual void OnHealthChanged()
         {
-            hpFill.fillAmount = currentHealth / maxHealth;
+            hpFill.fillAmount =  healthComponent.CurrentHealth/ healthComponent.MaxHealth;
         }
 
         private void OnDestroy()

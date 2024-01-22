@@ -7,10 +7,10 @@ namespace Game.Scripts.GUI
     {
         [SerializeField] private TextMeshProUGUI hpText;
 
-        protected override void OnHealthChanged(float currentHealth, float maxHealth)
+        protected override void OnHealthChanged()
         {
-            hpText.text = $"{currentHealth:0}/{maxHealth}";
-            base.OnHealthChanged(currentHealth, maxHealth);
+            hpText.text = $"{HealthComponent.CurrentHealth:0}/{HealthComponent.MaxHealth}";
+            base.OnHealthChanged();
         }
     }
 }

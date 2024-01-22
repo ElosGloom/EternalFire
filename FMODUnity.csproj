@@ -122,6 +122,7 @@
      <Folder Include="Assets\Plugins\FMOD\platforms\mac" />
      <Folder Include="Assets\Plugins\FMOD\Cache" />
      <Folder Include="Assets\Plugins\FMOD\platforms\html5" />
+     <Folder Include="Assets\Plugins\FMOD\Cache\Editor" />
      <Folder Include="Assets\Plugins\FMOD\addons\ResonanceAudio" />
      <Folder Include="Assets\Plugins\FMOD\platforms\ios\lib" />
      <Reference Include="UnityEngine">

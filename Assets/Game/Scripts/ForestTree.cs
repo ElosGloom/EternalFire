@@ -26,8 +26,10 @@ namespace Game.Scripts
             treeHp.HealthChangeEvent += OnDamageTaken;
         }
 
-        private void OnDamageTaken(float currentHp, float maxHp)
+        private void OnDamageTaken()
         {
+            var currentHp =treeHp.CurrentHealth;
+            var maxHp = treeHp.MaxHealth;
             if (currentHp == maxHp)//todo why?
                 return;
 

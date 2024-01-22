@@ -15,12 +15,14 @@ namespace Game.Scripts.Fire
         private void Awake()
         {
             var healthComponent = FireSystem.Instance.HealthComponent;
-            OnHealthChanged(healthComponent.CurrentHealth, healthComponent.MaxHealth);
+            OnHealthChanged();
             healthComponent.HealthChangeEvent += OnHealthChanged;
         }
 
-        private void OnHealthChanged(float currentHp, float maxHp)
+        private void OnHealthChanged()
         {
+            var currentHp = FireSystem.Instance.HealthComponent.CurrentHealth;
+            var maxHp = FireSystem.Instance.HealthComponent.MaxHealth;
             fogRevealer.Radius = lightRadiusCurve.Evaluate(currentHp / maxHp);
             fogRevealer.RevealForce = revealForceCurve.Evaluate(currentHp / maxHp);
         }

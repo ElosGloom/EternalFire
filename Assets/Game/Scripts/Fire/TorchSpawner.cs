@@ -25,6 +25,10 @@ namespace Game.Scripts.Fire
             var nearestMember = FireSystem.Instance.SearchNearestMember(spawnerPosition);
 
             var distance = Vector3.Distance(spawnerPosition, nearestMember.transform.position);
+            
+            if (FireSystem.Instance.HealthComponent.CurrentHealth<=0)
+                return;
+            
             if (distance < MinSpawnRadius || distance > MaxSpawnRadius)
                 return;
 

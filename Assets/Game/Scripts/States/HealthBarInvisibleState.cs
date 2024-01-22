@@ -1,4 +1,5 @@
-﻿using Game.Scripts.Health;
+﻿using Game.Scripts.Fire;
+using Game.Scripts.Health;
 using UnityEngine;
 
 namespace Game.Scripts.States
@@ -37,9 +38,10 @@ namespace Game.Scripts.States
             _canvasGroup.alpha -= Time.deltaTime / _fadeTime;
         }
 
-        private void OnHealthChanged(float currentHealth, float maxHealth)
+        private void OnHealthChanged()
         {
-            if (currentHealth < maxHealth)
+            
+            if (_healthComponent.CurrentHealth < _healthComponent.MaxHealth)
                 _stateMachine.SetState<HealthBarVisibleState>();
         }
     }
