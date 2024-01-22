@@ -144,6 +144,7 @@
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Magic\Aura" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Environment\Water\Bubbles" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+     <Folder Include="Assets\ExternalAssets\Lana Studio\Hyper Casual FX\Demo\Animations" />
      <Folder Include="Assets\Game\Prefabs\Fire" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Sword\Slash\SwordSlashThin" />
      <Folder Include="Assets\StreamingAssets\Fmod\EternalFire\Build\Desktop" />
@@ -196,6 +197,7 @@
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_VertexDisplacement.txt" />
      <Folder Include="Assets\TextMesh Pro\Resources\Sprite Assets" />
      <None Include="Assets\StreamingAssets\Fmod\EternalFire\Metadata\Platform\{ab606344-286e-44bd-9f04-ac229c2ca07f}.xml" />
+     <Folder Include="Assets\ExternalAssets\Lana Studio\Hyper Casual FX\Prefabs\Sparkle" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_Outline.txt" />
      <Folder Include="Assets\ExternalAssets\Polygon Arsenal\Materials" />
      <Folder Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\ResourcesData" />
@@ -247,6 +249,7 @@
      <None Include="Assets\StreamingAssets\Fmod\EternalFire\Metadata\AudioFile\{68e6a13d-45a4-4399-8ec0-ed86766eb216}.xml" />
      <Folder Include="Assets\ExternalAssets\POLYMORPHFX\MiGHTYFX" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\Legacy\Variants Base\TCP2_Mobile_Specular_OutlineBlending.shader" />
+     <Folder Include="Assets\ExternalAssets\Lana Studio\Hyper Casual FX\Prefabs\Area" />
      <Folder Include="Assets\StreamingAssets\Fmod\EternalFire\Metadata\EncodingSetting" />
      <Folder Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\ResourcesData\Sprites\Component\Icon_Icons_(x2)\NoShadow\Icons_128" />
      <None Include="Assets\StreamingAssets\Fmod\EternalFire\Metadata\SnapshotGroup\{7f08324d-c46f-4e2b-bb2f-9aedba530e76}.xml" />
@@ -353,6 +356,7 @@
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Interactive\Trails" />
      <Folder Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\ResourcesData\Sprites\Demo\Demo_Icon" />
      <Folder Include="Assets\ExternalAssets\POLYMORPHFX\MiGHTYFX\MagicSpellsFXPack\GFX3D" />
+     <Folder Include="Assets\ExternalAssets\Lana Studio\Hyper Casual FX\Prefabs\Dust" />
      <Folder Include="Assets\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Muzzleflash\- Misc\GunFire" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Materials\Misc\Fire" />
@@ -480,6 +484,7 @@
      <None Include="Assets\StreamingAssets\Fmod\EternalFire\Metadata\Master.xml" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Environment\Smoke" />
      <Folder Include="Assets\Game" />
+     <Folder Include="Assets\ExternalAssets\Lana Studio\Hyper Casual FX\Prefabs\Shine" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\Legacy\Variants Base\TCP2_Desktop_Outline.shader" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\Legacy\TCP2_OutlineOnly SM2.shader" />
      <Folder Include="Assets\ExternalAssets\VFX_Klaus\Prefabs\Hyper Casual FX" />
@@ -497,6 +502,7 @@
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\SG2\Hologram.shader" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Explosions\SoulExplosion" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\Hybrid\TCP2 Hybrid Include.cginc" />
+     <None Include="Assets\ExternalAssets\Lana Studio\Hyper Casual FX\Demo\Readme.txt" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Environment\Lightning" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Muzzleflash\LaserMuzzle" />
      <None Include="Assets\LevelData\Default.json" />
@@ -519,6 +525,7 @@
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Environment\Water\Flowing\Soft" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Blood\Green" />
+     <Folder Include="Assets\ExternalAssets\Lana Studio\Hyper Casual FX\Prefabs\Confetti" />
      <Folder Include="Assets\ExternalAssets\POLYMORPHFX\MiGHTYFX\MagicSpellsFXPack\Resources\Meshes" />
      <Folder Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\ResourcesData\Particles\Materials" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Shield" />
@@ -626,6 +633,7 @@
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_Vertical Fog.txt" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\Water\Water WindWaker2.shader" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Explosions\NukeExplosion" />
+     <Folder Include="Assets\ExternalAssets\Lana Studio\Hyper Casual FX\Prefabs\Water" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shader Templates\TCP2_ShaderTemplate_Water_CurvedWorld.txt" />
      <Folder Include="Assets\ExternalAssets\Polygon Arsenal\Shaders\URP" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Environment\Fire\Cartoon\Field Intense" />
@@ -633,6 +641,7 @@
      <Folder Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\Extensions\UIParticle" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Materials\Misc\Magic" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Muzzleflash\EnergyNovaSmallMuzzle" />
+     <Folder Include="Assets\ExternalAssets\Lana Studio\Hyper Casual FX\Prefabs" />
      <Folder Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\ResourcesData\Sprites\Component\Icon_EquipIcons_(x2)\NoShadow\EquipIcons_256" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Interactive\Flares" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\PBS\Hand Painted.shader" />
@@ -682,6 +691,7 @@
      <Folder Include="Assets\ExternalAssets\Male Peasant Pack Cute Series\Standard Assets Files\Scenes" />
      <Folder Include="Assets\ExternalAssets\Piloto Studio" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Muzzleflash\LiquidMuzzle" />
+     <Folder Include="Assets\ExternalAssets\Lana Studio\Hyper Casual FX\Models" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\Water\Reflection.shader" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\Water\Lava.shader" />
      <None Include="Assets\ExternalAssets\POLYMORPHFX\MiGHTYFX\_common\Shaders\pmFX_FX_Unlit_Distortion.shader" />
@@ -754,7 +764,9 @@
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Demo\Missile Prefabs\BulletFat" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\Water\Lava Cartoon.shader" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Blood\Yellow" />
+     <Folder Include="Assets\Game\Resources" />
      <Folder Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\ResourcesData\Sprites\Component\Icon_Icons_(x2)\Shadow\Icons_32" />
+     <Folder Include="Assets\ExternalAssets\Lana Studio\Hyper Casual FX\Prefabs\Flash" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\PBS\Outline Behind.shader" />
      <None Include="Assets\ExternalAssets\Piloto Studio\Shaders\VFX_Piloto\ParallaxVFX.shader" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Explosions\SmallExplosion" />
@@ -809,6 +821,7 @@
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\Legacy\Variants Base\TCP2_Mobile_Specular_Outline.shader" />
      <Folder Include="Assets\ExternalAssets\POLYMORPHFX\MiGHTYFX\MagicSpellsFXPack\Prefabs" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Environment\Fog\Black" />
+     <None Include="Assets\TextMesh Pro\Fonts\OFL.txt" />
      <Folder Include="Assets\StreamingAssets\Fmod\EternalFire\Metadata\BankFolder" />
      <None Include="Assets\StreamingAssets\Fmod\EternalFire\Metadata\Event\{2caac998-f473-4cc5-8f13-09a10775a873}.xml" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Environment\Fire\Soft\SoftTallFire" />
@@ -856,6 +869,7 @@
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Interactive\Money" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\SG2\Wind Animation.shader" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Blood\Red" />
+     <Folder Include="Assets\ExternalAssets\Lana Studio\Hyper Casual FX\Demo" />
      <Folder Include="Assets\JMO Assets\Toony Colors Pro\Shaders Generated\Examples" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Sword\- Legacy\SwordHitCriticalLegacy" />
      <Folder Include="Assets\ExternalAssets\Joystick Pack\Sprites\Horizontal Backgrounds" />
@@ -863,6 +877,7 @@
      <None Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\Extensions\UIParticle\UIAdditive.shader" />
      <Folder Include="Assets\ExternalAssets\POLYMORPHFX\MiGHTYFX\MagicSpellsFXPack\SRP" />
      <Folder Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\ResourcesData\Sprites\Component\Icon_EquipIcons_(Original)" />
+     <Folder Include="Assets\ExternalAssets\Lana Studio\Hyper Casual FX\Demo\Scenes" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\Water\Poison.shader" />
      <Folder Include="Assets\ExternalAssets\Joystick Pack\Sprites\Handles" />
      <Folder Include="Assets\ExternalAssets\Male Peasant Pack Cute Series\Scenes" />
