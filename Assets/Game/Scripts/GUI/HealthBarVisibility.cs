@@ -1,4 +1,5 @@
-﻿using Game.Scripts.Health;
+﻿using System;
+using Game.Scripts.Health;
 using Game.Scripts.States;
 using UnityEngine;
 
@@ -14,18 +15,30 @@ namespace Game.Scripts.GUI
 
         private void Start()
         {
+            healthComponent.DeathEvent += OnDeath;
             var visibleState = new HealthBarVisibleState(canvasGroup, fadeTime, healthComponent, _stateMachine);
             _stateMachine.AddState(visibleState);
 
             var invisibleState = new HealthBarInvisibleState(canvasGroup, fadeTime, healthComponent, _stateMachine);
             _stateMachine.AddState(invisibleState);
-
+           
             _stateMachine.SetState<HealthBarInvisibleState>();
         }
 
         private void Update()
         {
+           
             _stateMachine.Update();
+        }
+
+        private void OnDeath()
+        {
+            gameObject.SetActive(false);
+        }
+
+        private void OnDestroy()
+        {
+            healthComponent.DeathEvent -= OnDeath;
         }
     }
 }

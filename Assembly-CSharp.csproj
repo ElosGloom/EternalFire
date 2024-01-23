@@ -90,6 +90,7 @@
      <Compile Include="Assets\Game\Scripts\GameSettings.cs" />
      <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\ETFXProjectileScript.cs" />
      <Compile Include="Assets\Game\Scripts\SFX\ButtonSfx.cs" />
+     <Compile Include="Assets\Game\Scripts\Health\PlayerDeath.cs" />
      <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\ETFXButtonScript.cs" />
      <Compile Include="Assets\Game\Scripts\GUI\InventoryView.cs" />
      <Compile Include="Assets\Game\Scripts\GUI\MainJoystick.cs" />
