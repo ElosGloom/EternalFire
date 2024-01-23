@@ -130,6 +130,7 @@
      <Compile Include="Assets\ExternalAssets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
      <Compile Include="Assets\FoW\Scripts\FogRevealer.cs" />
      <Compile Include="Assets\Game\Scripts\Health\HealingOverTime.cs" />
+     <Compile Include="Assets\Game\Scripts\Health\PlayerFX.cs" />
      <Compile Include="Assets\Game\Scripts\GUI\ReloadLevelButton.cs" />
      <Compile Include="Assets\Game\Scripts\LevelManager\LevelManager.cs" />
      <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\ETFXLoopScript.cs" />
