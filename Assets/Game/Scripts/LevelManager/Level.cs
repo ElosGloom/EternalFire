@@ -1,6 +1,7 @@
 ﻿using System;
 using Game.Scripts.Fire;
 using Game.Scripts.Health;
+using Game.Scripts.SFX;
 using UnityEngine;
 
 namespace Game.Scripts.LevelManager
@@ -10,6 +11,7 @@ namespace Game.Scripts.LevelManager
         public static event Action WinEvent;
         public static event Action LoseEvent;
         [SerializeField] private HealthComponent playerHealth;
+        
 
 
         private void Start()
@@ -25,6 +27,7 @@ namespace Game.Scripts.LevelManager
 
         private void OnAllBonfiresConnected()
         {
+            SfxController.PlaySfx("event:/LevelComplete");
             WinEvent?.Invoke();
         }
 

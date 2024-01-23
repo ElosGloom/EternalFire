@@ -52,7 +52,7 @@ namespace Game.Scripts
             yield return new WaitForSeconds(damageDelay);
             if (other)
             {
-                SfxController.PlaySfx("event:/Chop1", 0.2f);
+                SfxController.PlayRandomSfx(0.2f, "event:/Chop1","event:/Chop2");
                 vfx.Play();
                 other.GetComponent<HealthComponent>().TakeDamage(damage);
             }

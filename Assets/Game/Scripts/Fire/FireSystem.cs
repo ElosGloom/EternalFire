@@ -35,11 +35,7 @@ namespace Game.Scripts.Fire
         {
             HasTorchesToReturn?.Invoke(false);
         }
-
-        private void Update()
-        {
-            EmptyBonfireListCheck();
-        }
+        
 
         public FireSystemMember SearchNearestMember(Vector3 spawnerPosition)
         {
@@ -94,18 +90,15 @@ namespace Game.Scripts.Fire
                 ConnectMember(inactiveBonfires[i], connectionProvider);
                 inactiveBonfires[i].SwitchActive(true);
                 inactiveBonfires.RemoveAt(i);
+                if (inactiveBonfires.Count == 0)
+                {
+                    AllBonfiresConnectedEvent?.Invoke();
+                }
+                
                 _torches.Clear();
                 HasTorchesToReturn?.Invoke(_torches.Count > 0);
             }
         }
         
-
-        private void EmptyBonfireListCheck()
-        {
-            if (inactiveBonfires.Count == 0)
-            {
-                AllBonfiresConnectedEvent?.Invoke();
-            }
-        }
     }
 }
