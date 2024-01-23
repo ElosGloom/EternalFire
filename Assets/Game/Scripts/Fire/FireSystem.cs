@@ -15,6 +15,8 @@ namespace Game.Scripts.Fire
         [SerializeField] private List<FireSystemMember> connectedMembers;
         [SerializeField] private ParticleSystem fireConnectionFX;
         [SerializeField] private List<Bonfire> inactiveBonfires;
+        [SerializeField] private List<Bonfire> activeBonfires;
+
 
         private static List<Torch> _torches;
         public HealthComponent HealthComponent => healthComponent;
@@ -35,11 +37,16 @@ namespace Game.Scripts.Fire
         {
             HasTorchesToReturn?.Invoke(false);
         }
-        
+
 
         public FireSystemMember SearchNearestMember(Vector3 spawnerPosition)
         {
             return connectedMembers.GetNearestObject(spawnerPosition);
+        }
+
+        public FireSystemMember SearchNearestConnectedBonfire(Vector3 spawnerPosition)
+        {
+            return activeBonfires.GetNearestObject(spawnerPosition);
         }
 
 
@@ -51,7 +58,7 @@ namespace Game.Scripts.Fire
                 _torches.RemoveAt(_torches.Count - 1);
                 connectedMembers.RemoveAt(connectedMembers.Count - 1);
                 HasTorchesToReturn?.Invoke(_torches.Count > 0);
-                
+
                 return true;
             }
 
@@ -88,17 +95,17 @@ namespace Game.Scripts.Fire
                     continue;
 
                 ConnectMember(inactiveBonfires[i], connectionProvider);
+                activeBonfires.Add(inactiveBonfires[i]);
                 inactiveBonfires[i].SwitchActive(true);
                 inactiveBonfires.RemoveAt(i);
                 if (inactiveBonfires.Count == 0)
                 {
                     AllBonfiresConnectedEvent?.Invoke();
                 }
-                
+
                 _torches.Clear();
                 HasTorchesToReturn?.Invoke(_torches.Count > 0);
             }
         }
-        
     }
 }
