@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace FoW
+namespace FPS.FoW
 {
     public class FogOfWar : MonoBehaviour
     {

@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using FoW;
+﻿using FPS.FoW;
+using UnityEngine;
 
 namespace Game.Scripts.Health
 {

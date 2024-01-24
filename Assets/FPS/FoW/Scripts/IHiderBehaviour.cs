@@ -1,4 +1,4 @@
-namespace FoW
+namespace FPS.FoW
 {
     public interface IHiderBehaviour
     {

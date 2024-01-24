@@ -4,7 +4,7 @@ using Unity.Collections;
 using Unity.Jobs;
 using UnityEngine;
 
-namespace FoW
+namespace FPS.FoW
 {
     public class FogCell : MonoBehaviour
     {

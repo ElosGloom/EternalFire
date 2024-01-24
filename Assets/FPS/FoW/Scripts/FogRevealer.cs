@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace FoW
+namespace FPS.FoW
 {
     public class FogRevealer : MonoBehaviour
     {

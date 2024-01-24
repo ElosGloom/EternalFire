@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace FoW
+namespace FPS.FoW
 {
     public class FogHider : MonoBehaviour, IHider
     {

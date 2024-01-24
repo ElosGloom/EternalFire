@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace FoW
+namespace FPS.FoW
 {
     [RequireComponent(typeof(FogHider))]
     public abstract class HiderBehaviour : MonoBehaviour, IHiderBehaviour

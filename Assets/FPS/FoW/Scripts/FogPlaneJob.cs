@@ -2,7 +2,7 @@ using Unity.Collections;
 using Unity.Jobs;
 using UnityEngine;
 
-namespace FoW
+namespace FPS.FoW
 {
     public struct FogPlaneJob : IJob
     {
