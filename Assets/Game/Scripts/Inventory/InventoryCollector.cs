@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using FPS.Pool;
 using Game.Scripts.Inventory;
 using UnityEngine;
 
@@ -12,6 +13,7 @@ namespace Game.Scripts
         private void OnTriggerEnter(Collider other)
         {
             StartCoroutine(DestroyDelayRoutine(other));
+            other.enabled = false;
         }
 
         private IEnumerator DestroyDelayRoutine(Collider other)
@@ -22,7 +24,8 @@ namespace Game.Scripts
             if (inventoryResource)
             {
                 inventory.AddItem(inventoryResource.ItemName, inventoryResource.ItemsCount);
-                inventoryResource.gameObject.SetActive(false);
+                FluffyPool.Return(inventoryResource);
+                other.enabled = true;
             }
         }
     }

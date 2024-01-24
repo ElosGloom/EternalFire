@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 1076787982258298981}
   - component: {fileID: 4483413076662570191}
   - component: {fileID: 8738632669310460743}
+  - component: {fileID: 5021404872210607040}
   m_Layer: 6
-  m_Name: (Rigidbody)Wood
+  m_Name: (InventoryResource)Wood
   m_TagString: Resource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,6 +74,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Wood
   itemsCount: 1
+  rb: {fileID: 4483413076662570191}
 --- !u!54 &4483413076662570191
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -112,7 +114,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82984455db954638bd529fd46cccd049, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Type>k__BackingField: {fileID: 4483413076662570191}
+  <Type>k__BackingField: {fileID: 1076787982258298981}
+--- !u!114 &5021404872210607040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139334533042051766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f5dfa21e5d64438975e02b7734a296e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolable: {fileID: 8738632669310460743}
 --- !u!1001 &2376342229101711609
 PrefabInstance:
   m_ObjectHideFlags: 0

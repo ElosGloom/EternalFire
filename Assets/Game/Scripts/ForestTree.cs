@@ -2,12 +2,13 @@
 using Game.Scripts.Health;
 using Game.Scripts.Inventory;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 namespace Game.Scripts
 {
     public class ForestTree : MonoBehaviour
     {
+
+        private static readonly int TreeDamage = Animator.StringToHash("TreeDamage");
         [SerializeField] private HealthComponent treeHp;
         [SerializeField] private Animator animator;
         [SerializeField] private MeshFilter treeMesh;
@@ -15,27 +16,29 @@ namespace Game.Scripts
         [SerializeField] private Mesh destroyedMesh;
         [SerializeField] private Collider treeTrigger;
         [SerializeField] private Collider treeCollider;
-        [SerializeField] private Rigidbody woodPrefab;
         [SerializeField] private Transform woodSpawnPoint;
         [SerializeField] private int shootOutForce;
         [SerializeField] private int woodCount;
-        
-        private static readonly int TreeDamage = Animator.StringToHash("TreeDamage");
 
-        
+
         private void Start()
         {
             treeHp.HealthChangeEvent += OnDamageTaken;
         }
 
+        private void OnDestroy()
+        {
+            treeHp.HealthChangeEvent -= OnDamageTaken;
+        }
+
         private void OnDamageTaken()
         {
-            var currentHp =treeHp.CurrentHealth;
-            var maxHp = treeHp.MaxHealth;
-            if (currentHp == maxHp)//todo why?
+            float currentHp = treeHp.CurrentHealth;
+            float maxHp = treeHp.MaxHealth;
+            if (currentHp == maxHp) //todo why?
                 return;
 
-            if (currentHp <= 0.5 * maxHp) 
+            if (currentHp <= 0.5 * maxHp)
                 treeMesh.mesh = damagedMesh;
 
             if (currentHp <= 0)
@@ -45,31 +48,26 @@ namespace Game.Scripts
                 Destroy(treeCollider);
                 Destroy(treeHp);
                 Destroy(animator, 1);
-                for (int i = 0; i < woodCount; i++)
+                for (var i = 0; i < woodCount; i++)
                 {
-                    float range = .5f;
+                    var range = .5f;
                     float randomX = Random.Range(-range, range);
                     float randomY = Random.Range(-range, range);
                     float randomZ = Random.Range(-range, range);
                     var randomVector = new Vector3(randomX, randomY, randomZ);
-                    var randomPosition = woodSpawnPoint.position + randomVector;
+                    Vector3 randomPosition = woodSpawnPoint.position + randomVector;
 
 
-                    var poolable = FluffyPool.Get<Rigidbody>("wood");
-                    poolable.transform.position = randomPosition;
-                    poolable.transform.SetParent(transform.parent);
-                    poolable.AddForce((randomPosition - transform.position) * shootOutForce);
+                    var inventoryResource = FluffyPool.Get<InventoryResource>("wood");
+                    inventoryResource.transform.position = randomPosition;
+                    inventoryResource.transform.SetParent(transform.parent);
+                    inventoryResource.Rigidbody.AddForce((randomPosition - transform.position) * shootOutForce);
                 }
 
                 Destroy(this);
             }
 
             animator.SetTrigger(TreeDamage);
-        }
-
-        private void OnDestroy()
-        {
-            treeHp.HealthChangeEvent -= OnDamageTaken;
         }
     }
 }
