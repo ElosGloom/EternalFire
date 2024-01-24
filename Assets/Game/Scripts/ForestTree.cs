@@ -1,4 +1,6 @@
-﻿using Game.Scripts.Health;
+﻿using FPS.Pool;
+using Game.Scripts.Health;
+using Game.Scripts.Inventory;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -53,8 +55,10 @@ namespace Game.Scripts
                     var randomPosition = woodSpawnPoint.position + randomVector;
 
 
-                    var currentPrefab = Instantiate(woodPrefab,randomPosition, Quaternion.identity, transform.parent);
-                    currentPrefab.AddForce((randomPosition - transform.position) * shootOutForce);
+                    var poolable = FluffyPool.Get<Rigidbody>("wood");
+                    poolable.transform.position = randomPosition;
+                    poolable.transform.SetParent(transform.parent);
+                    poolable.AddForce((randomPosition - transform.position) * shootOutForce);
                 }
 
                 Destroy(this);

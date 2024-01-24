@@ -22,7 +22,7 @@ namespace Game.Scripts
             if (inventoryResource)
             {
                 inventory.AddItem(inventoryResource.ItemName, inventoryResource.ItemsCount);
-                Destroy(inventoryResource.gameObject);
+                inventoryResource.gameObject.SetActive(false);
             }
         }
     }

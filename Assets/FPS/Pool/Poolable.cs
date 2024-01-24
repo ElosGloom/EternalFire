@@ -16,12 +16,13 @@ namespace FPS.Pool
 #if UNITY_EDITOR
         private void OnValidate()
         {
-            string goName = gameObject.name;
-            if (goName.Contains('>'))
-            {
-                goName = goName.Split('>')[^1];
-            }
-            gameObject.name = $"<{Type.GetType().Name}>{goName}";
+            // Type ??= transform;
+            // string goName = gameObject.name;
+            // if (goName.Contains('>'))
+            // {
+            //     goName = goName.Split('>')[^1];
+            // }
+            // gameObject.name = $"<{Type.GetType().Name}>{goName}";
         }
   #endif
     }

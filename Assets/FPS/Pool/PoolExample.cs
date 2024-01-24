@@ -1,24 +1,27 @@
 using System.Collections.Generic;
 using System.Linq;
+using Game.Scripts.Inventory;
 using UnityEngine;
 
 namespace FPS.Pool
 {
     public class PoolExample : MonoBehaviour
     {
-        private HashSet<Transform> t = new();
-        private HashSet<MeshFilter> f = new();
+        private HashSet<InventoryResource> t = new();
+        private HashSet<InventoryResource> f = new();
 
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.A))
             {
-                t.Add(FluffyPool.Get<Transform>("t"));
+                t.Add(FluffyPool.Get<InventoryResource>());
             }
+
             if (Input.GetKeyDown(KeyCode.Z))
             {
-                f.Add(FluffyPool.Get<MeshFilter>("f"));
+                f.Add(FluffyPool.Get<InventoryResource>("coin"));
             }
+
             if (Input.GetKeyDown(KeyCode.S))
             {
                 if (t.Count > 0)
@@ -27,8 +30,8 @@ namespace FPS.Pool
                     t.Remove(first);
                     first.gameObject.SetActive(false);
                 }
-
             }
+
             if (Input.GetKeyDown(KeyCode.X))
             {
                 if (f.Count > 0)
