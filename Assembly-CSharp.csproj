@@ -149,6 +149,7 @@
      <Folder Include="Assets\ExternalAssets\Joystick Pack\Scripts\Joysticks" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Environment\Lightning\Sharp" />
      <Folder Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\Prefabs" />
+     <Folder Include="Assets\Game\Texture\grass" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Environment\Stars\StarFogFlow" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Magic\Aura" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Environment\Water\Bubbles" />
@@ -174,6 +175,7 @@
      <Folder Include="Assets\ExternalAssets\Male Peasant Pack Cute Series\01 Customize Character Here\02 Attach Weapons and Accessories\Tools (+R Hand)" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Environment\Fire\Cartoon\Torch Intense" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\VFX Library" />
+     <Folder Include="Assets\ExternalAssets\Isometric Pack 3d\Props" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\Legacy\Include\TCP2_Outline_Behind_SM2.shader" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Materials\Misc\Skulls" />
      <Folder Include="Assets\ExternalAssets\Joystick Pack\Sprites\Vertical Backgrounds" />
@@ -203,6 +205,7 @@
      <None Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Combat FX.txt" />
      <Folder Include="Assets\Game\Texture" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Demo\Missile Prefabs\Frost" />
+     <Folder Include="Assets\ExternalAssets\Bitgem\RTS Elven Buildings - Proto Series\Textures" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Interactive\Portals" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Missiles\Bullet" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_VertexDisplacement.txt" />
@@ -358,6 +361,7 @@
      <None Include="Assets\ExternalAssets\Piloto Studio\Shaders\VFX_Piloto\MeshOverlayFX.shader" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Models" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Missiles\Laser" />
+     <Folder Include="Assets\ExternalAssets\Isometric Pack 3d" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Magic\Circle" />
      <Folder Include="Assets\JMO Assets\Toony Colors Pro\Textures\Threshold" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Demo\Missile Prefabs\Lightning" />
@@ -367,6 +371,7 @@
      <Folder Include="Assets\ExternalAssets\POLYMORPHFX\MiGHTYFX\MagicSpellsFXPack\Audio" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Magic\Buff" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\Standard PBS\TCP2_Standard PBS Outline (Specular).shader" />
+     <Folder Include="Assets\Game\Models\ForestDecor" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs 2D\Blood\Green" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Interactive\Trails" />
      <Folder Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\ResourcesData\Sprites\Demo\Demo_Icon" />
@@ -405,6 +410,7 @@
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Environment\Fire\Soft\SoftFireAB" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Nova\Frost" />
      <Folder Include="Assets\Game\Animations" />
+     <Folder Include="Assets\ExternalAssets\Bitgem\RTS Elven Buildings - Proto Series" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Sword\Hit\SwordHitCritical" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Magic\Sphere" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Demo\Textures" />
@@ -597,6 +603,7 @@
      <Folder Include="Assets\JMO Assets\Toony Colors Pro\Textures\Dithering" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <Folder Include="Assets\ExternalAssets\Joystick Pack" />
+     <Folder Include="Assets\ExternalAssets\Isometric Pack 3d\Props\Models\Materials" />
      <Folder Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\Prefabs\Prefabs_Component_Slider" />
      <Folder Include="Assets\ExternalAssets\Lana Studio\Hyper Casual FX\Textures" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Environment\Stars" />
@@ -699,6 +706,7 @@
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Demo\Missile Prefabs\Sparkle" />
      <Folder Include="Assets\Game\Scripts\States" />
      <None Include="Assets\StreamingAssets\Fmod\EternalFire\Metadata\EffectPresetFolder\{3d6d9b89-2f99-4a42-9c32-fd6247557a05}.xml" />
+     <Folder Include="Assets\ExternalAssets\Bitgem\RTS Elven Buildings - Proto Series\Materials" />
      <Folder Include="Assets\StreamingAssets\Fmod\EternalFire\Metadata\AudioFile" />
      <Folder Include="Assets\ExternalAssets\Polygon Arsenal" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_Sketch.txt" />
@@ -766,6 +774,7 @@
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Death" />
      <Folder Include="Assets\ExternalAssets\Piloto Studio\Models" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Explosions\BulletFatExplosion" />
+     <Folder Include="Assets\ExternalAssets\Isometric Pack 3d\Props\Textures" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Magic\PillarBlast" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Muzzleflash\MysticMuzzle" />
      <Folder Include="Assets\StreamingAssets\Fmod\EternalFire\Metadata\ProfilerFolder" />
@@ -773,6 +782,7 @@
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\Standard PBS\TCP2_PBS_ShadowMeta.shader" />
      <Folder Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\Preview" />
      <Folder Include="Assets\ExternalAssets\POLYMORPHFX\MiGHTYFX\MagicSpellsFXPack\Resources\Animations" />
+     <Folder Include="Assets\ExternalAssets\Bitgem" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Environment\Fire\Candle\CandleLightSoft" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Environment\Smoke\Dark" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
@@ -794,6 +804,7 @@
      <Folder Include="Assets\StreamingAssets\Fmod\EternalFire\Metadata\Locale" />
      <None Include="Assets\ExternalAssets\Piloto Studio\Shaders\VFX_Piloto\ParallaxVFX.shader" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Explosions\SmallExplosion" />
+     <Folder Include="Assets\ExternalAssets\Isometric Pack 3d\Props\Models" />
      <None Include="Assets\ExternalAssets\Piloto Studio\Shaders\VFX_Piloto\UberShader_Additive.shader" />
      <Folder Include="Assets\ExternalAssets\POLYMORPHFX\MiGHTYFX\MagicSpellsFXPack\Prefabs\FX" />
      <None Include="Assets\ExternalAssets\Piloto Studio\Shaders\VFX_Piloto\Tutorial.shader" />
@@ -805,12 +816,14 @@
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\Hybrid\TCP2 Hybrid URP Support.cginc" />
      <Folder Include="Assets\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\Water" />
      <Folder Include="Assets\ExternalAssets\Male Peasant Pack Cute Series\01 Customize Character Here\02 Attach Weapons and Accessories" />
+     <Folder Include="Assets\Game\Texture\snow" />
      <None Include="Assets\StreamingAssets\Fmod\EternalFire\Metadata\AudioFile\{6be07a76-6e91-4313-8f38-68ceb750128d}.xml" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Interactive\Powerups\PowerupGlow" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\Standard PBS\TCP2_Standard PBS (Specular).shader" />
      <Folder Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\ResourcesData\Sprites\Component\Icon_FunctionIcons_(x2)\FunctionIcons_32" />
      <Folder Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\ResourcesData\Sprites\Component\Icon_EquipIcons_(x2)\Shadow\EquipIcons_512" />
      <None Include="Assets\StreamingAssets\Fmod\EternalFire\Metadata\AudioFile\{86f37a2d-624f-4551-a04a-674c423d3c0c}.xml" />
+     <Folder Include="Assets\Game\Models\ForestDecor\Decor" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Interactive\Loot\ItemSparkle" />
      <Folder Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\ResourcesData\Fonts" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Sword\Slash\SwordSlashThick" />
@@ -873,6 +886,7 @@
      <Folder Include="Assets\ExternalAssets\Male Peasant Pack Cute Series\01 Customize Character Here\01 Drag Character Base to Scene\Fair" />
      <Folder Include="Assets\ExternalAssets\Male Peasant Pack Cute Series\01 Customize Character Here\02 Attach Weapons and Accessories\Back Props (+Back)" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Demo\Demo Prefabs\VFX Library" />
+     <Folder Include="Assets\Game\Models\ForestDecor\Decor\Materials" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Environment\Fire\Cartoon\Torch" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\Legacy\TCP2_OutlineOnly.shader" />
      <Folder Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\PSD 1" />
