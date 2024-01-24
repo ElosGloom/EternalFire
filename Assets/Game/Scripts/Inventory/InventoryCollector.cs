@@ -12,11 +12,11 @@ namespace Game.Scripts
 
         private void OnTriggerEnter(Collider other)
         {
-            StartCoroutine(DestroyDelayRoutine(other));
+            StartCoroutine(ReturnInPoolDelayRoutine(other));
             other.enabled = false;
         }
 
-        private IEnumerator DestroyDelayRoutine(Collider other)
+        private IEnumerator ReturnInPoolDelayRoutine(Collider other)
         {
             var inventoryResource = other.gameObject.GetComponent<InventoryResource>();
             yield return new WaitForSeconds(destroyDelay);
