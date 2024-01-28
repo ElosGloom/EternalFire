@@ -1,3 +1,4 @@
+using System;
 using Game.Scripts.SFX;
 using UnityEngine;
 
@@ -7,8 +8,15 @@ namespace Game.Scripts
     {
         private void Awake()
         {
+            GameSettings.Load();
             Application.targetFrameRate = 60;
-            MusicController.PlayMusic("event:/MainMusic");
         }
+
+        private void OnApplicationQuit()
+        {
+            GameSettings.Save();
+            PlayerPrefs.Save();
+        }
+        
     }
 }

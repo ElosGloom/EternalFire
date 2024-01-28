@@ -38,8 +38,8 @@ namespace Game.Scripts
 
         public static void Load()
         {
-            _musicVolume = PlayerPrefs.GetFloat(MusicKey);
-            _soundVolume = PlayerPrefs.GetFloat(SoundKey);
+            MusicVolume = PlayerPrefs.GetFloat(MusicKey,1);
+            SoundVolume = PlayerPrefs.GetFloat(SoundKey,1);
         }
 
         public static void Save()
