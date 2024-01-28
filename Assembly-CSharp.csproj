@@ -108,6 +108,7 @@
      <Compile Include="Assets\Game\Scripts\Extensions.cs" />
      <Compile Include="Assets\ExternalAssets\Piloto Studio\Readme\Scripts\Readme.cs" />
      <Compile Include="Assets\Game\Scripts\GUI\EnableUI.cs" />
+     <Compile Include="Assets\Game\Scripts\GUI\MainMenu.cs" />
      <Compile Include="Assets\Game\Scripts\States\HealthBarInvisibleState.cs" />
      <Compile Include="Assets\ExternalAssets\Piloto Studio\Readme\Scripts\ReadmeBehaviour.cs" />
      <Compile Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\Scripts\PanelFantasyRPG.cs" />
@@ -123,6 +124,7 @@
      <Compile Include="Assets\Game\Scripts\States\StateMachine.cs" />
      <Compile Include="Assets\Game\Scripts\ForestTree.cs" />
      <Compile Include="Assets\ExternalAssets\Epic Toon FX\Scripts\ETFXLightFade.cs" />
+     <Compile Include="Assets\Game\Scripts\GUI\SettingsButton.cs" />
      <Compile Include="Assets\Game\Scripts\Health\DamageOverTime.cs" />
      <Compile Include="Assets\Game\Scripts\CurveMotion.cs" />
      <Compile Include="Assets\Game\Scripts\GUI\InventoryCellView.cs" />

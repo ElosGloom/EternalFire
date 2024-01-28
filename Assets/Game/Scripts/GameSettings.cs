@@ -28,11 +28,11 @@ namespace Game.Scripts
 
         public static float SoundVolume
         {
-            get => _musicVolume;
+            get => _soundVolume;
             set
             {
                 value = Mathf.Clamp(value, 0, 1);
-                _musicVolume = value;
+                _soundVolume = value;
             }
         }
 
