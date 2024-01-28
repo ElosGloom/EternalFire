@@ -8,13 +8,13 @@ namespace Game.Scripts
     {
         [SerializeField] private Poolable poolable;
 
-        private void Awake()
+        private void OnEnable()
         {
             Level.WinEvent += Release;
             Level.LoseEvent += Release;
         }
 
-        private void OnDestroy()
+        private void OnDisable()
         {
             Level.WinEvent -= Release;
             Level.LoseEvent -= Release;

@@ -677,8 +677,8 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   forceField: {fileID: 6144946305796596997}
-  woodCooldown: 0.25
-  revealer: {fileID: 6143447322036241141}
+  woodTimeRequest: 0.25
+  revealerState: {fileID: 6143447322036241141}
 --- !u!114 &2279726752599032976
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -19,7 +19,7 @@ namespace Game.Scripts
         [SerializeField] private Transform woodSpawnPoint;
         [SerializeField] private int shootOutForce;
         [SerializeField] private int woodCount;
-
+        
 
         private void Start()
         {
@@ -62,6 +62,7 @@ namespace Game.Scripts
                     inventoryResource.transform.position = randomPosition;
                     inventoryResource.transform.SetParent(transform.parent);
                     inventoryResource.Rigidbody.AddForce((randomPosition - transform.position) * shootOutForce);
+                    
                 }
 
                 Destroy(this);

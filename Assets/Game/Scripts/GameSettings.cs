@@ -1,3 +1,4 @@
+using Game.Scripts.SFX;
 using UnityEngine;
 
 namespace Game.Scripts
@@ -17,6 +18,11 @@ namespace Game.Scripts
             {
                 value = Mathf.Clamp(value, 0, 1);
                 _musicVolume = value;
+
+                if (_musicVolume <= 0)
+                    MusicController.StopMusic();
+                else
+                    MusicController.PlayMusic("event:/MainMusic");
             }
         }
 

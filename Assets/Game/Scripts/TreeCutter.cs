@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using Game.Scripts.Health;
 using Game.Scripts.SFX;
 using UnityEngine;
@@ -12,6 +13,7 @@ namespace Game.Scripts
         [SerializeField] private int damage;
         [SerializeField] private float damageDelay;
         [SerializeField] private ParticleSystem vfx;
+        [SerializeField] private TrailRenderer trail;
 
 
         private float _nextAttackTimeLeft;
@@ -36,9 +38,11 @@ namespace Game.Scripts
             if (!other.gameObject.CompareTag("Tree"))
                 return; //todo remove tag
 
+            trail.enabled = true;
             animator.SetTrigger(TreeCut);
             StartCoroutine(CooldownResetRoutine());
             StartCoroutine(DamageDelayRoutine(other));
+            
         }
 
         private IEnumerator CooldownResetRoutine()
@@ -52,7 +56,7 @@ namespace Game.Scripts
             yield return new WaitForSeconds(damageDelay);
             if (other)
             {
-                SfxController.PlayRandomSfx(0.2f, "event:/Chop1","event:/Chop2");
+                SfxController.PlayRandomSfx(0.2f, "event:/Chop1", "event:/Chop2");
                 vfx.Play();
                 other.GetComponent<HealthComponent>().TakeDamage(damage);
             }
