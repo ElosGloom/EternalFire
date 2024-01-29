@@ -14,6 +14,10 @@ namespace Game.Scripts
         [SerializeField] private float damageDelay;
         [SerializeField] private ParticleSystem vfx;
         [SerializeField] private TrailRenderer trail;
+        [SerializeField] private CapsuleCollider treeCutterCollider;
+        [SerializeField] private Transform colliderPoint0;
+        [SerializeField] private Transform colliderPoint1;
+        [SerializeField] private LayerMask mask;
 
 
         private float _nextAttackTimeLeft;
@@ -38,28 +42,30 @@ namespace Game.Scripts
             if (!other.gameObject.CompareTag("Tree"))
                 return; //todo remove tag
 
+            _nextAttackTimeLeft = attackCooldown;
             trail.enabled = true;
             animator.SetTrigger(TreeCut);
-            StartCoroutine(CooldownResetRoutine());
-            StartCoroutine(DamageDelayRoutine(other));
-            
+            StartCoroutine(DamageDelayRoutine());
         }
 
-        private IEnumerator CooldownResetRoutine()
-        {
-            yield return new WaitForFixedUpdate();
-            _nextAttackTimeLeft = attackCooldown;
-        }
-
-        private IEnumerator DamageDelayRoutine(Collider other)
+        private IEnumerator DamageDelayRoutine()
         {
             yield return new WaitForSeconds(damageDelay);
-            if (other)
+            var colliders = Physics.OverlapCapsule(colliderPoint0.position, colliderPoint1.position,
+                treeCutterCollider.radius, mask,QueryTriggerInteraction.Ignore);
+
+            for (int i = 0; i < colliders.Length; i++)
             {
-                SfxController.PlayRandomSfx(0.2f, "event:/Chop1", "event:/Chop2");
-                vfx.Play();
-                other.GetComponent<HealthComponent>().TakeDamage(damage);
+                if (colliders[i].TryGetComponent(out HealthComponent healthComponent))
+                {
+                    SfxController.PlayRandomSfx(0.2f, "event:/Chop1", "event:/Chop2");
+                    vfx.Play();
+                    healthComponent.TakeDamage(damage);
+                }
             }
+
+            
+            trail.enabled = false;
         }
     }
 }

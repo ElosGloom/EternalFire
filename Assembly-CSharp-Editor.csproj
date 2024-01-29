@@ -48,6 +48,7 @@
      <Compile Include="Assets\ExternalAssets\Piloto Studio\Readme\Scripts\Editor\ReadmeHierarchy.cs" />
      <Compile Include="Assets\ExternalAssets\Joystick Pack\Scripts\Editor\VariableJoystickEditor.cs" />
      <Compile Include="Assets\ExternalAssets\Piloto Studio\Readme\Scripts\Editor\ReadmeBehaviourEditor.cs" />
+     <Compile Include="Assets\Game\Scripts\Editor\SwapObjects.cs" />
      <Compile Include="Assets\ExternalAssets\Piloto Studio\Readme\Scripts\Editor\ReadmeEditor.cs" />
      <Compile Include="Assets\ExternalAssets\Joystick Pack\Scripts\Editor\JoystickEditor.cs" />
      <Compile Include="Assets\Game\Scripts\Utils\Editor\SerializableDictionaryPropertyDrawer.cs" />
@@ -56,6 +57,7 @@
      <Compile Include="Assets\ExternalAssets\Piloto Studio\Readme\Scripts\Editor\ReadmeEditorStyles.cs" />
      <Folder Include="Assets\Game\Scripts\Utils\Editor" />
      <Folder Include="Assets\ExternalAssets\Joystick Pack\Scripts\Editor" />
+     <Folder Include="Assets\Game\Scripts\Editor" />
      <Folder Include="Assets\ExternalAssets\Piloto Studio\Readme\Scripts\Editor" />
      <Reference Include="UnityEngine">
      <HintPath>D:\Unity\2022.3.13f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>

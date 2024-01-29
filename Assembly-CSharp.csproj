@@ -217,6 +217,7 @@
      <Folder Include="Assets\ExternalAssets\Lana Studio\Hyper Casual FX\Prefabs\Sparkle" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_Outline.txt" />
      <Folder Include="Assets\ExternalAssets\Polygon Arsenal\Materials" />
+     <Folder Include="Assets\Game\Prefabs\Decor" />
      <Folder Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\ResourcesData" />
      <None Include="Assets\StreamingAssets\Fmod\EternalFire\Metadata\Asset\{5054f51c-3372-4b0d-85f5-b12d59101b73}.xml" />
      <Folder Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\ResourcesData\Sprites\Component\Icon_EquipIcons_(x2)\Shadow\EquipIcons_32" />
@@ -240,6 +241,7 @@
      <None Include="Assets\StreamingAssets\Fmod\EternalFire\Metadata\AudioFile\{54c81b70-060c-4d63-9996-6580c5017dd6}.xml" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Explosions\SpikyExplosion" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Interactive" />
+     <Folder Include="Assets\Game\Models\decor\Materials" />
      <Folder Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\Scripts" />
      <Folder Include="Assets\Game\Models\decor" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Materials\Misc\Liquid" />
@@ -611,6 +613,7 @@
      <Folder Include="Assets\ExternalAssets\Joystick Pack" />
      <Folder Include="Assets\Game\Materials\decor\isometric\Materials" />
      <Folder Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\Prefabs\Prefabs_Component_Slider" />
+     <Folder Include="Assets\Game\Models\decor\unused" />
      <Folder Include="Assets\ExternalAssets\Lana Studio\Hyper Casual FX\Textures" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Environment\Stars" />
      <Folder Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\ResourcesData\Sprites\Component\Icon_EquipIcons_(x2)\Shadow\EquipIcons_256" />
