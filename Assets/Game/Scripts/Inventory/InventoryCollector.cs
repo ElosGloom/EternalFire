@@ -16,19 +16,11 @@ namespace Game.Scripts
             var inventoryResource = other.gameObject.GetComponent<InventoryResource>();
             if (inventoryResource)
             {
-                try
+                inventoryResource.curveMotion.Move(other.transform.position, transform, () =>
                 {
-                    inventoryResource.curveMotion.Move(other.transform.position, transform, () =>
-                    {
-                        inventory.AddItem(inventoryResource.ItemName, inventoryResource.ItemsCount);
-                        FluffyPool.Return(inventoryResource);
-                    });
-                }
-                catch (Exception e)
-                {
-                    throw;
-                }
-              
+                    inventory.AddItem(inventoryResource.ItemName, inventoryResource.ItemsCount);
+                    FluffyPool.Return(inventoryResource);
+                });
             }
         }
     }

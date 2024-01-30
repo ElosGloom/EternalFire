@@ -679,6 +679,7 @@ MonoBehaviour:
   forceField: {fileID: 6144946305796596997}
   woodTimeRequest: 0.25
   revealerState: {fileID: 6143447322036241141}
+  bonfireTrigger: {fileID: 1437661926093191674}
 --- !u!114 &2279726752599032976
 MonoBehaviour:
   m_ObjectHideFlags: 0

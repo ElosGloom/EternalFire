@@ -9,6 +9,7 @@ namespace Game.Scripts.Fire
         [SerializeField] private float woodTimeRequest = 0.25f;
         [SerializeField] private GameObject revealerState;
 
+
         private float _timeToNextRequest;
 
 
@@ -19,6 +20,9 @@ namespace Game.Scripts.Fire
 
         private void OnTriggerStay(Collider other)
         {
+            if (enabled == false)
+                return;
+
             if (_timeToNextRequest > 0)
                 return;
 
@@ -45,6 +49,7 @@ namespace Game.Scripts.Fire
         public void SwitchActive(bool value)
         {
             revealerState.SetActive(value);
+            enabled = value;
         }
     }
 }
