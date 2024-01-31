@@ -7,7 +7,7 @@ namespace Game.Scripts.Fire
     {
         [SerializeField] private HealthComponent fireHealth;
         [SerializeField] private ParticleSystem mainFire;
-        [SerializeField] private ParticleSystem embersSmall;
+        // [SerializeField] private ParticleSystem embersSmall;
         [SerializeField] private ParticleSystem glow;
         [SerializeField] private ParticleSystem embersFlickering;
         [SerializeField] private AnimationCurve mainFireSizeCurve;
@@ -29,9 +29,9 @@ namespace Game.Scripts.Fire
             mainModule.startSize = new ParticleSystem.MinMaxCurve(mainFireSize);
 
             //backFire
-            mainModule = embersSmall.main;
-            const float backFireSizeMultiplier = 1.1f;
-            mainModule.startSize = new ParticleSystem.MinMaxCurve(mainFireSize * backFireSizeMultiplier);
+            // mainModule = embersSmall.main;
+            // const float backFireSizeMultiplier = 1.1f;
+            // mainModule.startSize = new ParticleSystem.MinMaxCurve(mainFireSize * backFireSizeMultiplier);
             
             mainModule = glow.main;
             float glowSize = glowSizeCurve.Evaluate(t);
