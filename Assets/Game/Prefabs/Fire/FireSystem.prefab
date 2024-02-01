@@ -53,6 +53,8 @@ MonoBehaviour:
   connectedMembers:
   - {fileID: 5968571351098433712}
   fireConnectionFX: {fileID: 8875821634432544740, guid: 27fcb011b6ba8be479a592db5c0fee0b, type: 3}
+  inactiveBonfires: []
+  activeBonfires: []
 --- !u!114 &8642621137821779582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,7 +81,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fe41e58eeaa4d94b1b427d06159ba48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagePerSecond: 1
+  damagePerSecond: 2
   healthComponent: {fileID: 8642621137821779582}
 --- !u!114 &3911548400996617138
 MonoBehaviour:
@@ -93,6 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d170b6a30e1411eb32ca6f50ff42fd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventory: {fileID: 0}
+  button: {fileID: 0}
 --- !u!1001 &4710491620252515068
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,4 +1,6 @@
 ﻿using System;
+using Game.Scripts.LevelManager;
+using UnityEditor.TextCore.Text;
 using UnityEngine;
 
 namespace Game.Scripts.Health
@@ -14,7 +16,17 @@ namespace Game.Scripts.Health
 
         public float CurrentHealth => currentHealth;
 
+        private void Start()
+        {
+            Level.WinEvent += OnWin;
+        }
+
         private void OnValidate()
+        {
+            currentHealth = maxHealth;
+        }
+
+        private void OnWin()
         {
             currentHealth = maxHealth;
         }
@@ -42,6 +54,11 @@ namespace Game.Scripts.Health
                 currentHealth = maxHealth;
 
             HealthChangeEvent?.Invoke();
+        }
+
+        private void OnDestroy()
+        {
+            Level.WinEvent -= OnWin;
         }
     }
 }

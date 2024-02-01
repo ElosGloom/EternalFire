@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   height: 3
-  moveTime: 1
+  moveTime: 0.5
 --- !u!1001 &2376342229101711609
 PrefabInstance:
   m_ObjectHideFlags: 0
