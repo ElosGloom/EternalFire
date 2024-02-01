@@ -1,12 +1,10 @@
-﻿using Game.Scripts.Health;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Game.Scripts.Fire
 {
     public class FireFx : MonoBehaviour
     {
         [SerializeField] private ParticleSystem mainFire;
-        // [SerializeField] private ParticleSystem embersSmall;
         [SerializeField] private ParticleSystem glow;
         [SerializeField] private ParticleSystem embersFlickering;
         [SerializeField] private AnimationCurve mainFireSizeCurve;
@@ -27,11 +25,6 @@ namespace Game.Scripts.Fire
             float mainFireSize = mainFireSizeCurve.Evaluate(t);
             mainModule.startSize = new ParticleSystem.MinMaxCurve(mainFireSize);
 
-            //backFire
-            // mainModule = embersSmall.main;
-            // const float backFireSizeMultiplier = 1.1f;
-            // mainModule.startSize = new ParticleSystem.MinMaxCurve(mainFireSize * backFireSizeMultiplier);
-            
             mainModule = glow.main;
             float glowSize = glowSizeCurve.Evaluate(t);
             const float glowSizeMultiplier = 1.1f;
@@ -40,7 +33,6 @@ namespace Game.Scripts.Fire
             mainModule = embersFlickering.main;
             float embersSmallSize = embersFlickeringCurve.Evaluate(t);
             mainModule.startSize = new ParticleSystem.MinMaxCurve(embersSmallSize);
-
         }
 
         private void OnDestroy()

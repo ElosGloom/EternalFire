@@ -114,7 +114,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.6504447
+  m_Radius: 0.56
   m_Height: 3.8170166
   m_Direction: 1
   m_Center: {x: 1.4420715e-11, y: 0.9793978, z: 0.006594538}
@@ -215,7 +215,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.17466585
+  m_Radius: 0.46
   m_Height: 3.0673325
   m_Direction: 1
   m_Center: {x: 0, y: 1.3983542, z: 0}
@@ -252,7 +252,6 @@ MonoBehaviour:
   destroyedMesh: {fileID: -3932542189027751561, guid: ea6914c3f330bf34a8d283458bf7e857, type: 3}
   treeTrigger: {fileID: 202187189431739435}
   treeCollider: {fileID: 7873919050070581151}
-  woodPrefab: {fileID: 4483413076662570191, guid: cb45c8c0cf840e54db43fa6f0aa8c068, type: 3}
   woodSpawnPoint: {fileID: 425078480066202779}
   shootOutForce: 200
   woodCount: 3
