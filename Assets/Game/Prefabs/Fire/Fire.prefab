@@ -43,7 +43,7 @@ ParticleSystemForceField:
   m_Parameters:
     m_Shape: 0
     m_StartRange: 0
-    m_EndRange: 20
+    m_EndRange: 6
     m_Length: 1
     m_GravityFocus: 0
     m_RotationRandomness: {x: 0, y: 0}
@@ -691,7 +691,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ec370604d784f609d1ab16016096b30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireHealth: {fileID: 0}
   mainFire: {fileID: 7100691123404450679}
   glow: {fileID: 3919164450034880951}
   embersFlickering: {fileID: 15895209305368865}

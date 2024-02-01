@@ -1,4 +1,5 @@
-﻿using Game.Scripts.SFX;
+﻿using Game.Scripts.Health;
+using Game.Scripts.SFX;
 using UnityEngine;
 
 namespace Game.Scripts.Fire
@@ -6,6 +7,8 @@ namespace Game.Scripts.Fire
     public class TorchSpawner : MonoBehaviour
     {
         [SerializeField] private Torch torchPrefab;
+        [SerializeField] private HealthComponent fireSystemHealth;
+        
         [SerializeField] private Transform fireParent;
         [SerializeField] private Inventory.Inventory inventory;
 

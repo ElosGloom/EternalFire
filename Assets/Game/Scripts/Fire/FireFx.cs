@@ -5,7 +5,6 @@ namespace Game.Scripts.Fire
 {
     public class FireFx : MonoBehaviour
     {
-        [SerializeField] private HealthComponent fireHealth;
         [SerializeField] private ParticleSystem mainFire;
         // [SerializeField] private ParticleSystem embersSmall;
         [SerializeField] private ParticleSystem glow;
@@ -17,7 +16,7 @@ namespace Game.Scripts.Fire
 
         private void Start()
         {
-            fireHealth.HealthChangeEvent += OnHealthChanged;
+            FireSystem.Instance.HealthComponent.HealthChangeEvent += OnHealthChanged;
         }
 
         private void OnHealthChanged()
@@ -46,7 +45,7 @@ namespace Game.Scripts.Fire
 
         private void OnDestroy()
         {
-            fireHealth.HealthChangeEvent -= OnHealthChanged;
+            FireSystem.Instance.HealthComponent.HealthChangeEvent -= OnHealthChanged;
         }
     }
 }

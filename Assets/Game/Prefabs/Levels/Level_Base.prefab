@@ -5118,6 +5118,10 @@ PrefabInstance:
       propertyPath: fireParent
       value: 
       objectReference: {fileID: 627578171982873049}
+    - target: {fileID: 6588357532893986978, guid: 1d6770becb6c0664ea46c884bf839d6b, type: 3}
+      propertyPath: fireSystemHealth
+      value: 
+      objectReference: {fileID: 1426020230658518360}
     - target: {fileID: 7662201466013061370, guid: 1d6770becb6c0664ea46c884bf839d6b, type: 3}
       propertyPath: treeCutter
       value: 

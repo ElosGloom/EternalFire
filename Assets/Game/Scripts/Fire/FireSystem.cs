@@ -80,6 +80,7 @@ namespace Game.Scripts.Fire
         {
             _torches.Add(newTorch);
             HasTorchesToReturn?.Invoke(_torches.Count > 0);
+            
             ConnectMember(newTorch, nearestMember);
         }
 

@@ -126,7 +126,7 @@ ParticleSystemForceField:
   m_Parameters:
     m_Shape: 0
     m_StartRange: 0
-    m_EndRange: 20
+    m_EndRange: 6
     m_Length: 1
     m_GravityFocus: 0
     m_RotationRandomness: {x: 0, y: 0}
@@ -655,6 +655,7 @@ GameObject:
   - component: {fileID: 1278562275269897177}
   - component: {fileID: 1554922114054119494}
   - component: {fileID: 4761863122827484657}
+  - component: {fileID: 194682872775564470}
   m_Layer: 0
   m_Name: Torch
   m_TagString: Untagged
@@ -785,6 +786,93 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 5
   revealForce: 0.5
+--- !u!114 &194682872775564470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4832082177534496341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec370604d784f609d1ab16016096b30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainFire: {fileID: 840013511404773541}
+  glow: {fileID: 6863838153970473573}
+  embersFlickering: {fileID: 7573528150446121715}
+  mainFireSizeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 5.865723
+      outSlope: 5.865723
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.04897064
+    - serializedVersion: 3
+      time: 0.98934937
+      value: 2
+      inSlope: 0.14675033
+      outSlope: 0.14675033
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.2848987
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  glowSizeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 2
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  embersFlickeringCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0.28992176
+      outSlope: 0.28992176
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.17083333
+    - serializedVersion: 3
+      time: 1
+      value: 0.15
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &8714306212077992494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -854,6 +942,21 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a3ead49f8644e34085b3cf05b3fe7ab, type: 3}
+--- !u!198 &840013511404773541 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8306674570294467211, guid: 0a3ead49f8644e34085b3cf05b3fe7ab, type: 3}
+  m_PrefabInstance: {fileID: 8714306212077992494}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &6863838153970473573 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2859274744040890443, guid: 0a3ead49f8644e34085b3cf05b3fe7ab, type: 3}
+  m_PrefabInstance: {fileID: 8714306212077992494}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &7573528150446121715 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1294218565546694877, guid: 0a3ead49f8644e34085b3cf05b3fe7ab, type: 3}
+  m_PrefabInstance: {fileID: 8714306212077992494}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8589263888836841254 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1142892496575444232, guid: 0a3ead49f8644e34085b3cf05b3fe7ab, type: 3}
