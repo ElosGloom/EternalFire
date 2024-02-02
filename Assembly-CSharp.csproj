@@ -97,6 +97,7 @@
      <Compile Include="Assets\FPS\ComponentSelector.cs" />
      <Compile Include="Assets\Game\Scripts\Fire\TorchSpawner.cs" />
      <Compile Include="Assets\ExternalAssets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
+     <Compile Include="Assets\Game\Scripts\VFXRotation.cs" />
      <Compile Include="Assets\FPS\FoW\Scripts\SwitchGameObjectBehaviour.cs" />
      <Compile Include="Assets\Game\Scripts\States\IState.cs" />
      <Compile Include="Assets\FPS\FoW\Scripts\FogHider.cs" />
@@ -832,6 +833,7 @@
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Interactive\Loot\ItemSparkle" />
      <Folder Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\ResourcesData\Fonts" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Sword\Slash\SwordSlashThick" />
+     <Folder Include="Assets\Game\VFX\materials" />
      <Folder Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\Prefabs\Prefabs_Component_Popups" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Environment\Fire\Candle\CandleLight" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Environment\Fire\Cartoon" />
