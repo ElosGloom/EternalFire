@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FMODUnityEditor", "FMODUnit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToonyColorsPro.Runtime", "ToonyColorsPro.Runtime.csproj", "{6efd43f5-0ede-5f22-59e5-90f0e89daf92}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{495fae4b-a26b-0b37-5af0-03967480aad1}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FMODUnityResonanceEditor", "FMODUnityResonanceEditor.csproj", "{5a073275-a1f9-b2e5-094d-175b4867cd46}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FMODUnity", "FMODUnity.csproj", "{6a4126c3-b3dc-6b3d-3656-7713d442587a}"
@@ -21,7 +23,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FMODUnityResonance", "FMODU
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToonyColorsPro.Demo.Editor", "ToonyColorsPro.Demo.Editor.csproj", "{affdc108-f496-64c0-b1c9-ffdd2d3d9f80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{495fae4b-a26b-0b37-5af0-03967480aad1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor-firstpass", "Assembly-CSharp-Editor-firstpass.csproj", "{4ef6cf2d-2a0d-6ce5-4e03-a658210a17bc}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,6 +42,8 @@ Global
 		{7a2f28d4-0c40-d57d-6c5a-b5773f16a39b}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6efd43f5-0ede-5f22-59e5-90f0e89daf92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6efd43f5-0ede-5f22-59e5-90f0e89daf92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{495fae4b-a26b-0b37-5af0-03967480aad1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{495fae4b-a26b-0b37-5af0-03967480aad1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5a073275-a1f9-b2e5-094d-175b4867cd46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5a073275-a1f9-b2e5-094d-175b4867cd46}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6a4126c3-b3dc-6b3d-3656-7713d442587a}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -48,8 +52,8 @@ Global
 		{e237af9f-cc28-984a-384d-f699eec448b3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{affdc108-f496-64c0-b1c9-ffdd2d3d9f80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{affdc108-f496-64c0-b1c9-ffdd2d3d9f80}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{495fae4b-a26b-0b37-5af0-03967480aad1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{495fae4b-a26b-0b37-5af0-03967480aad1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ef6cf2d-2a0d-6ce5-4e03-a658210a17bc}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4ef6cf2d-2a0d-6ce5-4e03-a658210a17bc}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -4136,6 +4136,7 @@ GameObject:
   - component: {fileID: 6882156322259930025}
   - component: {fileID: 5173259947016678796}
   - component: {fileID: 956353889517349513}
+  - component: {fileID: 3591348311343897864}
   m_Layer: 5
   m_Name: FireBG
   m_TagString: Untagged
@@ -4201,6 +4202,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3591348311343897864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7323946083224419052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 770355a7d0ea48d49e51400b128c1a6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireIcon: {fileID: 7323946083224419052}
+  fireHealth: {fileID: 1426020230658518360}
 --- !u!1 &7973014182403579073
 GameObject:
   m_ObjectHideFlags: 0
