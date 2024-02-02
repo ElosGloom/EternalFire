@@ -1,4 +1,6 @@
-﻿using FPS.FoW;
+﻿using System;
+using FPS.FoW;
+using Game.Scripts.GUI;
 using UnityEngine;
 
 namespace Game.Scripts.Health
@@ -6,22 +8,15 @@ namespace Game.Scripts.Health
     public class DamageInFog : HiderBehaviour
     {
         [SerializeField] private DamageOverTime damageOverTime;
-        [SerializeField] private CanvasGroup canvasGroup;
-        [SerializeField, Min(0.1f)] private float fadeTime = 1;
+        [SerializeField] private SpriteFader spriteFader;
         
-        private bool _inFog;
-        
-        private void Update()
-        {
-            if (_inFog)
-                canvasGroup.alpha += Time.deltaTime / fadeTime;
-            else
-                canvasGroup.alpha -= Time.deltaTime / fadeTime;
-        }
-
         public override void OnVisionStatusChanged(bool isVisible)
         {
-            _inFog = !isVisible;
+            if (!isVisible)
+                spriteFader.Fading();
+            else
+                spriteFader.StopFading();
+            
             damageOverTime.enabled = !isVisible;
         }
     }

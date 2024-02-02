@@ -6,7 +6,7 @@ namespace Game.Scripts.GUI
 {
     public class FireIconBounce : MonoBehaviour
     {
-        [SerializeField] private GameObject fireIcon;
+        [SerializeField] private Transform fireIcon;
         [SerializeField] private HealthComponent fireHealth;
 
 
@@ -19,15 +19,16 @@ namespace Game.Scripts.GUI
         {
             if (fireHealth.CurrentHealth <= fireHealth.MaxHealth / 3)
             {
-                if (!DOTween.IsTweening(fireIcon.transform))
+                if (!DOTween.IsTweening(fireIcon))
                 {
-                    fireIcon.transform.DOPunchScale(new Vector3(0.2f, 0.2f, 0.2f), 0.5f, 2, 1f);
+                    fireIcon.DOPunchScale(new Vector3(0.2f, 0.2f, 0.2f), 0.5f, 2);
                 }
             }
         }
 
         private void OnDestroy()
         {
+            fireIcon.DOKill();
             fireHealth.HealthChangeEvent -= ApplyBounceEffect;
         }
     }

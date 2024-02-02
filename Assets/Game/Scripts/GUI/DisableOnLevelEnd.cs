@@ -1,5 +1,4 @@
-﻿using System;
-using Game.Scripts.LevelManager;
+﻿using Game.Scripts.LevelManager;
 using UnityEngine;
 
 namespace Game.Scripts.GUI

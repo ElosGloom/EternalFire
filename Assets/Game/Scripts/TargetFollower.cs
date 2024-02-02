@@ -4,11 +4,17 @@ namespace Game.Scripts
 {
     public class TargetFollower : MonoBehaviour
     {
-        [SerializeField] private GameObject target;
+        [SerializeField] private Transform target;
+        private Transform _cachedTransform;
+
+        private void Awake()
+        {
+            _cachedTransform = transform;
+        }
 
         private void LateUpdate()
         {
-            transform.position = target.transform.position;
+            _cachedTransform.position = target.position;
         }
     }
 }
