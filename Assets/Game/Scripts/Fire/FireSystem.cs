@@ -9,6 +9,7 @@ namespace Game.Scripts.Fire
     {
         public static FireSystem Instance { get; private set; }
         public static event Action AllBonfiresConnectedEvent;
+        public static event Action InactiveBonfiresCountChangeEvent;
         public static event Action<bool> HasTorchesToReturn;
 
         [SerializeField] private HealthComponent healthComponent;
@@ -80,7 +81,6 @@ namespace Game.Scripts.Fire
         {
             _torches.Add(newTorch);
             HasTorchesToReturn?.Invoke(_torches.Count > 0);
-            
             ConnectMember(newTorch, nearestMember);
         }
 
@@ -99,6 +99,7 @@ namespace Game.Scripts.Fire
                 activeBonfires.Add(inactiveBonfires[i]);
                 inactiveBonfires[i].SwitchActive(true);
                 inactiveBonfires.RemoveAt(i);
+                InactiveBonfiresCountChangeEvent?.Invoke();
                 if (inactiveBonfires.Count == 0)
                 {
                     AllBonfiresConnectedEvent?.Invoke();
@@ -107,6 +108,11 @@ namespace Game.Scripts.Fire
                 _torches.Clear();
                 HasTorchesToReturn?.Invoke(_torches.Count > 0);
             }
+        }
+
+        public int GetInactiveBonfiresCount()
+        {
+            return inactiveBonfires.Count;
         }
     }
 }

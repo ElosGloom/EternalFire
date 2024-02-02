@@ -101,6 +101,7 @@
      <Compile Include="Assets\Game\Scripts\States\IState.cs" />
      <Compile Include="Assets\FPS\FoW\Scripts\FogHider.cs" />
      <Compile Include="Assets\FPS\FoW\Scripts\FogPlaneJob.cs" />
+     <Compile Include="Assets\Game\Scripts\GUI\InactiveBonfiresCount.cs" />
      <Compile Include="Assets\FPS\FoW\Scripts\IHiderBehaviour.cs" />
      <Compile Include="Assets\Game\Scripts\GUI\TorchReturnButton.cs" />
      <Compile Include="Assets\Game\Scripts\GUI\ArrowPointer.cs" />
@@ -436,7 +437,6 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <Folder Include="Assets\ExternalAssets\Male Peasant Pack Cute Series\01 Customize Character Here\02 Attach Weapons and Accessories\Standard Heads  (+ Head )" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Explosions\StormExplosion" />
-     <Folder Include="Assets\Game\UI\Windows" />
      <Folder Include="Assets\ExternalAssets\Piloto Studio\Shaders\SimplyToon_Piloto" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Missiles\FatBullet" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Explosions\StarIntenseExplosion" />
