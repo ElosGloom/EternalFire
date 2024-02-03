@@ -117,6 +117,7 @@
      <Compile Include="Assets\ExternalAssets\Piloto Studio\Readme\Scripts\ReadmeBehaviour.cs" />
      <Compile Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\Scripts\PanelFantasyRPG.cs" />
      <Compile Include="Assets\ExternalAssets\POLYMORPHFX\MiGHTYFX\_common\Scripts\PMFX_SpellFX.cs" />
+     <Compile Include="Assets\Game\Scripts\NewPerson.cs" />
      <Compile Include="Assets\Game\Scripts\ReleaseOnLevelEnd.cs" />
      <Compile Include="Assets\Game\Scripts\TargetFollower.cs" />
      <Compile Include="Assets\ExternalAssets\Joystick Pack\Scripts\Base\Joystick.cs" />
@@ -145,6 +146,7 @@
      <Compile Include="Assets\Game\Scripts\Health\PlayerFX.cs" />
      <Compile Include="Assets\Game\Scripts\GUI\ReloadLevelButton.cs" />
      <Compile Include="Assets\FPS\FoW\Scripts\FogCell.cs" />
+     <Compile Include="Assets\Game\Scripts\Person.cs" />
      <Compile Include="Assets\Game\Scripts\LevelManager\LevelManager.cs" />
      <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\ETFXLoopScript.cs" />
      <Folder Include="Assets" />
@@ -801,6 +803,7 @@
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Environment\Fire\Soft" />
      <Folder Include="Assets\Game\Prefabs\GUI" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Interactive\Powerups\PowerupActivate" />
+     <Folder Include="Assets\Game\UI\Creo" />
      <Folder Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\ResourcesData\Sprites\Component\Icon_FunctionIcons_(x2)\FunctionIcons_128" />
      <Folder Include="Assets\ExternalAssets\POLYMORPHFX\MiGHTYFX\_common\Extras\Grid\GridLightmap" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\Legacy\TCP2_Mobile.shader" />
