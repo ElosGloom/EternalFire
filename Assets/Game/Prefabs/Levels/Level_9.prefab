@@ -8602,6 +8602,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -4.8
       objectReference: {fileID: 0}
+    - target: {fileID: 627578171982873049, guid: 02334f3f99d32104f9f48d3657d83587, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.22
+      objectReference: {fileID: 0}
     - target: {fileID: 1162498644868953497, guid: 02334f3f99d32104f9f48d3657d83587, type: 3}
       propertyPath: items.list.Array.size
       value: 1
@@ -8628,7 +8632,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2076542397639884704, guid: 02334f3f99d32104f9f48d3657d83587, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.7428875
+      value: -7.8
       objectReference: {fileID: 0}
     - target: {fileID: 2136798268482842255, guid: 02334f3f99d32104f9f48d3657d83587, type: 3}
       propertyPath: inactiveBonfires.Array.size
@@ -8706,6 +8710,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4890951383700196322, guid: 02334f3f99d32104f9f48d3657d83587, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.0571127
+      objectReference: {fileID: 0}
     - target: {fileID: 6181767553087062146, guid: 02334f3f99d32104f9f48d3657d83587, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -8728,11 +8736,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8002027506485755495, guid: 02334f3f99d32104f9f48d3657d83587, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.990381
+      value: 12.99038
       objectReference: {fileID: 0}
     - target: {fileID: 8002027506485755495, guid: 02334f3f99d32104f9f48d3657d83587, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.2428875
+      value: -15.3
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5597790097697191907, guid: 02334f3f99d32104f9f48d3657d83587, type: 3}
