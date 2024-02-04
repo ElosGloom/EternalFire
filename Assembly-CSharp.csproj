@@ -96,6 +96,7 @@
      <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\ETFXButtonScript.cs" />
      <Compile Include="Assets\Game\Scripts\GUI\InventoryView.cs" />
      <Compile Include="Assets\Game\Scripts\GUI\MainJoystick.cs" />
+     <Compile Include="Assets\FPS\LocalizationService\LocalizedText.cs" />
      <Compile Include="Assets\FPS\ComponentSelector.cs" />
      <Compile Include="Assets\Game\Scripts\Fire\TorchSpawner.cs" />
      <Compile Include="Assets\ExternalAssets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
@@ -136,6 +137,7 @@
      <Compile Include="Assets\ExternalAssets\Epic Toon FX\Scripts\ETFXPitchRandomizer.cs" />
      <Compile Include="Assets\FPS\FoW\Scripts\FogRevealer.cs" />
      <Compile Include="Assets\ExternalAssets\Epic Toon FX\Demo\Scripts\VFX Library\ParticleEffectsLibrary.cs" />
+     <Compile Include="Assets\FPS\LocalizationService\Localization.cs" />
      <Compile Include="Assets\Game\Scripts\SFX\SFXController.cs" />
      <Compile Include="Assets\ExternalAssets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
      <Compile Include="Assets\ExternalAssets\POLYMORPHFX\MiGHTYFX\_common\Scripts\PMFX_SceneManager.cs" />
@@ -585,6 +587,7 @@
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Demo\Missile Prefabs\Laser" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\PBS\Blended Outline.shader" />
+     <Folder Include="Assets\FPS\LocalizationService" />
      <Folder Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\ResourcesData\Sprites\Component\Icon_Icons_(x2)\Shadow\Icons_256" />
      <Folder Include="Assets\StreamingAssets\Fmod\EternalFire\Metadata\Event" />
      <Folder Include="Assets\ExternalAssets\Piloto Studio\Readme" />
@@ -812,6 +815,7 @@
      <None Include="Assets\StreamingAssets\Fmod\EternalFire\Metadata\Event\{61e34248-25fe-46f0-b1db-2e736c0719c9}.xml" />
      <Folder Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\ResourcesData\Sprites\Component\Icon_Icons_(x2)\Shadow\Icons_32" />
      <Folder Include="Assets\ExternalAssets\Lana Studio\Hyper Casual FX\Prefabs\Flash" />
+     <Folder Include="Assets\FPS\LocalizationService\Resources" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\PBS\Outline Behind.shader" />
      <Folder Include="Assets\StreamingAssets\Fmod\EternalFire\Metadata\Locale" />
      <None Include="Assets\ExternalAssets\Piloto Studio\Shaders\VFX_Piloto\ParallaxVFX.shader" />
@@ -822,6 +826,7 @@
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_HSV.txt" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Materials\Misc\Portals" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Upgrade" />
+     <Folder Include="Assets\FPS\LocalizationService\Plugins" />
      <Folder Include="Assets\ExternalAssets\Polygon Arsenal\Shaders" />
      <Folder Include="Assets\Game\Prefabs\Levels" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\Hybrid\TCP2 Hybrid URP Support.cginc" />

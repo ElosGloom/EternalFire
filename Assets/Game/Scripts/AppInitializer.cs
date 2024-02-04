@@ -1,5 +1,4 @@
-using System;
-using Game.Scripts.SFX;
+using FPS.LocalizationService;
 using UnityEngine;
 
 namespace Game.Scripts
@@ -10,6 +9,7 @@ namespace Game.Scripts
         {
             GameSettings.Load();
             Application.targetFrameRate = 60;
+            Localization.Init();
         }
 
         private void OnApplicationQuit()

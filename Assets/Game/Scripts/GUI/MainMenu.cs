@@ -30,7 +30,7 @@ namespace Game.Scripts.GUI
             soundTurnOnButton.onClick.AddListener(SoundTurnOn);
             musicTurnOffButton.onClick.AddListener(MusicTurnOff);
             musicTurnOnButton.onClick.AddListener(MusicTurnOn);
-            rateUsButton.onClick.AddListener(RateUs);
+            // rateUsButton.onClick.AddListener(RateUs);
             exitButton.onClick.AddListener(OnExitButtonClick);
         }
         
@@ -68,9 +68,9 @@ namespace Game.Scripts.GUI
             musicTurnOffButton.gameObject.SetActive(true);
         }
 
-        private void RateUs()
-        {
-            Application.OpenURL("https://play.google.com/store/games?hl=ru&gl=US");
-        }
+        // private void RateUs()
+        // {
+        //     Application.OpenURL("https://play.google.com/store/games?hl=ru&gl=US");
+        // }
     }
 }

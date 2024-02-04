@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-  m_Name: LilitaOne-Regular SDF 1
+  m_Name: LilitaOne-Regular SDF SmallText
   m_EditorClassIdentifier: 
-  hashCode: 1706162118
+  hashCode: 40589877
   material: {fileID: 1645379218756928978}
-  materialHashCode: -2099322330
+  materialHashCode: 624736245
   m_Version: 1.1.0
   m_SourceFontFileGUID: 36f7545fbc5ef844da685931bac761a8
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 36f7545fbc5ef844da685931bac761a8, type: 3}
@@ -2588,7 +2588,8 @@ MonoBehaviour:
   m_FontFeatureTable:
     m_GlyphPairAdjustmentRecords: []
   fallbackFontAssets: []
-  m_FallbackFontAssetTable: []
+  m_FallbackFontAssetTable:
+  - {fileID: 11400000, guid: 25ae25a16b1f5914097b5911655d9299, type: 2}
   m_CreationSettings:
     sourceFontFileName: 
     sourceFontFileGUID: 36f7545fbc5ef844da685931bac761a8
@@ -2705,12 +2706,12 @@ Material:
     - _OutlineSoftness: 0
     - _OutlineUVSpeedX: 0
     - _OutlineUVSpeedY: 0
-    - _OutlineWidth: 0.294
+    - _OutlineWidth: 0.16
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
     - _ScaleRatioA: 0.9
     - _ScaleRatioB: 0.73125
-    - _ScaleRatioC: 0.61449575
+    - _ScaleRatioC: 0.73125
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
@@ -2724,8 +2725,8 @@ Material:
     - _TextureHeight: 1024
     - _TextureWidth: 1024
     - _UnderlayDilate: 0.19
-    - _UnderlayOffsetX: 1
-    - _UnderlayOffsetY: -1
+    - _UnderlayOffsetX: 0.37
+    - _UnderlayOffsetY: -0.45
     - _UnderlaySoftness: 0
     - _VertexOffsetX: 0
     - _VertexOffsetY: 0
@@ -2737,11 +2738,11 @@ Material:
     - _FaceColor: {r: 1, g: 1, b: 1, a: 1}
     - _GlowColor: {r: 0, g: 1, b: 0, a: 0.5}
     - _MaskCoord: {r: 0, g: 0, b: 32767, a: 32767}
-    - _OutlineColor: {r: 0.21847732, g: 0.16487184, b: 0.6132076, a: 1}
+    - _OutlineColor: {r: 0.12264152, g: 0.08962265, b: 0.3584906, a: 1}
     - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
     - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
-    - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.8509804}
+    - _UnderlayColor: {r: 0.08136797, g: 0.07075472, b: 0.2830189, a: 0.8509804}
   m_BuildTextureStacks: []
 --- !u!28 &2187596459961630867
 Texture2D:
