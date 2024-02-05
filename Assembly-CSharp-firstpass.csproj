@@ -57,6 +57,7 @@
      <Folder Include="Assets\Plugins\Demigiant\DOTween" />
      <Folder Include="Assets\Plugins" />
      <None Include="Assets\Plugins\Demigiant\DOTween\readme.txt" />
+     <Folder Include="Assets\Plugins\Android" />
      <Folder Include="Assets\Plugins\Demigiant" />
      <Reference Include="UnityEngine">
      <HintPath>D:\Unity\2022.3.13f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>

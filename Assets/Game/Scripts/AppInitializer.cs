@@ -1,4 +1,6 @@
+using System;
 using FPS.LocalizationService;
+using GameAnalyticsSDK;
 using UnityEngine;
 
 namespace Game.Scripts
@@ -7,6 +9,7 @@ namespace Game.Scripts
     {
         private void Awake()
         {
+            
             GameSettings.Load();
             Application.targetFrameRate = 60;
             Localization.Init();

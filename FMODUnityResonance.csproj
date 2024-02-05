@@ -307,6 +307,9 @@
      <Reference Include="Unity.Plastic.Antlr3.Runtime">
      <HintPath>E:\unity_projects\EternalFire\Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
      </Reference>
+     <Reference Include="Google.VersionHandlerImpl">
+     <HintPath>E:\unity_projects\EternalFire\Assets\ExternalDependencyManager\Editor\1.2.169\Google.VersionHandlerImpl.dll</HintPath>
+     </Reference>
      <Reference Include="unityplastic">
      <HintPath>E:\unity_projects\EternalFire\Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
      </Reference>
@@ -319,8 +322,14 @@
      <Reference Include="log4netPlastic">
      <HintPath>E:\unity_projects\EternalFire\Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
      </Reference>
+     <Reference Include="Google.VersionHandler">
+     <HintPath>E:\unity_projects\EternalFire\Assets\ExternalDependencyManager\Editor\Google.VersionHandler.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.VisualScripting.IonicZip">
      <HintPath>E:\unity_projects\EternalFire\Library\PackageCache\com.unity.visualscripting@1.9.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
+     </Reference>
+     <Reference Include="Google.JarResolver">
+     <HintPath>E:\unity_projects\EternalFire\Assets\ExternalDependencyManager\Editor\1.2.169\Google.JarResolver.dll</HintPath>
      </Reference>
      <Reference Include="DOTween">
      <HintPath>E:\unity_projects\EternalFire\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
@@ -330,6 +339,9 @@
      </Reference>
      <Reference Include="Unity.VisualScripting.TextureAssets">
      <HintPath>E:\unity_projects\EternalFire\Library\PackageCache\com.unity.visualscripting@1.9.1\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
+     </Reference>
+     <Reference Include="Google.PackageManagerResolver">
+     <HintPath>E:\unity_projects\EternalFire\Assets\ExternalDependencyManager\Editor\1.2.169\Google.PackageManagerResolver.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Android.Types">
      <HintPath>D:\Unity\2022.3.13f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
