@@ -156,12 +156,14 @@
      <Compile Include="Assets\ExternalAssets\Piloto Studio\Readme\Scripts\ReadmeBehaviour.cs" />
      <Compile Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\Scripts\PanelFantasyRPG.cs" />
      <Compile Include="Assets\ExternalAssets\POLYMORPHFX\MiGHTYFX\_common\Scripts\PMFX_SpellFX.cs" />
+     <Compile Include="Assets\FPS\Pool\ReleaseAfterDelay.cs" />
      <Compile Include="Assets\Unity-Logs-Viewer\Reporter\ReporterGUI.cs" />
      <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SendDesignEvent.cs" />
      <Compile Include="Assets\Game\Scripts\ReleaseOnLevelEnd.cs" />
      <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Debug.cs" />
      <Compile Include="Assets\Game\Scripts\TargetFollower.cs" />
      <Compile Include="Assets\ExternalAssets\Joystick Pack\Scripts\Base\Joystick.cs" />
+     <Compile Include="Assets\Game\Scripts\Tutorial.cs" />
      <Compile Include="Assets\ExternalAssets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
      <Compile Include="Assets\FPS\Pool\Poolable.cs" />
      <Compile Include="Assets\FPS\FoW\Scripts\HiderBehaviour.cs" />

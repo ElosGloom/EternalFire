@@ -7,7 +7,6 @@ namespace Game.Scripts
 {
     public class ForestTree : MonoBehaviour
     {
-
         private static readonly int TreeDamage = Animator.StringToHash("TreeDamage");
         [SerializeField] private HealthComponent treeHp;
         [SerializeField] private Animator animator;
@@ -19,7 +18,7 @@ namespace Game.Scripts
         [SerializeField] private Transform woodSpawnPoint;
         [SerializeField] private int shootOutForce;
         [SerializeField] private int woodCount;
-        
+
 
         private void Start()
         {
@@ -43,6 +42,10 @@ namespace Game.Scripts
 
             if (currentHp <= 0)
             {
+                var treeDestroyVFX = FluffyPool.Get<ParticleSystem>("tree_destroy");
+                var newPosition = transform.position + new Vector3(0, 1, 0); 
+                treeDestroyVFX.transform.position = newPosition;
+                treeDestroyVFX.Play();
                 treeMesh.mesh = destroyedMesh;
                 Destroy(treeTrigger);
                 Destroy(treeCollider);
@@ -62,7 +65,6 @@ namespace Game.Scripts
                     inventoryResource.transform.position = randomPosition;
                     inventoryResource.transform.SetParent(transform.parent);
                     inventoryResource.Rigidbody.AddForce((randomPosition - transform.position) * shootOutForce);
-                    
                 }
 
                 Destroy(this);
