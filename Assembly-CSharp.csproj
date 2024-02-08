@@ -162,8 +162,8 @@
      <Compile Include="Assets\Game\Scripts\ReleaseOnLevelEnd.cs" />
      <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Debug.cs" />
      <Compile Include="Assets\Game\Scripts\TargetFollower.cs" />
-     <Compile Include="Assets\ExternalAssets\Joystick Pack\Scripts\Base\Joystick.cs" />
      <Compile Include="Assets\Game\Scripts\Tutorial.cs" />
+     <Compile Include="Assets\ExternalAssets\Joystick Pack\Scripts\Base\Joystick.cs" />
      <Compile Include="Assets\ExternalAssets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
      <Compile Include="Assets\FPS\Pool\Poolable.cs" />
      <Compile Include="Assets\FPS\FoW\Scripts\HiderBehaviour.cs" />

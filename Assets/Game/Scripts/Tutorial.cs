@@ -25,7 +25,7 @@ namespace Game.Scripts
         private void Update()
         {
             if (_currentTarget != null &&
-                Vector3.Distance(player.position, _currentTarget.position) < 1f)
+                Vector3.Distance(player.position, _currentTarget.position) < 1.5f)
             {
                 enabled = false;
                 StartCoroutine(TargetChangeDelayRoutine());
