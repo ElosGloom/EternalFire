@@ -18,6 +18,10 @@ namespace Game.Scripts
 
         private void Start()
         {
+            if (PlayerPrefs.GetInt("Tutorial") == 1)
+            {
+                Destroy(arrow.gameObject);
+            };
             _currentTarget = tree;
             SetArrowTarget(_currentTarget);
         }
@@ -49,6 +53,7 @@ namespace Game.Scripts
             {
                 _currentTarget = null;
                 SetArrowTarget(null);
+               
             }
 
             SetArrowTarget(_currentTarget);
@@ -81,6 +86,7 @@ namespace Game.Scripts
 
         private void OnDestroy()
         {
+            PlayerPrefs.SetInt("Tutorial",1);
             DOTween.KillAll();
         }
     }

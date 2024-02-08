@@ -1413,8 +1413,33 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 206959052579403940, guid: d4289ad1a3a49494b84135a49aeeb2e0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 511534432252114972}
   m_SourcePrefab: {fileID: 100100000, guid: d4289ad1a3a49494b84135a49aeeb2e0, type: 3}
+--- !u!1 &2535355486755154183 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 206959052579403940, guid: d4289ad1a3a49494b84135a49aeeb2e0, type: 3}
+  m_PrefabInstance: {fileID: 2445490094282052003}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &511534432252114972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2535355486755154183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 416e71d47d2d464c81e6f2efe8db416b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrow: {fileID: 5664448267648142851}
+  tree: {fileID: 2872598468985029135}
+  activeBonfire: {fileID: 6236194947673226690}
+  inactiveBonfire: {fileID: 5750035658014149443}
+  player: {fileID: 5461853180817154115}
 --- !u!4 &5664448267648142851 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8028803199317417888, guid: d4289ad1a3a49494b84135a49aeeb2e0, type: 3}
@@ -5016,7 +5041,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8379465802963261448}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 416e71d47d2d464c81e6f2efe8db416b, type: 3}
   m_Name: 
