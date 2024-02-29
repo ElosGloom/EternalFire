@@ -298,6 +298,9 @@
      <Reference Include="UnityEditor.Graphs">
      <HintPath>D:\Unity\2022.3.13f1\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
      </Reference>
+     <Reference Include="UnityEditor.WebGL.Extensions">
+     <HintPath>D:\Unity\2022.3.13f1\Editor\Data\PlaybackEngines\WebGLSupport\UnityEditor.WebGL.Extensions.dll</HintPath>
+     </Reference>
      <Reference Include="UnityEditor.Android.Extensions">
      <HintPath>D:\Unity\2022.3.13f1\Editor\Data\PlaybackEngines\AndroidPlayer\UnityEditor.Android.Extensions.dll</HintPath>
      </Reference>

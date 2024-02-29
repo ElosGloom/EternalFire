@@ -774,7 +774,9 @@
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Materials\Misc\Magic" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Muzzleflash\EnergyNovaSmallMuzzle" />
      <Folder Include="Assets\ExternalAssets\Lana Studio\Hyper Casual FX\Prefabs" />
+     <Folder Include="Assets\Recordings" />
      <Folder Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\ResourcesData\Sprites\Component\Icon_EquipIcons_(x2)\NoShadow\EquipIcons_256" />
+     <Folder Include="Assets\Game\UI\Icons" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Interactive\Flares" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\PBS\Hand Painted.shader" />
      <Folder Include="Assets\TextMesh Pro\Resources\Style Sheets" />
@@ -1693,6 +1695,9 @@
      <Reference Include="System.Xml.XPath.XDocument">
      <HintPath>D:\Unity\2022.3.13f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Xml.XPath.XDocument.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.Recorder.Editor">
+     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.Recorder.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.VisualEffectGraph.Runtime">
      <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.VisualEffectGraph.Runtime.dll</HintPath>
      </Reference>
@@ -1744,6 +1749,9 @@
      <Reference Include="Unity.TextMeshPro">
      <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.Recorder">
+     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.Recorder.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.VSCode.Editor">
      <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
      </Reference>
@@ -1779,6 +1787,9 @@
      </Reference>
      <Reference Include="Unity.VisualStudio.Editor">
      <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Recorder.Base">
+     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.Recorder.Base.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.UI">
      <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
@@ -1825,11 +1836,11 @@
      <Reference Include="Unity.TextMeshPro.Editor">
      <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Searcher.Editor">
-     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.AI.Navigation.Editor">
      <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Searcher.Editor">
+     <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>E:\unity_projects\EternalFire\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
