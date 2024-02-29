@@ -71,7 +71,7 @@ Transform:
   m_GameObject: {fileID: 1573091292480681791}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 0.787, z: 0.791}
+  m_LocalPosition: {x: -0.85, y: 0.787, z: 0.791}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 3400861739313479077}
-  attackCooldown: 1
+  attackCooldown: 1.2
   damage: 10
   damageDelay: 1
   vfx: {fileID: 41921437878165622}
@@ -484,7 +484,7 @@ Transform:
   m_GameObject: {fileID: 6323481957852019550}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0.787, z: 0.791}
+  m_LocalPosition: {x: 0.85, y: 0.787, z: 0.791}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
