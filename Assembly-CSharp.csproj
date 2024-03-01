@@ -304,7 +304,6 @@
      <None Include="Assets\StreamingAssets\Fmod\EternalFire\Metadata\AudioFile\{54c81b70-060c-4d63-9996-6580c5017dd6}.xml" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Explosions\SpikyExplosion" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Interactive" />
-     <Folder Include="Assets\Game\Models\decor\Materials" />
      <Folder Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\Scripts" />
      <Folder Include="Assets\Game\Models\decor" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Materials\Misc\Liquid" />
