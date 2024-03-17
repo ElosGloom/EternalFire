@@ -1,5 +1,7 @@
+using FMODUnity;
 using Game.Scripts.SFX;
 using UnityEngine;
+using Task = System.Threading.Tasks.Task;
 
 namespace Game.Scripts
 {
@@ -8,8 +10,8 @@ namespace Game.Scripts
         private const string MusicKey = "music_volume";
         private const string SoundKey = "sound_volume";
 
-        private static float _musicVolume = 1;
-        private static float _soundVolume = 1;
+        private static float _musicVolume = 0;
+        private static float _soundVolume = 0;
 
         public static float MusicVolume
         {
@@ -20,9 +22,15 @@ namespace Game.Scripts
                 _musicVolume = value;
 
                 if (_musicVolume <= 0)
+                {
+                    Debug.Log("Stopping music");
                     MusicController.StopMusic();
+                }
                 else
+                {
+                    Debug.Log("Playing music");
                     MusicController.PlayMusic("event:/MainMusic");
+                }
             }
         }
 
@@ -36,10 +44,22 @@ namespace Game.Scripts
             }
         }
 
-        public static void Load()
+        public static async void Load()
         {
-            MusicVolume = PlayerPrefs.GetFloat(MusicKey,1);
-            SoundVolume = PlayerPrefs.GetFloat(SoundKey,1);
+            RuntimeManager.LoadBank("Master");
+            while (!RuntimeManager.HaveAllBanksLoaded)
+            {
+                await Task.Yield();
+            }
+
+            while (RuntimeManager.AnySampleDataLoading())
+            {
+                await Task.Yield();
+            }
+
+            Debug.Log("banks loaded");
+            MusicVolume = PlayerPrefs.GetFloat(MusicKey, 1);
+            SoundVolume = PlayerPrefs.GetFloat(SoundKey, 1);
         }
 
         public static void Save()

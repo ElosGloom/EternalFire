@@ -1,6 +1,4 @@
-using System;
 using FPS.LocalizationService;
-using GameAnalyticsSDK;
 using UnityEngine;
 
 namespace Game.Scripts

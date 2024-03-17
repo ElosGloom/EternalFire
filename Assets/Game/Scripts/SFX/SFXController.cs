@@ -14,6 +14,7 @@ namespace Game.Scripts.SFX
 
         public static void PlaySfx(string sfxKey, float maxPitchRange = 0)
         {
+            return;
             if (GameSettings.SoundVolume <= 0)
                 return;
 
@@ -30,7 +31,11 @@ namespace Game.Scripts.SFX
             ReleaseAfterPlay(eventInstance);
         }
 
-        public static void PlayRandomSfx(float maxPitchRange = 0, params string[] sfxKeys) => PlaySfx(sfxKeys.GetRandomElement(), maxPitchRange);
+        public static void PlayRandomSfx(float maxPitchRange = 0, params string[] sfxKeys)
+        {
+            return;
+            PlaySfx(sfxKeys.GetRandomElement(), maxPitchRange);
+        }
 
         public static void StopSfx(EventInstance eventInstance)
         {
@@ -40,6 +45,7 @@ namespace Game.Scripts.SFX
 
         private static async void ReleaseAfterPlay(EventInstance eventInstance)
         {
+            return;
             eventInstance.getDescription(out var description);
             description.getLength(out int length);
             await Task.Delay(length);
