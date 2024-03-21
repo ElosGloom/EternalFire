@@ -1916,7 +1916,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: MainMusic
-    clip: {fileID: 8300000, guid: 45922be8dae062441820825503a202ef, type: 3}
+    clip: {fileID: 8300000, guid: b1a6b0c7a0b9f7b40bda89b0407cbf3b, type: 3}
     volume: 0.75
     pitch: 1
     loop: 1
@@ -1928,43 +1928,43 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Chop1
-    clip: {fileID: 8300000, guid: c28857daf48f04341bd4226ab9eccb80, type: 3}
+    clip: {fileID: 8300000, guid: ccba130a6106ffc409b6974bfb281cb4, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Chop2
-    clip: {fileID: 8300000, guid: d450df78972e41a40bdd5f1f72228a24, type: 3}
+    clip: {fileID: 8300000, guid: 7c7bba6cd2c5650438a5c198d64b3069, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Click
-    clip: {fileID: 8300000, guid: af02d5fa1f0171140bde088f078d37ac, type: 3}
+    clip: {fileID: 8300000, guid: 75365ff8d6202fe4b8cbb9e3da861520, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: LevelComplete
-    clip: {fileID: 8300000, guid: 8e3866d9d680b6342b9010446316fe12, type: 3}
+    clip: {fileID: 8300000, guid: bf25617babaf1aa429cdeadaa3c7e698, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Lose
-    clip: {fileID: 8300000, guid: 9a1cbad0d7d55ca489c9f917e4820843, type: 3}
+    clip: {fileID: 8300000, guid: b025beb5fb6ddc149b8cb14c056c7ad3, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Step
-    clip: {fileID: 8300000, guid: 6d20c6ce4d57c43428f2ecbfac7bf597, type: 3}
-    volume: 1
+    clip: {fileID: 8300000, guid: 85d78897e3a77ae42926efb14d9577db, type: 3}
+    volume: 0.75
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Torch
-    clip: {fileID: 8300000, guid: 34544553a1e32124984e68a5018277d9, type: 3}
+    clip: {fileID: 8300000, guid: 6ca724eff22c7f6469d6e0bffe657bbb, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
