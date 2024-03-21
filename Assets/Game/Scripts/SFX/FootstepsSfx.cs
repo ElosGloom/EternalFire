@@ -6,7 +6,7 @@ namespace Game.Scripts.SFX
     {
         public void PlaySfx()
         {
-            SfxController.PlaySfx("event:/Step", 0.2f);
+           AudioManager.Instance.PlaySfx("Step");
         }
     }
 }

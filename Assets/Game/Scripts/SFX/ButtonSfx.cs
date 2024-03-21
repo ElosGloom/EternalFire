@@ -11,7 +11,7 @@ namespace Game.Scripts.SFX
 
         private void Awake()
         {
-            GetComponent<Button>().onClick.AddListener(() => SfxController.PlaySfx(sfxPath, maxPitchRange));
+             GetComponent<Button>().onClick.AddListener(() => AudioManager.Instance.PlaySfx("Click"));
         }
     }
 }

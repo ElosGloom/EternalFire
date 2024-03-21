@@ -1,6 +1,4 @@
-﻿using System;
-using Game.Scripts.SFX;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 namespace Game.Scripts.GUI
@@ -13,19 +11,18 @@ namespace Game.Scripts.GUI
         [SerializeField] private Button musicTurnOnButton;
         [SerializeField] private Button rateUsButton;
         [SerializeField] private Button exitButton;
-        
-        
+
 
         private bool _soundButtonStatus;
         private bool _musicButtonStatus;
 
         private void Start()
         {
-            soundTurnOffButton.gameObject.SetActive(GameSettings.SoundVolume==1f);
-            soundTurnOnButton.gameObject.SetActive(GameSettings.SoundVolume==0f);
-            musicTurnOffButton.gameObject.SetActive(GameSettings.MusicVolume==1f);
-            musicTurnOnButton.gameObject.SetActive(GameSettings.MusicVolume==0f);
-            
+            soundTurnOffButton.gameObject.SetActive(GameSettings.SoundVolume == 1f);
+            soundTurnOnButton.gameObject.SetActive(GameSettings.SoundVolume == 0f);
+            musicTurnOffButton.gameObject.SetActive(GameSettings.MusicVolume == 1f);
+            musicTurnOnButton.gameObject.SetActive(GameSettings.MusicVolume == 0f);
+
             soundTurnOffButton.onClick.AddListener(SoundTurnOff);
             soundTurnOnButton.onClick.AddListener(SoundTurnOn);
             musicTurnOffButton.onClick.AddListener(MusicTurnOff);
@@ -33,13 +30,14 @@ namespace Game.Scripts.GUI
             // rateUsButton.onClick.AddListener(RateUs);
             exitButton.onClick.AddListener(OnExitButtonClick);
         }
-        
+
 
         private void OnExitButtonClick()
         {
             gameObject.SetActive(false);
             Time.timeScale = 1;
         }
+
         private void SoundTurnOff()
         {
             GameSettings.SoundVolume = 0f;

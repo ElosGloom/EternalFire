@@ -22,12 +22,13 @@ namespace Game.Scripts.LevelManager
 
         private void OnPlayerDeath()
         {
+            AudioManager.Instance.PlaySfx("Lose");
             LoseEvent?.Invoke();
         }
 
         private void OnAllBonfiresConnected()
         {
-            SfxController.PlaySfx("event:/LevelComplete");
+           AudioManager.Instance.PlaySfx("LevelComplete");
             WinEvent?.Invoke();
         }
 

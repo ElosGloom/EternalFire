@@ -847,18 +847,6 @@
      </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="FMODUnityEditor.csproj">
-      <Project>{7a2f28d4-0c40-d57d-6c5a-b5773f16a39b}</Project>
-      <Name>FMODUnityEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="FMODUnityResonance.csproj">
-      <Project>{e237af9f-cc28-984a-384d-f699eec448b3}</Project>
-      <Name>FMODUnityResonance</Name>
-    </ProjectReference>
-    <ProjectReference Include="FMODUnity.csproj">
-      <Project>{6a4126c3-b3dc-6b3d-3656-7713d442587a}</Project>
-      <Name>FMODUnity</Name>
-    </ProjectReference>
     <ProjectReference Include="ToonyColorsPro2.Demo.csproj">
       <Project>{69702be0-5567-1fd5-0d30-d7954500c887}</Project>
       <Name>ToonyColorsPro2.Demo</Name>
@@ -866,10 +854,6 @@
     <ProjectReference Include="ToonyColorsPro.Demo.Editor.csproj">
       <Project>{affdc108-f496-64c0-b1c9-ffdd2d3d9f80}</Project>
       <Name>ToonyColorsPro.Demo.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="FMODUnityResonanceEditor.csproj">
-      <Project>{5a073275-a1f9-b2e5-094d-175b4867cd46}</Project>
-      <Name>FMODUnityResonanceEditor</Name>
     </ProjectReference>
     <ProjectReference Include="ToonyColorsPro.Runtime.csproj">
       <Project>{6efd43f5-0ede-5f22-59e5-90f0e89daf92}</Project>

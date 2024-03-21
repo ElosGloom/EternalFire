@@ -8,7 +8,7 @@ namespace Game.Scripts.Fire
     {
         [SerializeField] private Torch torchPrefab;
         [SerializeField] private HealthComponent fireSystemHealth;
-        
+
         [SerializeField] private Transform fireParent;
         [SerializeField] private Inventory.Inventory inventory;
 
@@ -28,10 +28,10 @@ namespace Game.Scripts.Fire
             var nearestMember = FireSystem.Instance.SearchNearestMember(spawnerPosition);
 
             var distance = Vector3.Distance(spawnerPosition, nearestMember.transform.position);
-            
-            if (FireSystem.Instance.HealthComponent.CurrentHealth<=0)
+
+            if (FireSystem.Instance.HealthComponent.CurrentHealth <= 0)
                 return;
-            
+
             if (distance < MinSpawnRadius || distance > MaxSpawnRadius)
                 return;
 
@@ -41,7 +41,7 @@ namespace Game.Scripts.Fire
             var torch = Instantiate(torchPrefab, spawnerPosition, Quaternion.identity, fireParent);
             FireSystem.Instance.ConnectNewTorch(torch, nearestMember);
             FireSystem.Instance.TryConnectBonfire(MaxSpawnRadius, torch);
-            SfxController.PlaySfx("event:/Torch");
+            AudioManager.Instance.PlaySfx("Torch");
         }
     }
 }

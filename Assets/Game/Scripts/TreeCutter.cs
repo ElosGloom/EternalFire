@@ -58,7 +58,7 @@ namespace Game.Scripts
             {
                 if (colliders[i].TryGetComponent(out HealthComponent healthComponent))
                 {
-                    SfxController.PlayRandomSfx(0.2f, "event:/Chop1", "event:/Chop2");
+                    AudioManager.Instance.PlayRandomSfx("Chop1","Chop2");
                     vfx.Play();
                     healthComponent.TakeDamage(damage);
                 }
