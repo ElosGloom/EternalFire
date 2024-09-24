@@ -1,6 +1,5 @@
 using System.Data;
 using System.Globalization;
-using System.Text;
 using UnityEngine;
 
 namespace FPS.LocalizationService
@@ -11,9 +10,6 @@ namespace FPS.LocalizationService
         private const string DefaultLanguage = "en";
         private static readonly DataTable DataTable = new();
         private static string _currentLanguage = DefaultLanguage;
-        private static readonly StringBuilder StringBuilder = new();
-
-        public static void SetLanguage(string languageKey) => _currentLanguage = languageKey;
 
         public static void Init()
         {
@@ -60,30 +56,14 @@ namespace FPS.LocalizationService
 
         public static string Get(string key)
         {
-            if (DataTable.Rows.Count == 0)
-                Init();
-
-            StringBuilder.Append("key = '");
-            StringBuilder.Append(key);
-            StringBuilder.Append("'");
-            var rows = DataTable.Select(StringBuilder.ToString());
-            StringBuilder.Clear();
+            var rows = DataTable.Select($"key = '{key}'");
             if (rows.Length > 0)
             {
                 var value = rows[0][_currentLanguage].ToString();
                 return value;
             }
 
-            StringBuilder.Append("[");
-            StringBuilder.Append(nameof(Localization));
-            StringBuilder.Append(":");
-            StringBuilder.Append(nameof(Get));
-            StringBuilder.Append("]");
-            StringBuilder.Append(" - localization item with key [");
-            StringBuilder.Append(key);
-            StringBuilder.Append(" doesn't exists.");
-            Debug.LogError(StringBuilder.ToString());
-            StringBuilder.Clear();
+            Debug.LogError($"[{nameof(Localization)}:{nameof(Get)}] - localization item with key [{key}] doesn't exists.");
             return key;
         }
 
@@ -98,7 +78,7 @@ namespace FPS.LocalizationService
         //          }
         //      }
     #if UNITY_WEBGL && !UNITY_EDITOR //Windows WebGL
-        private static string SystemLanguage => GetSystemLanguageJS().Split('-')[0].ToLower(); 
+        private static string SystemLanguage => GetSystemLanguageJS().Split('-')[0].ToLower();
 
         [System.Runtime.InteropServices.DllImport("__Internal")]
         private static extern string GetSystemLanguageJS();
