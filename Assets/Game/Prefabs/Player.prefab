@@ -250,9 +250,7 @@ MonoBehaviour:
   animator: {fileID: 3400861739313479077}
   attackCooldown: 1.2
   damage: 10
-  damageDelay: 1
-  vfx: {fileID: 41921437878165622}
-  trail: {fileID: 7405639551837363517}
+  damageDelay: 0.9
   treeCutterCollider: {fileID: 5003763155144849433}
   colliderPoint0: {fileID: 3081263772436038304}
   colliderPoint1: {fileID: 6731258733926085800}
@@ -361,6 +359,8 @@ MonoBehaviour:
   healthComponent: {fileID: 6243507135973427302}
   damageVFX: {fileID: 8670959347060836393}
   healVFX: {fileID: 2782182832510701426}
+  woodPoof: {fileID: 41921437878165622}
+  axeTrail: {fileID: 7405639551837363517}
 --- !u!1 &6265820264253018980
 GameObject:
   m_ObjectHideFlags: 0

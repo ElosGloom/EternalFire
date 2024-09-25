@@ -84,7 +84,9 @@
      <Compile Include="Assets\Game\Scripts\Inventory\InventoryCollector.cs" />
      <Compile Include="Assets\ExternalAssets\POLYMORPHFX\MiGHTYFX\_common\Scripts\PMFX_ProjectilesFX.cs" />
      <Compile Include="Assets\Game\Scripts\GUI\SpriteFader.cs" />
+     <Compile Include="Assets\Game\Scripts\Chest\Chest.cs" />
      <Compile Include="Assets\Game\Scripts\Utils\SerializableDictionary.cs" />
+     <Compile Include="Assets\Game\Scripts\Chest\ChestContent.cs" />
      <Compile Include="Assets\FPS\FoW\Scripts\FogOfWar.cs" />
      <Compile Include="Assets\Unity-Logs-Viewer\Reporter\ReporterMessageReceiver.cs" />
      <Compile Include="Assets\FPS\FoW\Scripts\IHider.cs" />
@@ -126,6 +128,7 @@
      <Compile Include="Assets\GameAnalytics\Plugins\Scripts\State\GAState.cs" />
      <Compile Include="Assets\Game\Scripts\Fire\TorchSpawner.cs" />
      <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Resource.cs" />
+     <Compile Include="Assets\Game\Scripts\DistanceMeter.cs" />
      <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Business.cs" />
      <Compile Include="Assets\ExternalAssets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
      <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SendBusinessEvent.cs" />
@@ -224,6 +227,7 @@
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Combat\Sword\Slash\SwordSlashThin" />
      <Folder Include="Assets\Game\Texture\decor\rocks" />
      <Folder Include="Assets\JMO Assets\Toony Colors Pro\Documentation\Documentation Data" />
+     <Folder Include="Assets\Game\Scripts\Chest" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Interactive\Hearts" />
      <None Include="Assets\JMO Assets\Toony Colors Pro\Shader Templates 2\SG2_Template_URP.txt" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Prefabs\Interactive\Loot\ChestAppear" />
@@ -499,6 +503,7 @@
      <Folder Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\ResourcesData\Sprites\Component\Icon_EquipIcons_(x2)\NoShadow" />
      <Folder Include="Assets\Unity-Logs-Viewer\ReporterDocumentation" />
      <Folder Include="Assets\ExternalAssets\VFX_Klaus\VFX_Lab" />
+     <Folder Include="Assets\Game\Prefabs\Chest" />
      <Folder Include="Assets\ExternalAssets\Layer Lab\GUI Pro-FantasyRPG\ResourcesData\Sprites\Component\Slider" />
      <Folder Include="Assets\ExternalAssets\Epic Toon FX\Demo\Missile Prefabs\Shadow" />
      <Folder Include="Assets\ExternalAssets\Male Peasant Pack Cute Series\01 Customize Character Here" />

@@ -8,12 +8,12 @@ namespace Game.Scripts
 {
     public class TreeCutter : MonoBehaviour
     {
+        public static event Action StartTreeCuttingEvent;
+        public static event Action TreeChoppingEvent;
         [SerializeField] private Animator animator;
         [SerializeField] private float attackCooldown = 1f;
         [SerializeField] private int damage;
         [SerializeField] private float damageDelay;
-        [SerializeField] private ParticleSystem vfx;
-        [SerializeField] private TrailRenderer trail;
         [SerializeField] private CapsuleCollider treeCutterCollider;
         [SerializeField] private Transform colliderPoint0;
         [SerializeField] private Transform colliderPoint1;
@@ -40,10 +40,10 @@ namespace Game.Scripts
                 return;
 
             if (!other.gameObject.CompareTag("Tree"))
-                return; //todo remove tag
+                return;                                         //todo remove tag
 
             _nextAttackTimeLeft = attackCooldown;
-            trail.enabled = true;
+            StartTreeCuttingEvent?.Invoke();
             animator.SetTrigger(TreeCut);
             StartCoroutine(DamageDelayRoutine());
         }
@@ -58,14 +58,10 @@ namespace Game.Scripts
             {
                 if (colliders[i].TryGetComponent(out HealthComponent healthComponent))
                 {
-                    AudioManager.Instance.PlayRandomSfx("Chop1","Chop2");
-                    vfx.Play();
                     healthComponent.TakeDamage(damage);
+                    TreeChoppingEvent?.Invoke();
                 }
             }
-
-            
-            trail.enabled = false;
         }
     }
 }

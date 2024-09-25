@@ -1,5 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using Game.Scripts.Utils;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Game.Scripts
 {
@@ -9,6 +12,15 @@ namespace Game.Scripts
         {
             int randomIndex = Random.Range(0, list.Count);
             return list[randomIndex];
+        }
+
+        public static TKey GetRandomKey<TKey, TValue>(this SerializableDictionary<TKey, TValue> dictionary)
+        {
+            TKey[] keys = new TKey[dictionary.Count];
+            dictionary.Keys.CopyTo(keys, 0);
+
+            int randomIndex = Random.Range(0, keys.Length);
+            return keys[randomIndex];
         }
 
         public static T GetRandomElement<T>(this T[] list)

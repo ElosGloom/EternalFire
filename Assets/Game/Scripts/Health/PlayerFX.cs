@@ -1,4 +1,5 @@
 ﻿using FPS.FoW;
+using Game.Scripts.SFX;
 using UnityEngine;
 
 namespace Game.Scripts.Health
@@ -8,12 +9,16 @@ namespace Game.Scripts.Health
         [SerializeField] private HealthComponent healthComponent;
         [SerializeField] private ParticleSystem damageVFX;
         [SerializeField] private ParticleSystem healVFX;
+        [SerializeField] private ParticleSystem woodPoof;
+        [SerializeField] private TrailRenderer axeTrail;
 
 
         private void Start()
         {
             healthComponent.DeathEvent += OnDeath;
             healthComponent.HealthChangeEvent += OnHealthChange;
+            TreeCutter.StartTreeCuttingEvent += OnTreeCuttingStart;
+            TreeCutter.TreeChoppingEvent += OnTreeChopping;
         }
 
         public override void OnVisionStatusChanged(bool isVisible)
@@ -24,8 +29,9 @@ namespace Game.Scripts.Health
                 {
                     healVFX.Play();
                 }
+
                 damageVFX.Stop();
-                
+
             }
             else
             {
@@ -36,11 +42,24 @@ namespace Game.Scripts.Health
 
         private void OnHealthChange()
         {
-           
+
             if (healthComponent.CurrentHealth >= healthComponent.MaxHealth)
             {
                 healVFX.Stop();
             }
+        }
+
+        private void OnTreeCuttingStart()
+        {
+
+            axeTrail.enabled = true;
+        }
+
+        private void OnTreeChopping()
+        {
+            woodPoof.Play();
+            axeTrail.enabled = false;
+            AudioManager.Instance.PlayRandomSfx("Chop1", "Chop2");
         }
 
         private void OnDeath()
@@ -52,6 +71,8 @@ namespace Game.Scripts.Health
         {
             healthComponent.HealthChangeEvent -= OnHealthChange;
             healthComponent.DeathEvent -= OnDeath;
+            TreeCutter.StartTreeCuttingEvent -= OnTreeCuttingStart;
+            TreeCutter.TreeChoppingEvent -= OnTreeChopping;
         }
     }
 }

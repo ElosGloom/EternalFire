@@ -596,7 +596,7 @@ Transform:
   m_GameObject: {fileID: 60861741}
   serializedVersion: 2
   m_LocalRotation: {x: 0.5, y: 0, z: 0, w: 0.8660254}
-  m_LocalPosition: {x: 2.4, y: 12.990381, z: -5.1000004}
+  m_LocalPosition: {x: -0.4, y: 12.99038, z: -16.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16130,6 +16130,12 @@ MonoBehaviour:
   - <Prefab>k__BackingField: {fileID: 6975364066715784793, guid: 9df955d4fb0ca754981f62d35c3da8a5, type: 3}
     <Count>k__BackingField: 4
     <Key>k__BackingField: tree_destroy
+  - <Prefab>k__BackingField: {fileID: 1191610651660397468, guid: 61f8d5ed312093240b3655229be04c01, type: 3}
+    <Count>k__BackingField: 3
+    <Key>k__BackingField: Torch
+  - <Prefab>k__BackingField: {fileID: 5206141560664371473, guid: 9f424d54074ccaa478e36183f007bd6f, type: 3}
+    <Count>k__BackingField: 3
+    <Key>k__BackingField: Coin
 --- !u!4 &1533578309
 Transform:
   m_ObjectHideFlags: 0
