@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2454172680867933292}
-  - component: {fileID: 2137547635190269360}
   - component: {fileID: 4483413076662570191}
   - component: {fileID: 1719109518186634794}
   - component: {fileID: 5076032111619636949}
   - component: {fileID: 5206141560664371473}
+  - component: {fileID: 2643357152735402442}
   m_Layer: 6
   m_Name: (InventoryResource)Coin 1
   m_TagString: Resource
@@ -37,29 +37,6 @@ Transform:
   - {fileID: 7857808976337241676}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &2137547635190269360
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2139334533042051766}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.15
-  m_Height: 0.6
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &4483413076662570191
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -99,8 +76,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e209770d0f9407c892ea4081ffce299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  height: 0
-  moveTime: 3
+  height: 3
+  moveTime: 0.5
 --- !u!114 &5076032111619636949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,7 +93,7 @@ MonoBehaviour:
   itemName: Coin
   itemsCount: 1
   rb: {fileID: 4483413076662570191}
-  itemCollider: {fileID: 2137547635190269360}
+  itemCollider: {fileID: 2643357152735402442}
   curveMotion: {fileID: 1719109518186634794}
 --- !u!114 &5206141560664371473
 MonoBehaviour:
@@ -131,6 +108,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Type>k__BackingField: {fileID: 5076032111619636949}
+--- !u!65 &2643357152735402442
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139334533042051766}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5, y: 0.5, z: 0.07}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5415728085225371086
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,7 +140,6 @@ GameObject:
   - component: {fileID: 7857808976337241676}
   - component: {fileID: 2624890097776833124}
   - component: {fileID: 8445797190192939079}
-  - component: {fileID: 4111370022585233047}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -215,26 +212,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &4111370022585233047
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5415728085225371086}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
