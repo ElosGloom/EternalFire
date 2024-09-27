@@ -86,6 +86,7 @@
      <Compile Include="Assets\Game\Scripts\GUI\SpriteFader.cs" />
      <Compile Include="Assets\Game\Scripts\Chest\Chest.cs" />
      <Compile Include="Assets\Game\Scripts\Utils\SerializableDictionary.cs" />
+     <Compile Include="Assets\Game\Scripts\GUI\BuffHandler.cs" />
      <Compile Include="Assets\Game\Scripts\Chest\ChestContent.cs" />
      <Compile Include="Assets\FPS\FoW\Scripts\FogOfWar.cs" />
      <Compile Include="Assets\Unity-Logs-Viewer\Reporter\ReporterMessageReceiver.cs" />
@@ -152,6 +153,7 @@
      <Compile Include="Assets\GameAnalytics\Plugins\Scripts\ILRD\AdMob\GAAdMobIntegration.cs" />
      <Compile Include="Assets\GameAnalytics\Plugins\Scripts\Events\GA_Error.cs" />
      <Compile Include="Assets\Game\Scripts\GUI\EnableUI.cs" />
+     <Compile Include="Assets\Game\Scripts\Chest\MovementSpeedBuff.cs" />
      <Compile Include="Assets\Game\Scripts\GUI\MainMenu.cs" />
      <Compile Include="Assets\Game\Scripts\States\HealthBarInvisibleState.cs" />
      <Compile Include="Assets\Unity-Logs-Viewer\Reporter\MultiKeyDictionary.cs" />
@@ -196,6 +198,7 @@
      <Compile Include="Assets\ExternalAssets\POLYMORPHFX\MiGHTYFX\_common\Scripts\PMFX_SceneManager.cs" />
      <Compile Include="Assets\Game\Scripts\GUI\NextLevelButton.cs" />
      <Compile Include="Assets\ExternalAssets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
+     <Compile Include="Assets\Game\Scripts\GUI\UIBuff.cs" />
      <Compile Include="Assets\Game\Scripts\Health\HealingOverTime.cs" />
      <Compile Include="Assets\Game\Scripts\Health\PlayerFX.cs" />
      <Compile Include="Assets\GameAnalytics\Plugins\Scripts\ILRD\Fyber\GAFyberIntegration.cs" />

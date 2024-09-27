@@ -3,7 +3,8 @@
     public enum ChestContent
     {
         Torch,
-        Coin
+        Coin,
+        MovementSpeedBuff
         
         
     }
